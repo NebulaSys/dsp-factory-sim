@@ -41,12 +41,12 @@ docs/research/_raw/*-globalgamemanagers.json
 # ---- local dev screenshots (a curated few live in docs/images/) ----
 docs/screenshots/
 
-# ---- building icons (fetched, not ours) ----
-# 63 PNGs downloaded from dsp-wiki.com; the art belongs to Youthcat Studio. Not vendored here,
-# so a fresh clone renders coloured blocks instead (the view has a documented fallback).
-#   pnpm icons:fetch   — or: node tools/fetch-icons.mjs
-# If you would rather ship them so the hosted demo looks right, delete this line.
-public/icons/
+# ---- building icons ----
+# 63 PNGs fetched from dsp-wiki.com (tools/fetch-icons.mjs). They ARE committed so the demo works
+# without a build step; the art belongs to Youthcat Studio and this is an unofficial fan project.
+#   pnpm icons:fetch   — refresh them
+# To drop them from the build, uncomment the line below: the view falls back to coloured blocks.
+# public/icons/
 
 # ---- OS / editor noise ----
 .DS_Store

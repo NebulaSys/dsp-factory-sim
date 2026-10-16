@@ -46,16 +46,17 @@ pnpm test       # 243 项测试
 pnpm build      # 类型检查 + 生产构建
 ```
 
-### 可选：拉取本地资源
+### 可选：拉取测试语料
 
-仓库**不包含**第三方素材，全新克隆后按需拉取：
+仓库**不包含**第三方蓝图（那些是别人发布的作品），全新克隆后按需拉取：
 
 ```bash
 pnpm corpus:fetch   # 第三方蓝图语料（约 1 MB），启用 6 项依赖语料的校验
-pnpm icons:fetch    # 63 个建筑图标（来自 dsp-wiki.com）
 ```
 
-没拉也不会坏：`corpus` 相关的校验与测试会**明确跳过**，图标则回退成**彩色方块**。
+没拉也不会坏：依赖它的校验与测试会**明确跳过**。
+
+建筑图标（63 个 PNG）**已随仓库提供**，因为界面开箱就该能看；需要更新时跑 `pnpm icons:fetch`。
 
 页面上可直接载入三份内置真实蓝图（或用链接参数 `?tab=blueprint&real=smelter-v1.txt`）：
 
@@ -101,7 +102,7 @@ v1 记录**没有 `recipeId` 字段** —— 它的头部只有位置、朝向�
 | 文件 | 内容 | 来源 |
 |---|---|---|
 | `dsp-vanilla.json` | 175 物品 / 189 配方 / 66 建筑 / 108 科技 / 36 升级 | [dsp-wiki.com](https://dsp-wiki.com/) `Module:GameData` |
-| `building-icons.json` | 建筑图标清单（61/66 覆盖；图片需 `pnpm icons:fetch`） | dsp-wiki.com |
+| `building-icons.json` | 建筑图标清单（61/66 覆盖） | dsp-wiki.com |
 | `building-slots.json` | 33 个建筑的连接槽位 | **从游戏本体资源提取** |
 
 ### 交叉验证
@@ -223,8 +224,8 @@ node tools/fetch-corpus.mjs     # 从公开仓库拉取（约 1 MB）
 **不随本仓库分发**，用 `pnpm corpus:fetch` 自行拉取。
 `public/samples/` 下的三份样本来自同一来源，仅用于让演示开箱可用。
 
-**建筑图标**（63 个 PNG）来自 dsp-wiki.com，其美术资源归 Youthcat Studio 所有，
-同样**不随本仓库分发**，用 `pnpm icons:fetch` 自行拉取；未拉取时界面回退为彩色方块。
+**建筑图标**（63 个 PNG）取自 dsp-wiki.com，其美术资源归 Youthcat Studio 所有，
+在此仅用于让界面开箱可用；本项目为非官方粉丝工具。
 
 `building-slots.json` 由 `tools/unity/` 从**本机安装**的游戏资源中解码，
 仓库内只保留提取结果，**不含任何游戏原始文件或资源**。
