@@ -1,0 +1,4 @@
+# pnpm 11 reads build-script approvals from here (the package.json "pnpm" field
+# is no longer honored). esbuild needs its postinstall to place the native binary.
+allowBuilds:
+  esbuild: true

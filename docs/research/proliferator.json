@@ -1,0 +1,121 @@
+{
+ "generatedAt": "2026-10-14T19:24:00-04:00",
+ "gameVersion": "0.10.35.29104",
+ "source": [
+  "https://dsp-wiki.com/index.php?title=Spray_Coater&action=raw",
+  "https://dsp-wiki.com/index.php?title=Proliferator&action=raw",
+  "https://wiki.biligame.com/dsp/增产剂Mk.I",
+  "https://wiki.biligame.com/dsp/增产剂Mk.II",
+  "https://wiki.biligame.com/dsp/增产剂Mk.III",
+  "game protosets v0.10.35.29104 (RecipeProto.NonProductive, ItemProto.Productive)"
+ ],
+ "marks": [
+  {
+   "key": "ProliferatorMk1",
+   "item": "ProliferatorMk1",
+   "itemName": "Proliferator Mk.I",
+   "nameZh": "增产剂Mk.I",
+   "tier": 1,
+   "id": 1141,
+   "spraysPerItem": 12,
+   "spraysPerItemSelfSprayed": 13,
+   "extraProductsBonus": 0.125,
+   "speedBonus": 0.25,
+   "energyConsumptionBonus": 0.3,
+   "sprayCoaterInputPerMin": null,
+   "note": "consumes 1 spray per item sprayed; spray storage of the Spray Coater is 600 for every mark",
+   "conflict": {
+    "field": "spraysPerItem",
+    "a": "task spec example said 30",
+    "b": "both wikis say 12",
+    "resolved": "12 chosen",
+    "why": "dsp-wiki Proliferator + Spray Coater pages and biligame 增产剂Mk.I all say 12"
+   }
+  },
+  {
+   "key": "ProliferatorMk2",
+   "item": "ProliferatorMk2",
+   "itemName": "Proliferator Mk.II",
+   "nameZh": "增产剂Mk.II",
+   "tier": 2,
+   "id": 1142,
+   "spraysPerItem": 24,
+   "spraysPerItemSelfSprayed": 28,
+   "extraProductsBonus": 0.2,
+   "speedBonus": 0.5,
+   "energyConsumptionBonus": 0.7,
+   "sprayCoaterInputPerMin": null,
+   "note": ""
+  },
+  {
+   "key": "ProliferatorMk3",
+   "item": "ProliferatorMk3",
+   "itemName": "Proliferator Mk.III",
+   "nameZh": "增产剂Mk.III",
+   "tier": 3,
+   "id": 1143,
+   "spraysPerItem": 60,
+   "spraysPerItemSelfSprayed": 75,
+   "extraProductsBonus": 0.25,
+   "speedBonus": 1.0,
+   "energyConsumptionBonus": 1.5,
+   "sprayCoaterInputPerMin": null,
+   "note": "self-sprayed sprays: biligame says 75 (=60*1.25), the EN wiki table says 72 - 75 chosen, conflict recorded",
+   "conflict": {
+    "field": "spraysPerItemSelfSprayed",
+    "a": "biligame 增产剂Mk.III: 75",
+    "b": "EN wiki Spray Coater table: 72",
+    "resolved": "75 chosen",
+    "why": "60 * 1.25 matches the extra-products formula that also reproduces 13 and 28"
+   }
+  }
+ ],
+ "mechanics": {
+  "modes": [
+   "extraProducts",
+   "speedup"
+  ],
+  "sprayStoragePerCoater": 600,
+  "sprayConsumption": "A sprayed cargo item carries a mark (Mk.I/II/III). Passing through the Spray Coater consumes exactly 1 stored spray per item; a piled/stacked cargo consumes sprays equal to the stack size and is marked in one go. The mark persists on the item until it is consumed as an ingredient (or, for Fractionators, until it is actually converted). Cargo whose stack mixes marks averages the mark level. The Spray Coater passes Proliferator through untouched if its storage is full or the incoming mark differs from the stored one. There is no \"last spray\" partial effect: an item is either marked or not, and a mark is worth its full bonus regardless of how full the coater storage was - only whole sprays are consumed.",
+  "activationRule": "For a production building the bonus applies only if ALL recipe ingredients carry a mark; the LOWEST mark among the inputs is used, and if any input is unmarked NO bonus applies. The mode (extra products vs speedup) is a per-building player toggle, default extra products.",
+  "extraProducts": "Expected output is multiplied by (1 + mark.extraProductsBonus); input consumption per craft is unchanged, so material per product falls by 1/(1+bonus). Byproducts are multiplied in the same way (the whole Results array is scaled); the game rolls the fractional part, so long-run averages match the multiplier but short runs do not.",
+  "speedup": "Crafting speed is multiplied by (1 + mark.speedBonus); this is MULTIPLICATIVE with the building crafting-speed multiplier (e.g. Assembler Mk.III 1.5x with Mk.III proliferator = 3x). Input consumption and output scale together, so material per product is unchanged.",
+  "energyPenalty": "Both modes add the mark energy penalty to the processing building power draw: Mk.I +30%, Mk.II +70%, Mk.III +150%. It applies to the production building (including the Fractionator) and to labs, not to the input items.",
+  "stacksWithTechUpgrades": "Yes - the bonus is applied on top of technology/upgrade effects (assembler speed multipliers, lab research speed, Vein Utilization on mining, etc.); it does not replace them.",
+  "cannotBeProliferated": {
+   "extraProductsForbidden": [
+    "Antimatter (Mass-energy Storage, collider)",
+    "Deuterium (collider)",
+    "Antimatter Fuel Rod",
+    "X-ray Cracking",
+    "Reformed Refinement",
+    "any recipe that consumes a building/entity item (all belts, sorters, splitters, pilers, storage, power buildings, assemblers, smelters, logistics stations, labs, turrets - ItemProto.Productive=false, 73 items)"
+   ],
+   "extraProductsForbiddenSource": "game data: RecipeProto.NonProductive={40 Deuterium,44 Antimatter Fuel Rod,58 X-ray Cracking,74 Mass-energy Storage,121 Reformed Refinement}; ItemProto.Productive=false for all 73 building items",
+   "neverApplicable": [
+    "Mining Machines / Advanced Mining Machines (no input item; ore must be sprayed on the belt downstream)",
+    "Water Pump, Oil Extractor, Orbital Collector, Fractionator input (Fractionator uses the speedup bonus only)",
+    "Solar Panels, Wind Turbines, Geothermal, Thermal/Fusion/Artificial Star generators themselves (only their FUEL can be sprayed)",
+    "Ray Receiver (only a sprayed Graviton Lens has an effect)"
+   ],
+   "wikiStatement": "The production of Antimatter, Antimatter Fuel Rod, the X-Ray Cracking recipe, and recipes that use other buildings as material cannot receive the Extra Products bonus; they can only benefit from Production Speedup."
+  },
+  "perBuilding": {
+   "assemblers/smelters/chemical plants/refineries": "both modes",
+   "fractionator": "speedup only: conversion percentage = 1% * (1+speedBonus) of the hydrogen passing through; passing hydrogen keeps its mark unless converted; energy penalty applies",
+   "miniature particle collider": "speedup only (all its recipes are NonProductive)",
+   "matrix lab (research)": "sprayed matrices give bonus hashes at the extra-products rate; speedup does not apply to research",
+   "mining machines": "no effect on the machine; the ore can be sprayed after it leaves the miner",
+   "power plants (generic fuel: coal, energetic graphite, hydrogen/deuteron rods)": "extra products bonus multiplies BOTH the fuel energy capacity and the generator output",
+   "artificial star (antimatter / strange annihilation fuel rods)": "speedup bonus multiplies generator output only, not the rod energy capacity, so the rod burns faster",
+   "ray receiver + graviton lens": "speedup bonus multiplies maximum collection rate (multiplicative with the lens 2x)",
+   "EM-Rail Ejector / Vertical Launching Silo": "speedup bonus multiplies launch speed of sprayed Solar Sails / Small Carrier Rockets",
+   "foundation": "extra products bonus = more soil pile when lowering terrain / less soil pile used when raising",
+   "ammunition and jamming capsules": "extra products bonus = more shots / more affected enemies per item",
+   "accumulator (full) and energy exchanger": "speedup bonus on charge/discharge rate; a placed Accumulator building loses the mark",
+   "proliferator itself": "extra products bonus = more sprays per Proliferator item (13/28/75)"
+  },
+  "notes": "CONFLICTS: (1) Mk.III self-sprayed sprays: biligame 75 vs EN wiki 72 - 75 chosen (equals 60*1.25, matching the extra-products formula that also reproduces 13 and 28). (2) The task-spec example value spraysPerItem=30 for Mk.I is NOT correct: the real value is 12. (3) The EN wiki states \"The production of Antimatter\" is forbidden; game data additionally flags the collider Deuterium recipe and Reformed Refinement as NonProductive - both are listed."
+ },
+ "conflicts": "CONFLICTS: (1) Mk.III self-sprayed sprays: biligame 75 vs EN wiki 72 - 75 chosen (equals 60*1.25, matching the extra-products formula that also reproduces 13 and 28). (2) The task-spec example value spraysPerItem=30 for Mk.I is NOT correct: the real value is 12. (3) The EN wiki states \"The production of Antimatter\" is forbidden; game data additionally flags the collider Deuterium recipe and Reformed Refinement as NonProductive - both are listed."
+}

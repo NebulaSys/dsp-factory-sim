@@ -1,0 +1,259 @@
+{
+ "generatedAt": "2026-10-16T19:33:48.226Z",
+ "repository": "https://github.com/DSPBluePrints/FactoryBluePrints",
+ "scanned": 28,
+ "decoded": 28,
+ "hashValid": 0,
+ "metadataOnlyDecodes": [],
+ "fullDecodes": 28,
+ "buildingsDecoded": 44846,
+ "hashInvalid": [
+  "仙术_Illegal_发电_Power_被淹死的鱼_发电堆叠蓝图集_1-风能_风能6层.txt.txt",
+  "仙术_Illegal_发电_Power_被淹死的鱼_发电堆叠蓝图集_3-太阳能_赤道_96-赤道太阳能16层.txt.txt",
+  "仙术_Illegal_发电_Power_被淹死的鱼_发电堆叠蓝图集_4-核聚变_h.txt.txt"
+ ],
+ "decodeFailures": [],
+ "prototypeHitRate": 1,
+ "unknownItemIds": [],
+ "unknownRecipeIds": [],
+ "buildingsSeen": [
+  [
+   "SolarPanel",
+   30414
+  ],
+  [
+   "ConveyorBeltMk3",
+   7916
+  ],
+  [
+   "SorterMk3",
+   1956
+  ],
+  [
+   "ConveyorBeltMk1",
+   1207
+  ],
+  [
+   "SorterMk1",
+   1158
+  ],
+  [
+   "RayReceiver",
+   576
+  ],
+  [
+   "ThermalPowerPlant",
+   536
+  ],
+  [
+   "PlaneSmelter",
+   504
+  ],
+  [
+   "TeslaTower",
+   181
+  ],
+  [
+   "SorterMk2",
+   96
+  ],
+  [
+   "Foundation",
+   69
+  ],
+  [
+   "AutomaticPiler",
+   65
+  ],
+  [
+   "SprayCoater",
+   34
+  ],
+  [
+   "ArcSmelter",
+   26
+  ],
+  [
+   "MiniFusionPowerPlant",
+   26
+  ],
+  [
+   "PileSorter",
+   22
+  ],
+  [
+   "AssemblingMachineMk2",
+   16
+  ],
+  [
+   "AssemblingMachineMk1",
+   14
+  ],
+  [
+   "WindTurbine",
+   11
+  ],
+  [
+   "ArtificialStar",
+   6
+  ],
+  [
+   "InterstellarLogisticsStation",
+   5
+  ],
+  [
+   "TrafficMonitor",
+   3
+  ],
+  [
+   "PlanetaryLogisticsStation",
+   2
+  ],
+  [
+   "DepotMk1",
+   1
+  ],
+  [
+   "LogisticsDistributor",
+   1
+  ],
+  [
+   "AdvancedMiningMachine",
+   1
+  ]
+ ],
+ "samples": [
+  {
+   "file": "仙术_Illegal_仙_无带堆叠锅13824.txt.txt",
+   "envelope": 1,
+   "gameVersion": "0.10.32.25783",
+   "areas": 7,
+   "buildings": 2971,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  },
+  {
+   "file": "仙术_Illegal_分布式_Distributed_虾米_星际熔炉7层仙术矩阵1.0版本_钛合金_产量8.4K_.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 3732,
+   "producers": 168,
+   "lines": 1,
+   "powerKW": 241920,
+   "topLine": "TitaniumAlloy ×168"
+  },
+  {
+   "file": "仙术_Illegal_分布式_Distributed_虾米_星际熔炉7层仙术矩阵1.0版本_钛块.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 2627,
+   "producers": 168,
+   "lines": 1,
+   "powerKW": 241920,
+   "topLine": "TitaniumIngot ×168"
+  },
+  {
+   "file": "仙术_Illegal_分布式_Distributed_虾米_星际熔炉7层仙术矩阵1.0版本_高效金刚石_产量33.6K_.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 2700,
+   "producers": 168,
+   "lines": 1,
+   "powerKW": 241920,
+   "topLine": "DiamondAdvanced ×168"
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_6层小太阳_有带.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 231,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_仙术发电大矿机.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 1,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_极地479太阳能16层.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.8.22.8915",
+   "areas": 6,
+   "buildings": 7665,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_清_清_开局无带堆叠火电51MW.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.14659",
+   "areas": 1,
+   "buildings": 59,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_清_清_无带极地火电_星内自带一级增产_.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.14659",
+   "areas": 8,
+   "buildings": 731,
+   "producers": 14,
+   "lines": 1,
+   "powerKW": 3780,
+   "topLine": "ProliferatorMkI ×14"
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_清_清_极地火电508MV小塔无带堆叠.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.14659",
+   "areas": 4,
+   "buildings": 734,
+   "producers": 42,
+   "lines": 4,
+   "powerKW": 18000,
+   "topLine": "Diamond ×14"
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_耳朵同_有带堆叠蓝图发电_1.-火电_火电_01层.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 8,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  },
+  {
+   "file": "仙术_Illegal_发电_Power_耳朵同_有带堆叠蓝图发电_1.-火电_火电_09层.txt.txt",
+   "envelope": 0,
+   "gameVersion": "0.9.27.15466",
+   "areas": 1,
+   "buildings": 162,
+   "producers": 0,
+   "lines": 0,
+   "powerKW": 0,
+   "topLine": null
+  }
+ ]
+}

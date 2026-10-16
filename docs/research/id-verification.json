@@ -1,0 +1,1002 @@
+{
+ "itemIdMismatches": [],
+ "recipeIdMismatches": [],
+ "missing": [
+  {
+   "kind": "item",
+   "id": 1211,
+   "name": "Dark Fog Lens",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 105,
+   "name": "Engine",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 117,
+   "name": "TrafficMonitor",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 118,
+   "name": "GeothermalPowerStation",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 119,
+   "name": "AdvancedMiningMachine",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 120,
+   "name": "AutomaticPiler",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 125,
+   "name": "GaussTurret",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 126,
+   "name": "LaserTurret",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 127,
+   "name": "ImplosionCannon",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 128,
+   "name": "PlasmaTurret",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 129,
+   "name": "MissileTurret",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 130,
+   "name": "JammerTower",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 131,
+   "name": "SignalTower",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 132,
+   "name": "PlanetaryShieldGenerator",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 133,
+   "name": "CombustibleUnit",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 134,
+   "name": "ExplosiveUnit",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 135,
+   "name": "CrystalExplosiveUnit",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 136,
+   "name": "MagnumAmmoBox",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 137,
+   "name": "TitaniumAmmoBox",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 138,
+   "name": "SuperalloyAmmoBox",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 139,
+   "name": "ShellSet",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 140,
+   "name": "HighExplosiveShellSet",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 141,
+   "name": "CrystalShellSet",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 142,
+   "name": "PlasmaCapsule",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 143,
+   "name": "AntimatterCapsule",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 144,
+   "name": "MissileSet",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 145,
+   "name": "SupersonicMissileSet",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 146,
+   "name": "GravityMissileSet",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 147,
+   "name": "Prototype",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 148,
+   "name": "PrecisionDrone",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 149,
+   "name": "AttackDrone",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 150,
+   "name": "Corvette",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 151,
+   "name": "Destroyer",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 152,
+   "name": "BattlefieldAnalysisBase",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 153,
+   "name": "SelfevolutionLab",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 154,
+   "name": "RecomposingAssembler",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 155,
+   "name": "NegentropySmelter",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 156,
+   "name": "StrangeAnnihilationFuelRod",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 157,
+   "name": "SRPlasmaTurret",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 158,
+   "name": "JammingCapsule",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 159,
+   "name": "SuppressingCapsule",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 160,
+   "name": "PileSorter",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 161,
+   "name": "HoloBeacon",
+   "reason": "not present on the wiki ID page"
+  },
+  {
+   "kind": "recipe",
+   "id": 162,
+   "name": "DarkFogLens",
+   "reason": "not present on the wiki ID page"
+  }
+ ],
+ "checked": {
+  "items": 175,
+  "recipes": 189
+ },
+ "namingVariants": [
+  {
+   "id": 1001,
+   "dataset": "Iron Ore",
+   "wiki": "Iron ore"
+  },
+  {
+   "id": 1002,
+   "dataset": "Copper Ore",
+   "wiki": "Copper ore"
+  },
+  {
+   "id": 1003,
+   "dataset": "Silicon Ore",
+   "wiki": "Silicon ore"
+  },
+  {
+   "id": 1004,
+   "dataset": "Titanium Ore",
+   "wiki": "Titanium ore"
+  },
+  {
+   "id": 1007,
+   "dataset": "Crude Oil",
+   "wiki": "Crude oil"
+  },
+  {
+   "id": 1011,
+   "dataset": "Fire Ice",
+   "wiki": "Fire ice"
+  },
+  {
+   "id": 1012,
+   "dataset": "Kimberlite Ore",
+   "wiki": "Kimberlite ore"
+  },
+  {
+   "id": 1013,
+   "dataset": "Fractal Silicon",
+   "wiki": "Fractal silicon"
+  },
+  {
+   "id": 1014,
+   "dataset": "Grating Crystal",
+   "wiki": "Grating crystal"
+  },
+  {
+   "id": 1015,
+   "dataset": "Stalagmite Crystal",
+   "wiki": "Spiniform stalagmite crystal"
+  },
+  {
+   "id": 1016,
+   "dataset": "Unipolar Magnet",
+   "wiki": "Unipolar magnet"
+  },
+  {
+   "id": 1031,
+   "dataset": "Plant Fuel",
+   "wiki": "Plant fuel"
+  },
+  {
+   "id": 1099,
+   "dataset": "Soil Pile",
+   "wiki": "Soil pile"
+  },
+  {
+   "id": 1101,
+   "dataset": "Iron Ingot",
+   "wiki": "Iron ingot"
+  },
+  {
+   "id": 1104,
+   "dataset": "Copper Ingot",
+   "wiki": "Copper ingot"
+  },
+  {
+   "id": 1105,
+   "dataset": "High-purity Silicon",
+   "wiki": "High-purity silicon"
+  },
+  {
+   "id": 1106,
+   "dataset": "Titanium Ingot",
+   "wiki": "Titanium ingot"
+  },
+  {
+   "id": 1107,
+   "dataset": "Titanium Alloy",
+   "wiki": "Titanium alloy"
+  },
+  {
+   "id": 1108,
+   "dataset": "Stone Brick",
+   "wiki": "Stone brick"
+  },
+  {
+   "id": 1109,
+   "dataset": "Energetic Graphite",
+   "wiki": "Energetic graphite"
+  },
+  {
+   "id": 1113,
+   "dataset": "Crystal Silicon",
+   "wiki": "Crystal silicon"
+  },
+  {
+   "id": 1114,
+   "dataset": "Refined Oil",
+   "wiki": "Refined oil"
+  },
+  {
+   "id": 1116,
+   "dataset": "Sulfuric Acid",
+   "wiki": "Sulfuric acid"
+  },
+  {
+   "id": 1117,
+   "dataset": "Organic Crystal",
+   "wiki": "Organic crystal"
+  },
+  {
+   "id": 1118,
+   "dataset": "Titanium Crystal",
+   "wiki": "Titanium crystal"
+  },
+  {
+   "id": 1119,
+   "dataset": "Titanium Glass",
+   "wiki": "Titanium glass"
+  },
+  {
+   "id": 1124,
+   "dataset": "Carbon Nanotube",
+   "wiki": "Carbon nanotube"
+  },
+  {
+   "id": 1125,
+   "dataset": "Frame Material",
+   "wiki": "Frame material"
+  },
+  {
+   "id": 1126,
+   "dataset": "Casimir Crystal",
+   "wiki": "Casimir crystal"
+  },
+  {
+   "id": 1127,
+   "dataset": "Strange Matter",
+   "wiki": "Strange matter"
+  },
+  {
+   "id": 1128,
+   "dataset": "Combustible Unit",
+   "wiki": "Combustible unit"
+  },
+  {
+   "id": 1129,
+   "dataset": "Explosive Unit",
+   "wiki": "Explosive unit"
+  },
+  {
+   "id": 1130,
+   "dataset": "Crystal Explosive Unit",
+   "wiki": "Crystal explosive unit"
+  },
+  {
+   "id": 1202,
+   "dataset": "Magnetic Coil",
+   "wiki": "Magnetic coil"
+  },
+  {
+   "id": 1203,
+   "dataset": "Electric Motor",
+   "wiki": "Electric motor"
+  },
+  {
+   "id": 1204,
+   "dataset": "Electromagnetic Turbine",
+   "wiki": "Electromagnetic turbine"
+  },
+  {
+   "id": 1205,
+   "dataset": "Super-magnetic Ring",
+   "wiki": "Super-magnetic ring"
+  },
+  {
+   "id": 1206,
+   "dataset": "Particle Container",
+   "wiki": "Particle container"
+  },
+  {
+   "id": 1208,
+   "dataset": "Critical Photon",
+   "wiki": "Critical photon"
+  },
+  {
+   "id": 1209,
+   "dataset": "Graviton Lens",
+   "wiki": "Graviton lens"
+  },
+  {
+   "id": 1210,
+   "dataset": "Space Warper",
+   "wiki": "Space warper"
+  },
+  {
+   "id": 1301,
+   "dataset": "Circuit Board",
+   "wiki": "Circuit board"
+  },
+  {
+   "id": 1302,
+   "dataset": "Microcrystalline Component",
+   "wiki": "Microcrystalline component"
+  },
+  {
+   "id": 1304,
+   "dataset": "Plane Filter",
+   "wiki": "Plane filter"
+  },
+  {
+   "id": 1305,
+   "dataset": "Quantum Chip",
+   "wiki": "Quantum chip"
+  },
+  {
+   "id": 1401,
+   "dataset": "Plasma Exciter",
+   "wiki": "Plasma exciter"
+  },
+  {
+   "id": 1402,
+   "dataset": "Particle Broadband",
+   "wiki": "Particle broadband"
+  },
+  {
+   "id": 1403,
+   "dataset": "Annihilation Constraint Sphere",
+   "wiki": "Annihilation constraint sphere"
+  },
+  {
+   "id": 1404,
+   "dataset": "Photon Combiner",
+   "wiki": "Photon combiner"
+  },
+  {
+   "id": 1406,
+   "dataset": "Reinforced Thruster",
+   "wiki": "Reinforced thruster"
+  },
+  {
+   "id": 1501,
+   "dataset": "Solar Sail",
+   "wiki": "Solar sail"
+  },
+  {
+   "id": 1502,
+   "dataset": "Dyson Sphere Component",
+   "wiki": "Dyson sphere component"
+  },
+  {
+   "id": 1503,
+   "dataset": "Small Carrier Rocket",
+   "wiki": "Small carrier rocket"
+  },
+  {
+   "id": 1601,
+   "dataset": "Magnum Ammo Box",
+   "wiki": "Magnum ammo box"
+  },
+  {
+   "id": 1602,
+   "dataset": "Titanium Ammo Box",
+   "wiki": "Titanium ammo box"
+  },
+  {
+   "id": 1603,
+   "dataset": "Superalloy Ammo Box",
+   "wiki": "Superalloy ammo box"
+  },
+  {
+   "id": 1604,
+   "dataset": "Shell Set",
+   "wiki": "Shell set"
+  },
+  {
+   "id": 1605,
+   "dataset": "High-Explosive Shell Set",
+   "wiki": "High-explosive shell set"
+  },
+  {
+   "id": 1606,
+   "dataset": "Crystal Shell Set",
+   "wiki": "Crystal shell set"
+  },
+  {
+   "id": 1607,
+   "dataset": "Plasma Capsule",
+   "wiki": "Plasma capsule"
+  },
+  {
+   "id": 1608,
+   "dataset": "Antimatter Capsule",
+   "wiki": "Antimatter capsule"
+  },
+  {
+   "id": 1609,
+   "dataset": "Missile Set",
+   "wiki": "Missile set"
+  },
+  {
+   "id": 1610,
+   "dataset": "Supersonic Missile Set",
+   "wiki": "Supersonic missile set"
+  },
+  {
+   "id": 1611,
+   "dataset": "Gravity Missile Set",
+   "wiki": "Gravity missile set"
+  },
+  {
+   "id": 1612,
+   "dataset": "Jamming Capsule",
+   "wiki": "Jamming capsule"
+  },
+  {
+   "id": 1613,
+   "dataset": "Suppressing Capsule",
+   "wiki": "Suppressing capsule"
+  },
+  {
+   "id": 1801,
+   "dataset": "Hydrogen Fuel Rod",
+   "wiki": "Hydrogen fuel rod"
+  },
+  {
+   "id": 1802,
+   "dataset": "Deuteron Fuel Rod",
+   "wiki": "Deuteron fuel rod"
+  },
+  {
+   "id": 1803,
+   "dataset": "Antimatter Fuel Rod",
+   "wiki": "Antimatter fuel rod"
+  },
+  {
+   "id": 1804,
+   "dataset": "Strange Annihilation Fuel Rod",
+   "wiki": "Strange annihilation fuel rod"
+  },
+  {
+   "id": 2001,
+   "dataset": "Conveyor Belt Mk.I",
+   "wiki": "Conveyor belt MK.I"
+  },
+  {
+   "id": 2002,
+   "dataset": "Conveyor Belt Mk.II",
+   "wiki": "Conveyor belt MK.II"
+  },
+  {
+   "id": 2003,
+   "dataset": "Conveyor Belt Mk.III",
+   "wiki": "Conveyor belt MK.III"
+  },
+  {
+   "id": 2011,
+   "dataset": "Sorter Mk.I",
+   "wiki": "Sorter MK.I"
+  },
+  {
+   "id": 2012,
+   "dataset": "Sorter Mk.II",
+   "wiki": "Sorter MK.II"
+  },
+  {
+   "id": 2013,
+   "dataset": "Sorter Mk.III",
+   "wiki": "Sorter MK.III"
+  },
+  {
+   "id": 2014,
+   "dataset": "Pile Sorter",
+   "wiki": "Pile sorter"
+  },
+  {
+   "id": 2030,
+   "dataset": "Traffic Monitor",
+   "wiki": "Traffic monitor"
+  },
+  {
+   "id": 2040,
+   "dataset": "Automatic Piler",
+   "wiki": "Automatic piler"
+  },
+  {
+   "id": 2101,
+   "dataset": "Depot Mk.I",
+   "wiki": "Storage MK.I"
+  },
+  {
+   "id": 2102,
+   "dataset": "Depot Mk.II",
+   "wiki": "Storage MK.II"
+  },
+  {
+   "id": 2103,
+   "dataset": "Planetary Logistics Station",
+   "wiki": "Planetary logistics station"
+  },
+  {
+   "id": 2104,
+   "dataset": "Interstellar Logistics Station",
+   "wiki": "Interstellar logistics station"
+  },
+  {
+   "id": 2105,
+   "dataset": "Orbital Collector",
+   "wiki": "Orbital collector"
+  },
+  {
+   "id": 2106,
+   "dataset": "Storage Tank",
+   "wiki": "Storage tank"
+  },
+  {
+   "id": 2107,
+   "dataset": "Logistics Distributor",
+   "wiki": "Logistics distributor"
+  },
+  {
+   "id": 2201,
+   "dataset": "Tesla Tower",
+   "wiki": "Tesla tower"
+  },
+  {
+   "id": 2202,
+   "dataset": "Wireless Power Tower",
+   "wiki": "Wireless power tower"
+  },
+  {
+   "id": 2203,
+   "dataset": "Wind Turbine",
+   "wiki": "Wind turbine"
+  },
+  {
+   "id": 2204,
+   "dataset": "Thermal Power Plant",
+   "wiki": "Thermal power station"
+  },
+  {
+   "id": 2205,
+   "dataset": "Solar Panel",
+   "wiki": "Solar panel"
+  },
+  {
+   "id": 2207,
+   "dataset": "Accumulator (full)",
+   "wiki": "Accumulator(full)"
+  },
+  {
+   "id": 2208,
+   "dataset": "Ray Receiver",
+   "wiki": "Ray receiver"
+  },
+  {
+   "id": 2209,
+   "dataset": "Energy Exchanger",
+   "wiki": "Energy exchanger"
+  },
+  {
+   "id": 2210,
+   "dataset": "Artificial Star",
+   "wiki": "Artificial star"
+  },
+  {
+   "id": 2211,
+   "dataset": "Mini Fusion Power Plant",
+   "wiki": "Mini fusion power station"
+  },
+  {
+   "id": 2212,
+   "dataset": "Satellite Substation",
+   "wiki": "Satellite substation"
+  },
+  {
+   "id": 2213,
+   "dataset": "Geothermal Power Station",
+   "wiki": "Geothermal power station"
+  },
+  {
+   "id": 2301,
+   "dataset": "Mining Machine",
+   "wiki": "Mining machine"
+  },
+  {
+   "id": 2302,
+   "dataset": "Arc Smelter",
+   "wiki": "Arc smelter"
+  },
+  {
+   "id": 2303,
+   "dataset": "Assembling Machine Mk.I",
+   "wiki": "Assembling machine Mk.I"
+  },
+  {
+   "id": 2304,
+   "dataset": "Assembling Machine Mk.II",
+   "wiki": "Assembling machine Mk.II"
+  },
+  {
+   "id": 2305,
+   "dataset": "Assembling Machine Mk.III",
+   "wiki": "Assembling machine Mk.III"
+  },
+  {
+   "id": 2306,
+   "dataset": "Water Pump",
+   "wiki": "Water pump"
+  },
+  {
+   "id": 2307,
+   "dataset": "Oil Extractor",
+   "wiki": "Oil extractor"
+  },
+  {
+   "id": 2308,
+   "dataset": "Oil Refinery",
+   "wiki": "Oil refinery"
+  },
+  {
+   "id": 2309,
+   "dataset": "Chemical Plant",
+   "wiki": "Chemical plant"
+  },
+  {
+   "id": 2310,
+   "dataset": "Miniature Particle Collider",
+   "wiki": "Miniature particle collider"
+  },
+  {
+   "id": 2311,
+   "dataset": "EM-Rail Ejector",
+   "wiki": "EM-rail ejector"
+  },
+  {
+   "id": 2312,
+   "dataset": "Vertical Launching Silo",
+   "wiki": "Vertical launching silo"
+  },
+  {
+   "id": 2313,
+   "dataset": "Spray Coater",
+   "wiki": "Spray coater"
+  },
+  {
+   "id": 2315,
+   "dataset": "Plane Smelter",
+   "wiki": "Plane smelter"
+  },
+  {
+   "id": 2316,
+   "dataset": "Advanced Mining Machine",
+   "wiki": "Advanced mining machine"
+  },
+  {
+   "id": 2317,
+   "dataset": "Quantum Chemical Plant",
+   "wiki": "Quantum chemical plant"
+  },
+  {
+   "id": 2318,
+   "dataset": "Re-composing Assembler",
+   "wiki": "Re-composing assembler"
+  },
+  {
+   "id": 2319,
+   "dataset": "Negentropy Smelter",
+   "wiki": "Negentropy smelter"
+  },
+  {
+   "id": 2901,
+   "dataset": "Matrix Lab",
+   "wiki": "Matrix lab"
+  },
+  {
+   "id": 2902,
+   "dataset": "Self-evolution Lab",
+   "wiki": "Self-evolution lab"
+  },
+  {
+   "id": 3001,
+   "dataset": "Gauss Turret",
+   "wiki": "Gauss turret"
+  },
+  {
+   "id": 3002,
+   "dataset": "Laser Turret",
+   "wiki": "Laser turret"
+  },
+  {
+   "id": 3003,
+   "dataset": "Implosion Cannon",
+   "wiki": "Implosion cannon"
+  },
+  {
+   "id": 3004,
+   "dataset": "Plasma Turret",
+   "wiki": "Plasma turret"
+  },
+  {
+   "id": 3005,
+   "dataset": "Missile Turret",
+   "wiki": "Missile turret"
+  },
+  {
+   "id": 3006,
+   "dataset": "Jammer Tower",
+   "wiki": "Jammer tower"
+  },
+  {
+   "id": 3007,
+   "dataset": "Signal Tower",
+   "wiki": "Signal tower"
+  },
+  {
+   "id": 3008,
+   "dataset": "Planetary Shield Generator",
+   "wiki": "Planetary shield generator"
+  },
+  {
+   "id": 3009,
+   "dataset": "Battlefield Analysis Base",
+   "wiki": "Battlefield analysis base"
+  },
+  {
+   "id": 3010,
+   "dataset": "SR Plasma Turret",
+   "wiki": "SR plasma turret"
+  },
+  {
+   "id": 5001,
+   "dataset": "Logistics Drone",
+   "wiki": "Logistics drone"
+  },
+  {
+   "id": 5002,
+   "dataset": "Interstellar Logistics Vessel",
+   "wiki": "Logistics vessel"
+  },
+  {
+   "id": 5003,
+   "dataset": "Logistics Bot",
+   "wiki": "Logistics bot"
+  },
+  {
+   "id": 5102,
+   "dataset": "Precision Drone",
+   "wiki": "Precision drone"
+  },
+  {
+   "id": 5103,
+   "dataset": "Attack Drone",
+   "wiki": "Attack drone"
+  },
+  {
+   "id": 5201,
+   "dataset": "Dark Fog Matrix",
+   "wiki": "Dark fog matrix"
+  },
+  {
+   "id": 5202,
+   "dataset": "Silicon-based Neuron",
+   "wiki": "Silicon-based neuron"
+  },
+  {
+   "id": 5203,
+   "dataset": "Matter Recombinator",
+   "wiki": "Matter recombinator"
+  },
+  {
+   "id": 5204,
+   "dataset": "Negentropy Singularity",
+   "wiki": "Negentropy singularity"
+  },
+  {
+   "id": 5205,
+   "dataset": "Core Element",
+   "wiki": "Core element"
+  },
+  {
+   "id": 5206,
+   "dataset": "Energy Shard",
+   "wiki": "Energy shard"
+  },
+  {
+   "id": 6001,
+   "dataset": "Electromagnetic Matrix",
+   "wiki": "Electromagnetic matrix"
+  },
+  {
+   "id": 6002,
+   "dataset": "Energy Matrix",
+   "wiki": "Energy matrix"
+  },
+  {
+   "id": 6003,
+   "dataset": "Structure Matrix",
+   "wiki": "Structure matrix"
+  },
+  {
+   "id": 6004,
+   "dataset": "Information Matrix",
+   "wiki": "Information matrix"
+  },
+  {
+   "id": 6005,
+   "dataset": "Gravity Matrix",
+   "wiki": "Gravity matrix"
+  },
+  {
+   "id": 6006,
+   "dataset": "Universe Matrix",
+   "wiki": "Universe matrix"
+  }
+ ],
+ "danglingItems": []
+}

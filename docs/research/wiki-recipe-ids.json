@@ -1,0 +1,478 @@
+[
+ {
+  "id": 1,
+  "name": "Iron ingot"
+ },
+ {
+  "id": 2,
+  "name": "Magnet"
+ },
+ {
+  "id": 3,
+  "name": "Copper ingot"
+ },
+ {
+  "id": 4,
+  "name": "Stone brick"
+ },
+ {
+  "id": 5,
+  "name": "Gear"
+ },
+ {
+  "id": 6,
+  "name": "Magnetic coil"
+ },
+ {
+  "id": 7,
+  "name": "Wind turbine"
+ },
+ {
+  "id": 8,
+  "name": "Tesla tower"
+ },
+ {
+  "id": 9,
+  "name": "Electromagnetic matrix"
+ },
+ {
+  "id": 10,
+  "name": "Matrix lab"
+ },
+ {
+  "id": 11,
+  "name": "Prism"
+ },
+ {
+  "id": 12,
+  "name": "Plasma exciter"
+ },
+ {
+  "id": 13,
+  "name": "Wireless power tower"
+ },
+ {
+  "id": 14,
+  "name": "Oil extractor"
+ },
+ {
+  "id": 15,
+  "name": "Oil refinery"
+ },
+ {
+  "id": 16,
+  "name": "Plasma refining"
+ },
+ {
+  "id": 17,
+  "name": "Energetic graphite"
+ },
+ {
+  "id": 18,
+  "name": "Energy matrix"
+ },
+ {
+  "id": 19,
+  "name": "Hydrogen fuel rod"
+ },
+ {
+  "id": 20,
+  "name": "Thruster"
+ },
+ {
+  "id": 21,
+  "name": "Reinforced thruster"
+ },
+ {
+  "id": 22,
+  "name": "Chemical plant"
+ },
+ {
+  "id": 23,
+  "name": "Plastic"
+ },
+ {
+  "id": 24,
+  "name": "Sulfuric acid"
+ },
+ {
+  "id": 25,
+  "name": "Organic crystal"
+ },
+ {
+  "id": 26,
+  "name": "Titanium crystal"
+ },
+ {
+  "id": 27,
+  "name": "Structure matrix"
+ },
+ {
+  "id": 28,
+  "name": "Casimir crystal"
+ },
+ {
+  "id": 29,
+  "name": "Casimir crystal (advanced)"
+ },
+ {
+  "id": 30,
+  "name": "Titanium glass"
+ },
+ {
+  "id": 31,
+  "name": "Graphene"
+ },
+ {
+  "id": 32,
+  "name": "Graphene (advanced)"
+ },
+ {
+  "id": 33,
+  "name": "Carbon nanotube"
+ },
+ {
+  "id": 34,
+  "name": "Silicon ore"
+ },
+ {
+  "id": 35,
+  "name": "Carbon nanotube (advanced)"
+ },
+ {
+  "id": 36,
+  "name": "Particle broadband"
+ },
+ {
+  "id": 37,
+  "name": "Crystal silicon"
+ },
+ {
+  "id": 38,
+  "name": "Plane filter"
+ },
+ {
+  "id": 39,
+  "name": "Miniature particle collider"
+ },
+ {
+  "id": 40,
+  "name": "Deuterium"
+ },
+ {
+  "id": 41,
+  "name": "Deuteron fuel rod"
+ },
+ {
+  "id": 42,
+  "name": "Annihilation constraint sphere"
+ },
+ {
+  "id": 43,
+  "name": "Artificial star"
+ },
+ {
+  "id": 44,
+  "name": "Antimatter fuel rod"
+ },
+ {
+  "id": 45,
+  "name": "Assembling machine Mk.I"
+ },
+ {
+  "id": 46,
+  "name": "Assembling machine Mk.II"
+ },
+ {
+  "id": 47,
+  "name": "Assembling machine Mk.III"
+ },
+ {
+  "id": 48,
+  "name": "Mining machine"
+ },
+ {
+  "id": 49,
+  "name": "Water pump"
+ },
+ {
+  "id": 50,
+  "name": "Circuit board"
+ },
+ {
+  "id": 51,
+  "name": "Processor"
+ },
+ {
+  "id": 52,
+  "name": "Quantum chip"
+ },
+ {
+  "id": 53,
+  "name": "Microcrystalline component"
+ },
+ {
+  "id": 54,
+  "name": "Organic crystal (original)"
+ },
+ {
+  "id": 55,
+  "name": "Information matrix"
+ },
+ {
+  "id": 56,
+  "name": "Arc smelter"
+ },
+ {
+  "id": 57,
+  "name": "Glass"
+ },
+ {
+  "id": 58,
+  "name": "X-ray cracking"
+ },
+ {
+  "id": 59,
+  "name": "High-purity silicon"
+ },
+ {
+  "id": 60,
+  "name": "Diamond"
+ },
+ {
+  "id": 61,
+  "name": "Diamond (advanced)"
+ },
+ {
+  "id": 62,
+  "name": "Crystal silicon (advanced)"
+ },
+ {
+  "id": 63,
+  "name": "Steel"
+ },
+ {
+  "id": 64,
+  "name": "Thermal power station"
+ },
+ {
+  "id": 65,
+  "name": "Titanium ingot"
+ },
+ {
+  "id": 66,
+  "name": "Titanium alloy"
+ },
+ {
+  "id": 67,
+  "name": "Solar panel"
+ },
+ {
+  "id": 68,
+  "name": "Photon combiner"
+ },
+ {
+  "id": 69,
+  "name": "Photon combiner (advanced)"
+ },
+ {
+  "id": 70,
+  "name": "Solar sail"
+ },
+ {
+  "id": 71,
+  "name": "EM-Rail Ejector"
+ },
+ {
+  "id": 72,
+  "name": "Ray receiver"
+ },
+ {
+  "id": 73,
+  "name": "Satellite substation"
+ },
+ {
+  "id": 74,
+  "name": "Mass-energy storage"
+ },
+ {
+  "id": 75,
+  "name": "Universe matrix"
+ },
+ {
+  "id": 76,
+  "name": "Accumulator"
+ },
+ {
+  "id": 77,
+  "name": "Energy exchanger"
+ },
+ {
+  "id": 78,
+  "name": "Space warper"
+ },
+ {
+  "id": 79,
+  "name": "Space warper (advanced)"
+ },
+ {
+  "id": 80,
+  "name": "Frame material"
+ },
+ {
+  "id": 81,
+  "name": "Dyson sphere component"
+ },
+ {
+  "id": 82,
+  "name": "Vertical launching silo"
+ },
+ {
+  "id": 83,
+  "name": "Small carrier rocket"
+ },
+ {
+  "id": 84,
+  "name": "Conveyor belt MK.I"
+ },
+ {
+  "id": 85,
+  "name": "Sorter MK.I"
+ },
+ {
+  "id": 86,
+  "name": "Storage MK.I"
+ },
+ {
+  "id": 87,
+  "name": "Splitter"
+ },
+ {
+  "id": 88,
+  "name": "Sorter MK.II"
+ },
+ {
+  "id": 89,
+  "name": "Conveyor belt MK.II"
+ },
+ {
+  "id": 90,
+  "name": "Sorter MK.III"
+ },
+ {
+  "id": 91,
+  "name": "Storage MK.II"
+ },
+ {
+  "id": 92,
+  "name": "Conveyor belt MK.III"
+ },
+ {
+  "id": 93,
+  "name": "Planetary Logistics Station"
+ },
+ {
+  "id": 94,
+  "name": "Logistics drone"
+ },
+ {
+  "id": 95,
+  "name": "Interstellar Logistics Station"
+ },
+ {
+  "id": 96,
+  "name": "Logistics vessel"
+ },
+ {
+  "id": 97,
+  "name": "Electric motor"
+ },
+ {
+  "id": 98,
+  "name": "Electromagnetic turbine"
+ },
+ {
+  "id": 99,
+  "name": "Particle container"
+ },
+ {
+  "id": 100,
+  "name": "Particle container (advanced)"
+ },
+ {
+  "id": 101,
+  "name": "Graviton lens"
+ },
+ {
+  "id": 102,
+  "name": "Gravity matrix"
+ },
+ {
+  "id": 103,
+  "name": "Super-magnetic ring"
+ },
+ {
+  "id": 104,
+  "name": "Strange matter"
+ },
+ {
+  "id": 106,
+  "name": "Proliferator Mk.I"
+ },
+ {
+  "id": 107,
+  "name": "Proliferator Mk.II"
+ },
+ {
+  "id": 108,
+  "name": "Proliferator Mk.III"
+ },
+ {
+  "id": 109,
+  "name": "Spray coater"
+ },
+ {
+  "id": 110,
+  "name": "Fractionator"
+ },
+ {
+  "id": 111,
+  "name": "Orbital collector"
+ },
+ {
+  "id": 112,
+  "name": "Foundation"
+ },
+ {
+  "id": 113,
+  "name": "Mini fusion power station"
+ },
+ {
+  "id": 114,
+  "name": "Storage tank"
+ },
+ {
+  "id": 115,
+  "name": "Deuterium fractionation"
+ },
+ {
+  "id": 116,
+  "name": "Plane smelter"
+ },
+ {
+  "id": 121,
+  "name": "Reforming refine"
+ },
+ {
+  "id": 122,
+  "name": "Logistics distributor"
+ },
+ {
+  "id": 123,
+  "name": "Logistics bot"
+ },
+ {
+  "id": 124,
+  "name": "Quantum chemical plant"
+ }
+]

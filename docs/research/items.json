@@ -1,0 +1,1764 @@
+{
+ "generatedAt": "2026-10-14T23:18:05Z",
+ "source": [
+  "https://dsp-wiki.com/api.php?action=query&prop=revisions&rvslots=main&rvprop=content&format=json&formatversion=2&titles=Module%3AGameData%2Fprotosets.json",
+  "https://dsp-wiki.com/api.php?action=parse&page=Modding:Items%20IDs&prop=wikitext&format=json&formatversion=2",
+  "https://dsp-wiki.com/api.php?action=query&prop=revisions&rvslots=main&rvprop=content&format=json&formatversion=2&titles=<Item>/ItemInfo",
+  "https://raw.githubusercontent.com/Wesmania/dspbp/HEAD/src/data/enums.rs",
+  "https://raw.githubusercontent.com/Wesmania/dspbp/HEAD/data/en/items.txt",
+  "https://raw.githubusercontent.com/Wesmania/dspbp/HEAD/data/cn/items.txt",
+  "https://raw.githubusercontent.com/antian369/dsp-calc/HEAD/data/Vanilla.json",
+  "https://raw.githubusercontent.com/cabmoomoo/dsp-calc/HEAD/data/data.json"
+ ],
+ "items": [
+  {
+   "id": 1000,
+   "key": "Water",
+   "name": "Water",
+   "nameZh": "水",
+   "category": "raw",
+   "stackSize": 20,
+   "isRaw": true,
+   "isFluid": true
+  },
+  {
+   "id": 1001,
+   "key": "IronOre",
+   "name": "Iron Ore",
+   "nameZh": "铁矿",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1002,
+   "key": "CopperOre",
+   "name": "Copper Ore",
+   "nameZh": "铜矿",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1003,
+   "key": "SiliconOre",
+   "name": "Silicon Ore",
+   "nameZh": "硅石",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1004,
+   "key": "TitaniumOre",
+   "name": "Titanium Ore",
+   "nameZh": "钛石",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1005,
+   "key": "Stone",
+   "name": "Stone",
+   "nameZh": "石矿",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1006,
+   "key": "Coal",
+   "name": "Coal",
+   "nameZh": "煤矿",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1007,
+   "key": "CrudeOil",
+   "name": "Crude Oil",
+   "nameZh": "原油",
+   "category": "raw",
+   "stackSize": 20,
+   "isRaw": true,
+   "isFluid": true
+  },
+  {
+   "id": 1011,
+   "key": "FireIce",
+   "name": "Fire Ice",
+   "nameZh": "可燃冰",
+   "category": "raw",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1012,
+   "key": "KimberliteOre",
+   "name": "Kimberlite Ore",
+   "nameZh": "金伯利矿石",
+   "category": "raw",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1013,
+   "key": "FractalSilicon",
+   "name": "Fractal Silicon",
+   "nameZh": "分形硅石",
+   "category": "raw",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1014,
+   "key": "GratingCrystal",
+   "name": "Grating Crystal",
+   "nameZh": "光栅石",
+   "category": "raw",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1015,
+   "key": "StalagmiteCrystal",
+   "name": "Stalagmite Crystal",
+   "nameZh": "刺笋结晶",
+   "category": "raw",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1016,
+   "key": "UnipolarMagnet",
+   "name": "Unipolar Magnet",
+   "nameZh": "单极磁石",
+   "category": "raw",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1030,
+   "key": "Log",
+   "name": "Log",
+   "nameZh": "木材",
+   "category": "raw",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1031,
+   "key": "PlantFuel",
+   "name": "Plant Fuel",
+   "nameZh": "植物燃料",
+   "category": "raw",
+   "stackSize": 500,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1099,
+   "key": "SoilPile",
+   "name": "Soil Pile",
+   "nameZh": "沙土",
+   "category": "raw",
+   "stackSize": 1000000,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1101,
+   "key": "IronIngot",
+   "name": "Iron Ingot",
+   "nameZh": "铁块",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1102,
+   "key": "Magnet",
+   "name": "Magnet",
+   "nameZh": "磁铁",
+   "category": "intermediate",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1103,
+   "key": "Steel",
+   "name": "Steel",
+   "nameZh": "钢材",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1104,
+   "key": "CopperIngot",
+   "name": "Copper Ingot",
+   "nameZh": "铜块",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1105,
+   "key": "HighpuritySilicon",
+   "name": "High-purity Silicon",
+   "nameZh": "高纯硅块",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1106,
+   "key": "TitaniumIngot",
+   "name": "Titanium Ingot",
+   "nameZh": "钛块",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1107,
+   "key": "TitaniumAlloy",
+   "name": "Titanium Alloy",
+   "nameZh": "钛合金",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1108,
+   "key": "StoneBrick",
+   "name": "Stone Brick",
+   "nameZh": "石材",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1109,
+   "key": "EnergeticGraphite",
+   "name": "Energetic Graphite",
+   "nameZh": "高能石墨",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1110,
+   "key": "Glass",
+   "name": "Glass",
+   "nameZh": "玻璃",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1111,
+   "key": "Prism",
+   "name": "Prism",
+   "nameZh": "棱镜",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1112,
+   "key": "Diamond",
+   "name": "Diamond",
+   "nameZh": "金刚石",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1113,
+   "key": "CrystalSilicon",
+   "name": "Crystal Silicon",
+   "nameZh": "晶格硅",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1114,
+   "key": "RefinedOil",
+   "name": "Refined Oil",
+   "nameZh": "精炼油",
+   "category": "intermediate",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": true
+  },
+  {
+   "id": 1115,
+   "key": "Plastic",
+   "name": "Plastic",
+   "nameZh": "塑料",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1116,
+   "key": "SulfuricAcid",
+   "name": "Sulfuric Acid",
+   "nameZh": "硫酸",
+   "category": "intermediate",
+   "stackSize": 20,
+   "isRaw": true,
+   "isFluid": true
+  },
+  {
+   "id": 1117,
+   "key": "OrganicCrystal",
+   "name": "Organic Crystal",
+   "nameZh": "有机晶体",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1118,
+   "key": "TitaniumCrystal",
+   "name": "Titanium Crystal",
+   "nameZh": "钛晶石",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1119,
+   "key": "TitaniumGlass",
+   "name": "Titanium Glass",
+   "nameZh": "钛化玻璃",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1120,
+   "key": "Hydrogen",
+   "name": "Hydrogen",
+   "nameZh": "氢",
+   "category": "intermediate",
+   "stackSize": 20,
+   "isRaw": true,
+   "isFluid": true
+  },
+  {
+   "id": 1121,
+   "key": "Deuterium",
+   "name": "Deuterium",
+   "nameZh": "重氢",
+   "category": "intermediate",
+   "stackSize": 20,
+   "isRaw": true,
+   "isFluid": true
+  },
+  {
+   "id": 1122,
+   "key": "Antimatter",
+   "name": "Antimatter",
+   "nameZh": "反物质",
+   "category": "intermediate",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1123,
+   "key": "Graphene",
+   "name": "Graphene",
+   "nameZh": "石墨烯",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1124,
+   "key": "CarbonNanotube",
+   "name": "Carbon Nanotube",
+   "nameZh": "碳纳米管",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1125,
+   "key": "FrameMaterial",
+   "name": "Frame Material",
+   "nameZh": "框架材料",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1126,
+   "key": "CasimirCrystal",
+   "name": "Casimir Crystal",
+   "nameZh": "卡西米尔晶体",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1127,
+   "key": "StrangeMatter",
+   "name": "Strange Matter",
+   "nameZh": "奇异物质",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1128,
+   "key": "CombustibleUnit",
+   "name": "Combustible Unit",
+   "nameZh": "燃烧单元",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1129,
+   "key": "ExplosiveUnit",
+   "name": "Explosive Unit",
+   "nameZh": "爆破单元",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1130,
+   "key": "CrystalExplosiveUnit",
+   "name": "Crystal Explosive Unit",
+   "nameZh": "晶石爆破单元",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1131,
+   "key": "Foundation",
+   "name": "Foundation",
+   "nameZh": "地基",
+   "category": "building",
+   "stackSize": 1000,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1141,
+   "key": "Proliferator1",
+   "name": "Proliferator Mk.I",
+   "nameZh": "增产剂 Mk.I",
+   "category": "proliferator",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1142,
+   "key": "Proliferator2",
+   "name": "Proliferator Mk.II",
+   "nameZh": "增产剂 Mk.II",
+   "category": "proliferator",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1143,
+   "key": "Proliferator3",
+   "name": "Proliferator Mk.III",
+   "nameZh": "增产剂 Mk.III",
+   "category": "proliferator",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1201,
+   "key": "Gear",
+   "name": "Gear",
+   "nameZh": "齿轮",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1202,
+   "key": "MagneticCoil",
+   "name": "Magnetic Coil",
+   "nameZh": "磁线圈",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1203,
+   "key": "ElectricMotor",
+   "name": "Electric Motor",
+   "nameZh": "电动机",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1204,
+   "key": "ElectromagneticTurbine",
+   "name": "Electromagnetic Turbine",
+   "nameZh": "电磁涡轮",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1205,
+   "key": "SupermagneticRing",
+   "name": "Super-magnetic Ring",
+   "nameZh": "超级磁场环",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1206,
+   "key": "ParticleContainer",
+   "name": "Particle Container",
+   "nameZh": "粒子容器",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1208,
+   "key": "CriticalPhoton",
+   "name": "Critical Photon",
+   "nameZh": "临界光子",
+   "category": "intermediate",
+   "stackSize": 100,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 1209,
+   "key": "GravitonLens",
+   "name": "Graviton Lens",
+   "nameZh": "引力透镜",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1210,
+   "key": "SpaceWarper",
+   "name": "Space Warper",
+   "nameZh": "空间翘曲器",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1211,
+   "key": "DarkFogLens",
+   "name": "Dark Fog Lens",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1301,
+   "key": "CircuitBoard",
+   "name": "Circuit Board",
+   "nameZh": "电路板",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1302,
+   "key": "MicrocrystallineComponent",
+   "name": "Microcrystalline Component",
+   "nameZh": "微晶元件",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1303,
+   "key": "Processor",
+   "name": "Processor",
+   "nameZh": "处理器",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1304,
+   "key": "PlaneFilter",
+   "name": "Plane Filter",
+   "nameZh": "位面过滤器",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1305,
+   "key": "QuantumChip",
+   "name": "Quantum Chip",
+   "nameZh": "量子芯片",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1401,
+   "key": "PlasmaExciter",
+   "name": "Plasma Exciter",
+   "nameZh": "电浆激发器",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1402,
+   "key": "ParticleBroadband",
+   "name": "Particle Broadband",
+   "nameZh": "粒子宽带",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1403,
+   "key": "AnnihilationConstraintSphere",
+   "name": "Annihilation Constraint Sphere",
+   "nameZh": "湮灭约束球",
+   "category": "component",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1404,
+   "key": "PhotonCombiner",
+   "name": "Photon Combiner",
+   "nameZh": "光子合并器",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1405,
+   "key": "Thruster",
+   "name": "Thruster",
+   "nameZh": "推进器",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1406,
+   "key": "ReinforcedThruster",
+   "name": "Reinforced Thruster",
+   "nameZh": "加力推进器",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1407,
+   "key": "Engine",
+   "name": "Engine",
+   "nameZh": "动力引擎",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1501,
+   "key": "SolarSail",
+   "name": "Solar Sail",
+   "nameZh": "太阳帆",
+   "category": "component",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1502,
+   "key": "DysonSphereComponent",
+   "name": "Dyson Sphere Component",
+   "nameZh": "戴森球组件",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1503,
+   "key": "SmallCarrierRocket",
+   "name": "Small Carrier Rocket",
+   "nameZh": "小型运载火箭",
+   "category": "component",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1601,
+   "key": "MagnumAmmoBox",
+   "name": "Magnum Ammo Box",
+   "nameZh": "机枪弹箱",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1602,
+   "key": "TitaniumAmmoBox",
+   "name": "Titanium Ammo Box",
+   "nameZh": "钛化弹箱",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1603,
+   "key": "SuperalloyAmmoBox",
+   "name": "Superalloy Ammo Box",
+   "nameZh": "超合金弹箱",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1604,
+   "key": "ShellSet",
+   "name": "Shell Set",
+   "nameZh": "炮弹组",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1605,
+   "key": "HighExplosiveShellSet",
+   "name": "High-Explosive Shell Set",
+   "nameZh": "高爆炮弹组",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1606,
+   "key": "CrystalShellSet",
+   "name": "Crystal Shell Set",
+   "nameZh": "晶石炮弹组",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1607,
+   "key": "PlasmaCapsule",
+   "name": "Plasma Capsule",
+   "nameZh": "等离子胶囊",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1608,
+   "key": "AntimatterCapsule",
+   "name": "Antimatter Capsule",
+   "nameZh": "反物质胶囊",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1609,
+   "key": "MissileSet",
+   "name": "Missile Set",
+   "nameZh": "导弹组",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1610,
+   "key": "SupersonicMissileSet",
+   "name": "Supersonic Missile Set",
+   "nameZh": "超音速导弹组",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1611,
+   "key": "GravityMissileSet",
+   "name": "Gravity Missile Set",
+   "nameZh": "引力导弹组",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1612,
+   "key": "JammingCapsule",
+   "name": "Jamming Capsule",
+   "nameZh": "干扰胶囊",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1613,
+   "key": "SuppressingCapsule",
+   "name": "Suppressing Capsule",
+   "nameZh": "压制胶囊",
+   "category": "ammo",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1801,
+   "key": "HydrogenFuelRod",
+   "name": "Hydrogen Fuel Rod",
+   "nameZh": "液氢燃料棒",
+   "category": "fuel",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1802,
+   "key": "DeuteronFuelRod",
+   "name": "Deuteron Fuel Rod",
+   "nameZh": "氘核燃料棒",
+   "category": "fuel",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1803,
+   "key": "AntimatterFuelRod",
+   "name": "Antimatter Fuel Rod",
+   "nameZh": "反物质燃料棒",
+   "category": "fuel",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 1804,
+   "key": "StrangeAnnihilationFuelRod",
+   "name": "Strange Annihilation Fuel Rod",
+   "nameZh": "奇异湮灭燃料棒",
+   "category": "fuel",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2001,
+   "key": "ConveyorBeltMk1",
+   "name": "Conveyor Belt Mk.I",
+   "nameZh": "传送带",
+   "category": "building",
+   "stackSize": 300,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2002,
+   "key": "ConveyorBeltMk2",
+   "name": "Conveyor Belt Mk.II",
+   "nameZh": "高速传送带",
+   "category": "building",
+   "stackSize": 300,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2003,
+   "key": "ConveyorBeltMk3",
+   "name": "Conveyor Belt Mk.III",
+   "nameZh": "极速传送带",
+   "category": "building",
+   "stackSize": 300,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2011,
+   "key": "SorterMk1",
+   "name": "Sorter Mk.I",
+   "nameZh": "分拣器",
+   "category": "building",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2012,
+   "key": "SorterMk2",
+   "name": "Sorter Mk.II",
+   "nameZh": "高速分拣器",
+   "category": "building",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2013,
+   "key": "SorterMk3",
+   "name": "Sorter Mk.III",
+   "nameZh": "极速分拣器",
+   "category": "building",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2014,
+   "key": "PileSorter",
+   "name": "Pile Sorter",
+   "nameZh": "集装分拣器",
+   "category": "building",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2020,
+   "key": "Splitter",
+   "name": "Splitter",
+   "nameZh": "四向分流器",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2030,
+   "key": "TrafficMonitor",
+   "name": "Traffic Monitor",
+   "nameZh": "流速监测器",
+   "category": "building",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2040,
+   "key": "AutomaticPiler",
+   "name": "Automatic Piler",
+   "nameZh": "自动集装机",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2101,
+   "key": "DepotMk1",
+   "name": "Depot Mk.I",
+   "nameZh": "小型储物仓",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2102,
+   "key": "DepotMk2",
+   "name": "Depot Mk.II",
+   "nameZh": "大型储物仓",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2103,
+   "key": "PlanetaryLogisticsStation",
+   "name": "Planetary Logistics Station",
+   "nameZh": "行星内物流运输站",
+   "category": "building",
+   "stackSize": 10,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2104,
+   "key": "InterstellarLogisticsStation",
+   "name": "Interstellar Logistics Station",
+   "nameZh": "星际物流运输站",
+   "category": "building",
+   "stackSize": 10,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2105,
+   "key": "OrbitalCollector",
+   "name": "Orbital Collector",
+   "nameZh": "轨道采集器",
+   "category": "building",
+   "stackSize": 10,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2106,
+   "key": "StorageTank",
+   "name": "Storage Tank",
+   "nameZh": "储液罐",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2107,
+   "key": "LogisticsDistributor",
+   "name": "Logistics Distributor",
+   "nameZh": "物流配送器",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2201,
+   "key": "TeslaTower",
+   "name": "Tesla Tower",
+   "nameZh": "电力感应塔",
+   "category": "building",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2202,
+   "key": "WirelessPowerTower",
+   "name": "Wireless Power Tower",
+   "nameZh": "无线输电塔",
+   "category": "building",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2203,
+   "key": "WindTurbine",
+   "name": "Wind Turbine",
+   "nameZh": "风力涡轮机",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2204,
+   "key": "ThermalPowerPlant",
+   "name": "Thermal Power Plant",
+   "nameZh": "火力发电厂",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2205,
+   "key": "SolarPanel",
+   "name": "Solar Panel",
+   "nameZh": "太阳能板",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2206,
+   "key": "Accumulator",
+   "name": "Accumulator",
+   "nameZh": "蓄电器",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2207,
+   "key": "AccumulatorFull",
+   "name": "Accumulator (full)",
+   "nameZh": "蓄电器（满）",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 2208,
+   "key": "RayReceiver",
+   "name": "Ray Receiver",
+   "nameZh": "射线接收站",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2209,
+   "key": "EnergyExchanger",
+   "name": "Energy Exchanger",
+   "nameZh": "能量枢纽",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2210,
+   "key": "ArtificialStar",
+   "name": "Artificial Star",
+   "nameZh": "人造恒星",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2211,
+   "key": "MiniFusionPowerPlant",
+   "name": "Mini Fusion Power Plant",
+   "nameZh": "微型聚变发电站",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2212,
+   "key": "SatelliteSubstation",
+   "name": "Satellite Substation",
+   "nameZh": "卫星配电站",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2213,
+   "key": "GeothermalPowerStation",
+   "name": "Geothermal Power Station",
+   "nameZh": "地热发电站",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2301,
+   "key": "MiningMachine",
+   "name": "Mining Machine",
+   "nameZh": "采矿机",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2302,
+   "key": "ArcSmelter",
+   "name": "Arc Smelter",
+   "nameZh": "电弧熔炉",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2303,
+   "key": "AssemblingMachineMk1",
+   "name": "Assembling Machine Mk.I",
+   "nameZh": "制造台 Mk.I",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2304,
+   "key": "AssemblingMachineMk2",
+   "name": "Assembling Machine Mk.II",
+   "nameZh": "制造台 Mk.II",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2305,
+   "key": "AssemblingMachineMk3",
+   "name": "Assembling Machine Mk.III",
+   "nameZh": "制造台 Mk.III",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2306,
+   "key": "WaterPump",
+   "name": "Water Pump",
+   "nameZh": "抽水站",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2307,
+   "key": "OilExtractor",
+   "name": "Oil Extractor",
+   "nameZh": "原油萃取站",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2308,
+   "key": "OilRefinery",
+   "name": "Oil Refinery",
+   "nameZh": "原油精炼厂",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2309,
+   "key": "ChemicalPlant",
+   "name": "Chemical Plant",
+   "nameZh": "化工厂",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2310,
+   "key": "MiniatureParticleCollider",
+   "name": "Miniature Particle Collider",
+   "nameZh": "微型粒子对撞机",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2311,
+   "key": "EMRailEjector",
+   "name": "EM-Rail Ejector",
+   "nameZh": "电磁轨道弹射器",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2312,
+   "key": "VerticalLaunchingSilo",
+   "name": "Vertical Launching Silo",
+   "nameZh": "垂直发射井",
+   "category": "building",
+   "stackSize": 10,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2313,
+   "key": "SprayCoater",
+   "name": "Spray Coater",
+   "nameZh": "喷涂机",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2314,
+   "key": "Fractionator",
+   "name": "Fractionator",
+   "nameZh": "分馏塔",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2315,
+   "key": "PlaneSmelter",
+   "name": "Plane Smelter",
+   "nameZh": "位面熔炉",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2316,
+   "key": "AdvancedMiningMachine",
+   "name": "Advanced Mining Machine",
+   "nameZh": "大型采矿机",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2317,
+   "key": "QuantumChemicalPlant",
+   "name": "Quantum Chemical Plant",
+   "nameZh": "量子化工厂",
+   "category": "building",
+   "stackSize": 30,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2318,
+   "key": "RecomposingAssembler",
+   "name": "Re-composing Assembler",
+   "nameZh": "重组式制造台",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2319,
+   "key": "NegentropySmelter",
+   "name": "Negentropy Smelter",
+   "nameZh": "负熵熔炉",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2401,
+   "key": "HoloBeacon",
+   "name": "Holo Beacon",
+   "nameZh": "全息信标",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2901,
+   "key": "MatrixLab",
+   "name": "Matrix Lab",
+   "nameZh": "矩阵研究站",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 2902,
+   "key": "SelfevolutionLab",
+   "name": "Self-evolution Lab",
+   "nameZh": "自演化研究站",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3001,
+   "key": "GaussTurret",
+   "name": "Gauss Turret",
+   "nameZh": "高斯机枪塔",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3002,
+   "key": "LaserTurret",
+   "name": "Laser Turret",
+   "nameZh": "高频激光塔",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3003,
+   "key": "ImplosionCannon",
+   "name": "Implosion Cannon",
+   "nameZh": "聚爆加农炮",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3004,
+   "key": "PlasmaTurret",
+   "name": "Plasma Turret",
+   "nameZh": "磁化电浆炮",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3005,
+   "key": "MissileTurret",
+   "name": "Missile Turret",
+   "nameZh": "导弹防御塔",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3006,
+   "key": "JammerTower",
+   "name": "Jammer Tower",
+   "nameZh": "干扰塔",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3007,
+   "key": "SignalTower",
+   "name": "Signal Tower",
+   "nameZh": "信号塔",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3008,
+   "key": "PlanetaryShieldGenerator",
+   "name": "Planetary Shield Generator",
+   "nameZh": "行星护盾发生器",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3009,
+   "key": "BattlefieldAnalysisBase",
+   "name": "Battlefield Analysis Base",
+   "nameZh": "战场分析基站",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 3010,
+   "key": "SRPlasmaTurret",
+   "name": "SR Plasma Turret",
+   "nameZh": "近程电浆塔",
+   "category": "building",
+   "stackSize": 20,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5001,
+   "key": "LogisticsDrone",
+   "name": "Logistics Drone",
+   "nameZh": "物流运输机",
+   "category": "building",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5002,
+   "key": "InterstellarLogisticsVessel",
+   "name": "Interstellar Logistics Vessel",
+   "nameZh": "星际物流运输船",
+   "category": "building",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5003,
+   "key": "LogisticsBot",
+   "name": "Logistics Bot",
+   "nameZh": "配送运输机",
+   "category": "building",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5101,
+   "key": "Prototype",
+   "name": "Prototype",
+   "nameZh": "原型机",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5102,
+   "key": "PrecisionDrone",
+   "name": "Precision Drone",
+   "nameZh": "精准无人机",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5103,
+   "key": "AttackDrone",
+   "name": "Attack Drone",
+   "nameZh": "攻击无人机",
+   "category": "component",
+   "stackSize": 100,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5111,
+   "key": "Corvette",
+   "name": "Corvette",
+   "nameZh": "护卫舰",
+   "category": "component",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5112,
+   "key": "Destroyer",
+   "name": "Destroyer",
+   "nameZh": "驱逐舰",
+   "category": "component",
+   "stackSize": 50,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 5201,
+   "key": "DarkFogMatrix",
+   "name": "Dark Fog Matrix",
+   "nameZh": "黑雾矩阵",
+   "category": "raw",
+   "stackSize": 1000,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 5202,
+   "key": "SiliconbasedNeuron",
+   "name": "Silicon-based Neuron",
+   "nameZh": "硅基神经元",
+   "category": "raw",
+   "stackSize": 500,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 5203,
+   "key": "MatterRecombinator",
+   "name": "Matter Recombinator",
+   "nameZh": "物质重组器",
+   "category": "raw",
+   "stackSize": 500,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 5204,
+   "key": "NegentropySingularity",
+   "name": "Negentropy Singularity",
+   "nameZh": "负熵奇点",
+   "category": "raw",
+   "stackSize": 500,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 5205,
+   "key": "CoreElement",
+   "name": "Core Element",
+   "nameZh": "核心素",
+   "category": "raw",
+   "stackSize": 500,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 5206,
+   "key": "EnergyShard",
+   "name": "Energy Shard",
+   "nameZh": "能量碎片",
+   "category": "raw",
+   "stackSize": 2000,
+   "isRaw": true,
+   "isFluid": false
+  },
+  {
+   "id": 6001,
+   "key": "ElectromagneticMatrix",
+   "name": "Electromagnetic Matrix",
+   "nameZh": "电磁矩阵",
+   "category": "matrix",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 6002,
+   "key": "EnergyMatrix",
+   "name": "Energy Matrix",
+   "nameZh": "能量矩阵",
+   "category": "matrix",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 6003,
+   "key": "StructureMatrix",
+   "name": "Structure Matrix",
+   "nameZh": "结构矩阵",
+   "category": "matrix",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 6004,
+   "key": "InformationMatrix",
+   "name": "Information Matrix",
+   "nameZh": "信息矩阵",
+   "category": "matrix",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 6005,
+   "key": "GravityMatrix",
+   "name": "Gravity Matrix",
+   "nameZh": "引力矩阵",
+   "category": "matrix",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  },
+  {
+   "id": 6006,
+   "key": "UniverseMatrix",
+   "name": "Universe Matrix",
+   "nameZh": "宇宙矩阵",
+   "category": "matrix",
+   "stackSize": 200,
+   "isRaw": false,
+   "isFluid": false
+  }
+ ]
+}

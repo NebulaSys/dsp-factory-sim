@@ -1,0 +1,171 @@
+{
+ "generatedAt": "2026-10-14T19:24:00-04:00",
+ "gameVersion": "0.10.35.29104",
+ "source": [
+  "https://dsp-wiki.com/index.php?title=Mining_Machine&action=raw",
+  "https://dsp-wiki.com/index.php?title=Vein_Utilization_(Upgrade)&action=raw",
+  "https://dsp-wiki.com/api.php?action=parse&page=Mining Machine/ItemInfo",
+  "https://dsp-wiki.com/api.php?action=parse&page=Advanced Mining Machine/ItemInfo",
+  "https://dsp-wiki.com/index.php?title=Water_Pump&action=raw",
+  "https://dsp-wiki.com/index.php?title=Oil_Extractor&action=raw",
+  "https://dsp-wiki.com/index.php?title=Orbital_Collector&action=raw",
+  "https://dsp-wiki.com/index.php?title=Conveyor_Belts&action=raw",
+  "https://dsp-wiki.com/index.php?title=Sorters&action=raw",
+  "https://wiki.biligame.com/dsp/采矿机 (30/min per vein, official text)",
+  "game prefabs v0.10.35.29104 (MinerDesc.periodf, BeltDesc.speed, InserterDesc.sttf)"
+ ],
+ "mining": {
+  "machineSpeedMultiplier": 1.0,
+  "baseVeinSpeedPerMinPerVein": 30.0,
+  "baseVeinSpeedFormula": "output_items_per_min = 30 * (number of covered veins) * miningSpeedMultiplier",
+  "advancedMiningMachineSpeedPerMinPerVein": 60.0,
+  "miningSpeedMultiplierFormula": "miningSpeedMultiplier = 1 + 0.10 * VeinUtilizationLevel (applies to Mining Machine, Advanced Mining Machine, Water Pump, Oil Extractor and Orbital Collector gathering speed)",
+  "veinConsumptionFormula": "vein units consumed per item = 0.94 ^ VeinUtilizationLevel; total ore obtainable from a vein = initialAmount / 0.94^level",
+  "prefabPeriodFactor": {
+   "MiningMachine": 2.0,
+   "AdvancedMiningMachine": 1.0,
+   "WaterPump": 1.2,
+   "OilExtractor": 1.0,
+   "note": "rate = 60 / periodf items per minute per vein (MinerDesc.periodf); reproduces 30 / 60 / 50 / oilfield-rate exactly"
+  },
+  "veinAmountDefault": null,
+  "oilExtractorRate": "crude oil seep base production rate (displayed in-game, per second, minimum 0.1/s = 6/min) * miningSpeedMultiplier; seep rate decays with a 12 h half-life while extracting",
+  "waterPumpRate": "50 items/min * miningSpeedMultiplier (also pumps Sulfuric Acid from acid oceans)",
+  "orbitalCollectorRates": {
+   "formula": "raw rate = gas giant base yield * 8 * miningSpeedMultiplier",
+   "consumption": "the 30 MW upkeep is paid from the collected Hydrogen/Deuterium/Fire Ice (9 MJ per H2/D2, 4.8 MJ per Fire Ice), so about 200 units/min are consumed; net output = raw - upkeep"
+  },
+  "notes": "Vein Utilization adds +10% mining speed additively per level and reduces vein consumption by 6% compounding per level, so total available ore rises as 1/0.94^n while the depletion rate peaks at level 6 and falls below the level-0 rate at level 17. The rate is the SAME for every material vein type (both the EN and the zh-CN wiki state this explicitly). CONFLICT: VeinProtoSet.MiningTime differs per ore (stone 45, coal 30, iron/copper/silicon/titanium/crude 60, kimberlite/fractal/grating/stalagmite 90, unipolar magnet 120); if the machine used it the rates would differ, so MiningTime is judged to drive hand-mining / mecha mining rather than machine throughput - chosen: flat 30/min/vein. Miners covering more than 1800/min auto-stack their output (2 stacks at >1800/min, 3 at >3600/min, 4 at >5400/min)."
+ },
+ "belts": [
+  {
+   "key": "ConveyorBeltMk1",
+   "item": "ConveyorBeltMk1",
+   "id": 2001,
+   "name": "Conveyor Belt Mk.I",
+   "nameZh": "传送带",
+   "speedPerSec": 6.0,
+   "speedPerMin": 360.0,
+   "beltSpeedMultiplier": 1,
+   "itemsPerSlotStack": null,
+   "stackingWithTech": null,
+   "note": "game: BeltDesc.speed=1 with a 6 items/s base; one item per tile plus one per tile joint; Automatic Piler can stack up to 4"
+  },
+  {
+   "key": "ConveyorBeltMk2",
+   "item": "ConveyorBeltMk2",
+   "id": 2002,
+   "name": "Conveyor Belt Mk.II",
+   "nameZh": "高速传送带",
+   "speedPerSec": 12.0,
+   "speedPerMin": 720.0,
+   "beltSpeedMultiplier": 2,
+   "itemsPerSlotStack": null,
+   "stackingWithTech": null,
+   "note": ""
+  },
+  {
+   "key": "ConveyorBeltMk3",
+   "item": "ConveyorBeltMk3",
+   "id": 2003,
+   "name": "Conveyor Belt Mk.III",
+   "nameZh": "极速传送带",
+   "speedPerSec": 30.0,
+   "speedPerMin": 1800.0,
+   "beltSpeedMultiplier": 5,
+   "itemsPerSlotStack": null,
+   "stackingWithTech": null,
+   "note": "6000/min when fully piled with 4-stacks (Automatic Piler)"
+  }
+ ],
+ "sorters": [
+  {
+   "key": "SorterMk1",
+   "item": "SorterMk1",
+   "id": 2011,
+   "name": "Sorter Mk.I",
+   "nameZh": "分拣器",
+   "speedPerSec": 1.5,
+   "speedPerMin": 90.0,
+   "powerConsumptionKW": 18.0,
+   "powerIdleKW": 9.0,
+   "canFilter": true,
+   "canStack": false,
+   "sttfSecondsPerTripPerGrid": 0.3333333,
+   "speedByDistance": {
+    "1": 1.5,
+    "2": 0.75,
+    "3": 0.5
+   },
+   "note": "sttf=1/3 s per trip per grid; rate = 0.5/sttf; wiki lists filtering on every sorter Mk (the Sorters page says Mk.I/Mk.II/Mk.III can all take filters)"
+  },
+  {
+   "key": "SorterMk2",
+   "item": "SorterMk2",
+   "id": 2012,
+   "name": "Sorter Mk.II",
+   "nameZh": "高速分拣器",
+   "speedPerSec": 3.0,
+   "speedPerMin": 180.0,
+   "powerConsumptionKW": 36.0,
+   "powerIdleKW": 9.0,
+   "canFilter": true,
+   "canStack": false,
+   "sttfSecondsPerTripPerGrid": 0.1666667,
+   "speedByDistance": {
+    "1": 3.0,
+    "2": 1.5,
+    "3": 1.0
+   },
+   "note": ""
+  },
+  {
+   "key": "SorterMk3",
+   "item": "SorterMk3",
+   "id": 2013,
+   "name": "Sorter Mk.III",
+   "nameZh": "极速分拣器",
+   "speedPerSec": 6.0,
+   "speedPerMin": 360.0,
+   "powerConsumptionKW": 72.0,
+   "powerIdleKW": 9.0,
+   "canFilter": true,
+   "canStack": true,
+   "sttfSecondsPerTripPerGrid": 0.0833333,
+   "speedByDistance": {
+    "1": 6.0,
+    "2": 3.0,
+    "3": 2.0
+   },
+   "cargoStackingWithUpgrade": {
+    "base": 1,
+    "max": 6,
+    "speedPerSecAtMax": 36.0,
+    "conflict": "UNRESOLVED: the 5-level \"Sorter Cargo Stacking\" chain (protoset values 4,5,6,7,8) is IsObsolete=true in 0.10.35 and was replaced by \"Pile Sorter Upgrade\" (3311-3316: unload 2, load 3, unload 3, load 4, unload 4, maximised). The wiki Transport-Rate table (2..6 -> 12..36 items/s) was written against the obsolete chain. Chosen: wiki values 12/18/24/30/36 items/s, because the wiki and the GameData-rendered infobox agree with each other, but treat live 0.10.x sorter stacking as UNCONFIRMED."
+   },
+   "note": ""
+  }
+ ],
+ "notes": "Sorter speed is quoted at 1 grid of reach; it halves for 2 grids and is one third at 3 grids (maximum reach = 3 tiles). Sorter Cargo Stacking (5 levels) multiplies Sorter Mk.III throughput: chosen values are the wiki stack sizes 2/3/4/5/6 => 12/18/24/30/36 items/s, because both the wiki Transport-Rate table and the GameData-rendered infobox agree; the protoset per-level UnlockValues (4,5,6,7,8) disagree and are recorded as an open conflict. Pile Sorter = 0.05 s/grid (20 trips/s, base stack 2). Belt/sorter item ids 2001-2003 and 2011-2014 are confirmed by both Modding:Items_IDs and BeltDesc.beltPrototype in the game prefabs.",
+ "conflicts": [
+  {
+   "field": "sorter cargo stacking",
+   "a": "protoset (obsolete chain) 4,5,6,7,8 -> 24..48 items/s",
+   "b": "wiki + GameData infobox 2..6 -> 12..36 items/s",
+   "resolved": "wiki values chosen, live values unconfirmed"
+  },
+  {
+   "field": "mining rate per vein by ore type",
+   "a": "game VeinProtoSet.MiningTime differs per ore (stone 45, coal 30, iron 60, kimberlite 90, unipolar magnet 120), which would give 40/60/30/20/15 items per min per vein for a Mining Machine",
+   "b": "EN wiki Mining Machine page (\"base rate of 30 items per minute ... same for all material veins\"), EN/ZH ItemInfo (\"30 * veins * Mining speed/min\") and the zh-CN wiki official text (\"每矿脉30个/分钟\")",
+   "resolved": "flat 30/min per vein (Advanced Mining Machine 60/min per vein)",
+   "why": "three independent statements including official-game-text-derived zh wiki; MiningTime judged to drive hand/mecha mining"
+  },
+  {
+   "field": "Water Pump base rate",
+   "a": "prefab periodf=1.2 => 50/min",
+   "b": "wiki formula P=(6*Bs)/(5+0.5*Vu) => 50/min per pump",
+   "resolved": "50/min * mining speed multiplier (agrees)"
+  }
+ ]
+}

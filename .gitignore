@@ -1,0 +1,57 @@
+# ---- dependencies & build output ----
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+.vite/
+coverage/
+
+# ---- local engineering notes ----
+# Process records, debugging war stories and scratch work. Deliberately not published;
+# see notes/README.md for what lives there and why.
+notes/
+
+# ---- scratch/debug test files — never commit these; the suite must stay green ----
+test/_dbg*.test.ts
+test/_debug*.test.ts
+test/_dump*.test.ts
+
+# ---- research data ----
+# The curated research JSON in docs/research/ IS committed: it is the input to
+# tools/build-dataset.mjs and is derived from public wiki data.
+docs/research/_merged.json
+
+# Raw corpus is reproducible and, in part, not ours to redistribute:
+#
+#   * realbp/ and realbp2/ are blueprint strings published by other people in
+#     DSPBluePrints/FactoryBluePrints. Fetch with: node tools/fetch-corpus.mjs
+#   * slotconfig*.json is decoded from Dyson Sphere Program's own asset files. Regenerate
+#     with tools/unity/ against your own installation.
+docs/research/_raw/realbp/
+docs/research/_raw/realbp2/
+docs/research/_raw/slotconfig*.json
+docs/research/_raw/*-sharedassets0.json
+docs/research/_raw/*-level0.json
+docs/research/_raw/*-globalgamemanagers.json
+
+# Exception: the wiki's own prefabs data module. It is public wiki content, it is small,
+# and tools/check-machine-constants.ts (a gate) needs it, so a fresh clone can still run.
+!docs/research/_raw/prefabs.json
+
+# ---- local dev screenshots (a curated few live in docs/images/) ----
+docs/screenshots/
+
+# ---- building icons (fetched, not ours) ----
+# 63 PNGs downloaded from dsp-wiki.com; the art belongs to Youthcat Studio. Not vendored here,
+# so a fresh clone renders coloured blocks instead (the view has a documented fallback).
+#   pnpm icons:fetch   — or: node tools/fetch-icons.mjs
+# If you would rather ship them so the hosted demo looks right, delete this line.
+public/icons/
+
+# ---- OS / editor noise ----
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json

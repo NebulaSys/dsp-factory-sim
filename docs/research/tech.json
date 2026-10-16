@@ -1,0 +1,9647 @@
+{
+ "generatedAt": "2026-10-14T19:20:00-04:00",
+ "gameVersion": "0.10.35.29104",
+ "source": [
+  "https://dsp-wiki.com/index.php?title=Module:GameData/protosets.json&action=raw (game protosets v0.10.35.29104)",
+  "https://dsp-wiki.com/index.php?title=Technologies&action=raw",
+  "https://dsp-wiki.com/index.php?title=Upgrades&action=raw",
+  "https://dsp-wiki.com/index.php?title=Vein_Utilization_(Upgrade)&action=raw",
+  "https://wiki.biligame.com/dsp/ (zh-CN names, tech/upgrade tables)"
+ ],
+ "technologies": [
+  {
+   "key": "DysonSphereProgram",
+   "name": "Dyson Sphere Program",
+   "nameZh": "戴森球计划",
+   "id": 1,
+   "prerequisites": [],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 1,
+    "items": []
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Electromagnetism",
+   "name": "Electromagnetism",
+   "nameZh": "电磁学",
+   "id": 1001,
+   "prerequisites": [
+    "Dyson Sphere Program"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 1200,
+    "items": [
+     {
+      "item": "MagneticCoil",
+      "itemName": "Magnetic Coil",
+      "count": 30
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "WindTurbine",
+     "TeslaTower",
+     "MiningMachine"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "WindTurbine",
+     "TeslaTower",
+     "MiningMachine"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "WindTurbine",
+      "TeslaTower",
+      "MiningMachine"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ElectromagneticMatrix",
+   "name": "Electromagnetic Matrix",
+   "nameZh": "电磁矩阵",
+   "id": 1002,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 1800,
+    "items": [
+     {
+      "item": "MagneticCoil",
+      "itemName": "Magnetic Coil",
+      "count": 20
+     },
+     {
+      "item": "CircuitBoard",
+      "itemName": "Circuit Board",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ElectromagneticMatrix"
+    ],
+    "buildings": [
+     "MatrixLab"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "MatrixLab"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ElectromagneticMatrix"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "MatrixLab"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighEfficiencyPlasmaControl",
+   "name": "High-Efficiency Plasma Control",
+   "nameZh": "高效电浆控制",
+   "id": 1101,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 9000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Prism",
+     "PlasmaExciter"
+    ],
+    "buildings": [
+     "WirelessPowerTower"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "PlasmaExciter"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -27,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Prism",
+      "PlasmaExciter"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "WirelessPowerTower"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PlasmaExtractRefining",
+   "name": "Plasma Extract Refining",
+   "nameZh": "等离子萃取精炼",
+   "id": 1102,
+   "prerequisites": [
+    "Fluid Storage Encapsulation",
+    "High-Efficiency Plasma Control"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Hydrogen"
+    ],
+    "buildings": [
+     "OilExtractor",
+     "OilRefinery"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -27,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Hydrogen"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "OilExtractor",
+      "OilRefinery"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "XRayCracking",
+   "name": "X-Ray Cracking",
+   "nameZh": "X射线裂解",
+   "id": 1103,
+   "prerequisites": [
+    "Basic Chemical Engineering",
+    "Plasma Extract Refining"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Hydrogen"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -27,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Hydrogen"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ReformedRefinement",
+   "name": "Reformed Refinement",
+   "nameZh": "重整精炼",
+   "id": 1104,
+   "prerequisites": [
+    "X-Ray Cracking"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 90000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "RefinedOil"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -27,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "RefinedOil"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HoloBeacon",
+   "name": "Holo Beacon",
+   "nameZh": "全息信标",
+   "id": 1105,
+   "prerequisites": [
+    "High-Efficiency Plasma Control"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "HoloBeacon"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "HoloBeacon"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "HoloBeacon"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "EnergyMatrix",
+   "name": "Energy Matrix",
+   "nameZh": "能量矩阵",
+   "id": 1111,
+   "prerequisites": [
+    "Plasma Extract Refining"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "EnergyMatrix"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "EnergyMatrix"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HydrogenFuelRod",
+   "name": "Hydrogen Fuel Rod",
+   "nameZh": "氢燃料棒",
+   "id": 1112,
+   "prerequisites": [
+    "Energy Matrix"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "HydrogenFuelRod"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "HydrogenFuelRod"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Thruster",
+   "name": "Thruster",
+   "nameZh": "推进器",
+   "id": 1113,
+   "prerequisites": [
+    "Hydrogen Fuel Rod"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Thruster"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Thruster"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ReinforcedThruster",
+   "name": "Reinforced Thruster",
+   "nameZh": "加力推进器",
+   "id": 1114,
+   "prerequisites": [
+    "Thruster"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ReinforcedThruster"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ReinforcedThruster"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "FluidStorageEncapsulation",
+   "name": "Fluid Storage Encapsulation",
+   "nameZh": "流体储存封装",
+   "id": 1120,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 9000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "StorageTank",
+     "WaterPump"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "StorageTank"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "StorageTank",
+      "WaterPump"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "BasicChemicalEngineering",
+   "name": "Basic Chemical Engineering",
+   "nameZh": "基础化工",
+   "id": 1121,
+   "prerequisites": [
+    "Fluid Storage Encapsulation",
+    "Plasma Extract Refining"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Plastic",
+     "SulfuricAcid"
+    ],
+    "buildings": [
+     "ChemicalPlant"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Plastic",
+      "SulfuricAcid"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "ChemicalPlant"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PolymerChemicalEngineering",
+   "name": "Polymer Chemical Engineering",
+   "nameZh": "高分子化工",
+   "id": 1122,
+   "prerequisites": [
+    "Basic Chemical Engineering"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "OrganicCrystal",
+     "OrganicCrystal"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "OrganicCrystal",
+      "OrganicCrystal"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighStrengthCrystal",
+   "name": "High-Strength Crystal",
+   "nameZh": "高强度晶体",
+   "id": 1123,
+   "prerequisites": [
+    "Polymer Chemical Engineering"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "TitaniumCrystal"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "TitaniumCrystal"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "StructureMatrix",
+   "name": "Structure Matrix",
+   "nameZh": "结构矩阵",
+   "id": 1124,
+   "prerequisites": [
+    "High-Strength Crystal"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 240000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "StructureMatrix"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "StructureMatrix"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "CasimirCrystal",
+   "name": "Casimir Crystal",
+   "nameZh": "卡西米尔晶体",
+   "id": 1125,
+   "prerequisites": [
+    "Structure Matrix"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 240000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "CasimirCrystal",
+     "CasimirCrystal"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "CasimirCrystal",
+      "CasimirCrystal"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighStrengthGlass",
+   "name": "High-Strength Glass",
+   "nameZh": "高强度玻璃",
+   "id": 1126,
+   "prerequisites": [
+    "High-Strength Material"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 240000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 6
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "TitaniumGlass"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -19,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "TitaniumGlass"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "AppliedSuperconductor",
+   "name": "Applied Superconductor",
+   "nameZh": "应用型超导体",
+   "id": 1131,
+   "prerequisites": [
+    "Basic Chemical Engineering"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Graphene",
+     "Graphene"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -19,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Graphene",
+      "Graphene"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighStrengthMaterial",
+   "name": "High-Strength Material",
+   "nameZh": "高强度材料",
+   "id": 1132,
+   "prerequisites": [
+    "Applied Superconductor"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 135000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 16
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 4
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "CarbonNanotube",
+     "CarbonNanotube"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -19,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "CarbonNanotube",
+      "CarbonNanotube"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ParticleControl",
+   "name": "Particle Control",
+   "nameZh": "粒子可控",
+   "id": 1133,
+   "prerequisites": [
+    "High-Strength Material"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 16
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 16
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 4
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ParticleBroadband",
+     "CrystalSilicon"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -15,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ParticleBroadband",
+      "CrystalSilicon"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "DeuteriumFractionation",
+   "name": "Deuterium Fractionation",
+   "nameZh": "重氢分馏",
+   "id": 1134,
+   "prerequisites": [
+    "Thermal Power",
+    "Plasma Extract Refining"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 30
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Deuterium"
+    ],
+    "buildings": [
+     "Fractionator"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -15,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Deuterium"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "Fractionator"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "WaveFunctionInterference",
+   "name": "Wave Function Interference",
+   "nameZh": "波函数干扰",
+   "id": 1141,
+   "prerequisites": [
+    "High-Strength Glass",
+    "Casimir Crystal"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 2
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "PlaneFilter"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "PlaneFilter"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MiniatureParticleCollider",
+   "name": "Miniature Particle Collider",
+   "nameZh": "微型粒子对撞机",
+   "id": 1142,
+   "prerequisites": [
+    "Structure Matrix"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 240000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Deuterium"
+    ],
+    "buildings": [
+     "MiniatureParticleCollider"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Deuterium"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "MiniatureParticleCollider"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "StrangeMatter",
+   "name": "Strange Matter",
+   "nameZh": "奇异物质",
+   "id": 1143,
+   "prerequisites": [
+    "Miniature Particle Collider"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 300000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "StrangeMatter"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "StrangeMatter"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ArtificialStar",
+   "name": "Artificial Star",
+   "nameZh": "人造恒星",
+   "id": 1144,
+   "prerequisites": [
+    "Controlled Annihilation Reaction"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 432000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "ArtificialStar"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -3,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "ArtificialStar"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ControlledAnnihilationReaction",
+   "name": "Controlled Annihilation Reaction",
+   "nameZh": "可控湮灭反应",
+   "id": 1145,
+   "prerequisites": [
+    "Dirac Inversion Mechanism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 600000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 24
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "AnnihilationConstraintSphere",
+     "AntimatterFuelRod"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -3,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "AnnihilationConstraintSphere",
+      "AntimatterFuelRod"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ProliferatorMk1",
+   "name": "Proliferator Mk.I",
+   "nameZh": "增产剂Mk.I",
+   "id": 1151,
+   "prerequisites": [
+    "Semiconductor Material",
+    "High-Efficiency Plasma Control"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ProliferatorMk1"
+    ],
+    "buildings": [
+     "SprayCoater"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -11,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ProliferatorMkI"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "SprayCoater"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ProliferatorMk2",
+   "name": "Proliferator Mk.II",
+   "nameZh": "增产剂Mk.II",
+   "id": 1152,
+   "prerequisites": [
+    "Processor",
+    "Proliferator Mk.I"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 16
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ProliferatorMk2"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -11,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ProliferatorMkII"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ProliferatorMk3",
+   "name": "Proliferator Mk.III",
+   "nameZh": "增产剂Mk.III",
+   "id": 1153,
+   "prerequisites": [
+    "Proliferator Mk.II",
+    "High-Strength Material"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 8
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 6
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 4
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ProliferatorMk3"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -11,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ProliferatorMkIII"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "BasicAssembling",
+   "name": "Basic Assembling",
+   "nameZh": "基础制造",
+   "id": 1201,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 1800,
+    "items": [
+     {
+      "item": "CircuitBoard",
+      "itemName": "Circuit Board",
+      "count": 20
+     },
+     {
+      "item": "Gear",
+      "itemName": "Gear",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "AssemblingMachineMk1"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "AssemblingMachineMk1"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -3,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "AssemblingMachineMkI"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighSpeedAssembling",
+   "name": "High-Speed Assembling",
+   "nameZh": "高速制造",
+   "id": 1202,
+   "prerequisites": [
+    "Basic Assembling",
+    "Processor"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "AssemblingMachineMk2"
+    ],
+    "functions": [
+     7
+    ],
+    "functionValues": [
+     0.5
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -3,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "AssemblingMachineMkII"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      7
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "QuantumPrinting",
+   "name": "Quantum Printing",
+   "nameZh": "量子打印",
+   "id": 1203,
+   "prerequisites": [
+    "High-Speed Assembling",
+    "Quantum Chip"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "AssemblingMachineMk3"
+    ],
+    "functions": [
+     7
+    ],
+    "functionValues": [
+     0.5
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -3,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "AssemblingMachineMkIII"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      7
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Processor",
+   "name": "Processor",
+   "nameZh": "处理器",
+   "id": 1302,
+   "prerequisites": [
+    "Semiconductor Material"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Processor"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -7,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Processor"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "QuantumChip",
+   "name": "Quantum Chip",
+   "nameZh": "量子芯片",
+   "id": 1303,
+   "prerequisites": [
+    "Information Matrix",
+    "Wave Function Interference"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "QuantumChip"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -19,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "QuantumChip"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PhotonSpotlightMining",
+   "name": "Photon Spotlight Mining",
+   "nameZh": "光子聚束采矿",
+   "id": 1304,
+   "prerequisites": [
+    "Quantum Chip"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 6
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "AdvancedMiningMachine"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -19,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "AdvancedMiningMachine"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MesoscopicQuantumEntanglement",
+   "name": "Mesoscopic Quantum Entanglement",
+   "nameZh": "亚微观量子纠缠",
+   "id": 1305,
+   "prerequisites": [
+    "Quantum Chip",
+    "Strange Matter"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "QuantumChemicalPlant"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -31,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "QuantumChemicalPlant"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SemiconductorMaterial",
+   "name": "Semiconductor Material",
+   "nameZh": "半导体材料",
+   "id": 1311,
+   "prerequisites": [
+    "Basic Assembling"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "MicrocrystallineComponent"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -7,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "MicrocrystallineComponent"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "InformationMatrix",
+   "name": "Information Matrix",
+   "nameZh": "信息矩阵",
+   "id": 1312,
+   "prerequisites": [
+    "Processor",
+    "Particle Control"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "InformationMatrix"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -7,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "InformationMatrix"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "AutomaticMetallurgy",
+   "name": "Automatic Metallurgy",
+   "nameZh": "自动化冶金",
+   "id": 1401,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 1800,
+    "items": [
+     {
+      "item": "MagneticCoil",
+      "itemName": "Magnetic Coil",
+      "count": 20
+     },
+     {
+      "item": "CircuitBoard",
+      "itemName": "Circuit Board",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Glass"
+    ],
+    "buildings": [
+     "ArcSmelter"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "ArcSmelter"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 5,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Glass"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "ArcSmelter"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SmeltingPurification",
+   "name": "Smelting Purification",
+   "nameZh": "冶炼提纯",
+   "id": 1402,
+   "prerequisites": [
+    "Automatic Metallurgy"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SiliconOre",
+     "EnergeticGraphite",
+     "HighpuritySilicon"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 5,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SiliconOre",
+      "EnergeticGraphite",
+      "HighpuritySilicon"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "CrystalSmelting",
+   "name": "Crystal Smelting",
+   "nameZh": "晶体冶炼",
+   "id": 1403,
+   "prerequisites": [
+    "Smelting Purification"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 90000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Diamond",
+     "Diamond",
+     "CrystalSilicon"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 5,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Diamond",
+      "Diamond",
+      "CrystalSilicon"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SteelSmelting",
+   "name": "Steel Smelting",
+   "nameZh": "钢材冶炼",
+   "id": 1411,
+   "prerequisites": [
+    "Automatic Metallurgy"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 21600,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Steel"
+    ],
+    "buildings": [],
+    "functions": [
+     37,
+     37
+    ],
+    "functionValues": [
+     2203.0,
+     2401.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 13,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Steel"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      37,
+      37
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ThermalPower",
+   "name": "Thermal Power",
+   "nameZh": "火力发电",
+   "id": 1412,
+   "prerequisites": [
+    "Basic Assembling"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 5400,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "ThermalPowerPlant"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "ThermalPowerPlant"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -15,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "ThermalPowerPlant"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "TitaniumSmelting",
+   "name": "Titanium Smelting",
+   "nameZh": "钛矿冶炼",
+   "id": 1413,
+   "prerequisites": [
+    "Steel Smelting"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "TitaniumIngot"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 13,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "TitaniumIngot"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighStrengthTitaniumAlloy",
+   "name": "High-Strength Titanium Alloy",
+   "nameZh": "高强度钛合金",
+   "id": 1414,
+   "prerequisites": [
+    "Titanium Smelting"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 2
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "TitaniumAlloy"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 13,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "TitaniumAlloy"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Reclamation",
+   "name": "Reclamation",
+   "nameZh": "移山填海工程",
+   "id": 1415,
+   "prerequisites": [
+    "Steel Smelting"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "Foundation"
+    ],
+    "functions": [
+     45
+    ],
+    "functionValues": [
+     1.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 9,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "Foundation"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      45
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MiniFusionPowerGeneration",
+   "name": "Mini Fusion Power Generation",
+   "nameZh": "微型核聚变发电",
+   "id": 1416,
+   "prerequisites": [
+    "Deuterium Fractionation"
+   ],
+   "prerequisitesImplicit": [
+    "High-Strength Titanium Alloy"
+   ],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "DeuteronFuelRod"
+    ],
+    "buildings": [
+     "MiniFusionPowerPlant"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -15,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "DeuteronFuelRod"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "MiniFusionPowerPlant"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PlaneFilterSmelting",
+   "name": "Plane-Filter Smelting",
+   "nameZh": "位面冶金",
+   "id": 1417,
+   "prerequisites": [
+    "Wave Function Interference"
+   ],
+   "prerequisitesImplicit": [
+    "Crystal Smelting"
+   ],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "PlaneSmelter"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "PlaneSmelter"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SolarCollection",
+   "name": "Solar Collection",
+   "nameZh": "太阳能收集",
+   "id": 1501,
+   "prerequisites": [
+    "Smelting Purification",
+    "Electromagnetic Matrix",
+    "Basic Assembling"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "SolarPanel"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "SolarPanel"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "SolarPanel"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PhotonFrequencyConversion",
+   "name": "Photon Frequency Conversion",
+   "nameZh": "光子变频",
+   "id": 1502,
+   "prerequisites": [
+    "Solar Collection"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "PhotonCombiner",
+     "PhotonCombiner"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "PhotonCombiner",
+      "PhotonCombiner"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SolarSailOrbitSystem",
+   "name": "Solar Sail Orbit System",
+   "nameZh": "太阳帆轨道系统",
+   "id": 1503,
+   "prerequisites": [
+    "Photon Frequency Conversion"
+   ],
+   "prerequisitesImplicit": [
+    "Super Magnetic Field Generator"
+   ],
+   "cost": {
+    "hashes": 54000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SolarSail"
+    ],
+    "buildings": [
+     "EMRailEjector"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SolarSail"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "EMRailEjector"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "RayReceiver",
+   "name": "Ray Receiver",
+   "nameZh": "射线接收站",
+   "id": 1504,
+   "prerequisites": [
+    "Solar Sail Orbit System"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "RayReceiver"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "RayReceiver"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PlanetaryIonosphereUtilization",
+   "name": "Planetary Ionosphere Utilization",
+   "nameZh": "行星电离层利用",
+   "id": 1505,
+   "prerequisites": [
+    "Ray Receiver"
+   ],
+   "prerequisitesImplicit": [
+    "Gravitational Wave Refraction"
+   ],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 20
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [],
+    "functions": [
+     8
+    ],
+    "functionValues": [
+     1.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "other",
+     "functions": [
+      8
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "DiracInversionMechanism",
+   "name": "Dirac Inversion Mechanism",
+   "nameZh": "狄拉克逆变机制",
+   "id": 1506,
+   "prerequisites": [
+    "Planetary Ionosphere Utilization"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 540000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 5
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 5
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Antimatter"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Antimatter"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "UniverseMatrix",
+   "name": "Universe Matrix",
+   "nameZh": "宇宙矩阵",
+   "id": 1507,
+   "prerequisites": [
+    "Dirac Inversion Mechanism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 720000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "UniverseMatrix"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "UniverseMatrix"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MissionCompleted",
+   "name": "Mission Completed !",
+   "nameZh": "任务完成!",
+   "id": 1508,
+   "prerequisites": [
+    "Universe Matrix"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 3600000,
+    "items": [
+     {
+      "item": "UniverseMatrix",
+      "itemName": "Universe Matrix",
+      "count": 4
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [],
+    "functions": [
+     99
+    ],
+    "functionValues": [
+     1.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 1,
+   "effects": [
+    {
+     "kind": "other",
+     "functions": [
+      99
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "DarkFogLens",
+   "name": "Dark Fog Lens",
+   "nameZh": "黑雾引力透镜",
+   "id": 1509,
+   "prerequisites": [
+    "Planetary Ionosphere Utilization"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 30000,
+    "items": [
+     {
+      "item": "DarkFogMatrix",
+      "itemName": "Dark Fog Matrix",
+      "count": 120
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "DarkFogLens"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -3,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "DarkFogLens"
+     ]
+    }
+   ],
+   "hidden": true,
+   "note": ""
+  },
+  {
+   "key": "EnergyStorage",
+   "name": "Energy Storage",
+   "nameZh": "能量储存",
+   "id": 1511,
+   "prerequisites": [
+    "Crystal Smelting",
+    "Solar Collection"
+   ],
+   "prerequisitesImplicit": [
+    "Super Magnetic Field Generator"
+   ],
+   "cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "Accumulator"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 9,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "Accumulator"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "InterstellarPowerTransmission",
+   "name": "Interstellar Power Transmission",
+   "nameZh": "星际电力运输",
+   "id": 1512,
+   "prerequisites": [
+    "High-Strength Titanium Alloy",
+    "Energy Storage"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 216000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 2
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "EnergyExchanger"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 9,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "EnergyExchanger"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "GeothermalExtraction",
+   "name": "Geothermal Extraction",
+   "nameZh": "地热开采",
+   "id": 1513,
+   "prerequisites": [
+    "Photon Frequency Conversion"
+   ],
+   "prerequisitesImplicit": [
+    "Super Magnetic Field Generator"
+   ],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "GeothermalPowerStation"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 5,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "GeothermalPowerStation"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighStrengthLightweightStructure",
+   "name": "High-Strength Lightweight Structure",
+   "nameZh": "高强度轻质结构",
+   "id": 1521,
+   "prerequisites": [
+    "Solar Sail Orbit System"
+   ],
+   "prerequisitesImplicit": [
+    "High-Strength Material"
+   ],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 2
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "FrameMaterial",
+     "DysonSphereComponent"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 5,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "FrameMaterial",
+      "DysonSphereComponent"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "VerticalLaunchingSilo",
+   "name": "Vertical Launching Silo",
+   "nameZh": "垂直发射井",
+   "id": 1522,
+   "prerequisites": [
+    "High-Strength Lightweight Structure"
+   ],
+   "prerequisitesImplicit": [
+    "Quantum Chip"
+   ],
+   "cost": {
+    "hashes": 576000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SmallCarrierRocket"
+    ],
+    "buildings": [
+     "VerticalLaunchingSilo"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 5,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SmallCarrierRocket"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "VerticalLaunchingSilo"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "BasicLogisticsSystem",
+   "name": "Basic Logistics System",
+   "nameZh": "基础物流系统",
+   "id": 1601,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 1800,
+    "items": [
+     {
+      "item": "CircuitBoard",
+      "itemName": "Circuit Board",
+      "count": 20
+     },
+     {
+      "item": "Gear",
+      "itemName": "Gear",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "ConveyorBeltMk1",
+     "SorterMk1",
+     "DepotMk1"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "ConveyorBeltMk1",
+     "SorterMk1"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 21,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "ConveyorBeltMkI",
+      "SorterMkI",
+      "DepotMkI"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "UpgradedLogisticsSystem",
+   "name": "Upgraded Logistics System",
+   "nameZh": "改良物流系统",
+   "id": 1602,
+   "prerequisites": [
+    "Basic Logistics System"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "Splitter",
+     "SorterMk2",
+     "TrafficMonitor"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "Splitter",
+     "SorterMk2",
+     "TrafficMonitor"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 21,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "Splitter",
+      "SorterMkII",
+      "TrafficMonitor"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighEfficiencyLogisticsSystem",
+   "name": "High-Efficiency Logistics System",
+   "nameZh": "高效物流系统",
+   "id": 1603,
+   "prerequisites": [
+    "Upgraded Logistics System"
+   ],
+   "prerequisitesImplicit": [
+    "Magnetic Levitation"
+   ],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "ConveyorBeltMk2",
+     "SorterMk3",
+     "DepotMk2"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 21,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "ConveyorBeltMkII",
+      "SorterMkIII",
+      "DepotMkII"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PlanetaryLogisticsSystem",
+   "name": "Planetary Logistics System",
+   "nameZh": "行星物流系统",
+   "id": 1604,
+   "prerequisites": [
+    "High-Efficiency Logistics System"
+   ],
+   "prerequisitesImplicit": [
+    "Thruster"
+   ],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "LogisticsDrone"
+    ],
+    "buildings": [
+     "ConveyorBeltMk3",
+     "PlanetaryLogisticsStation"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 21,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "LogisticsDrone"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "ConveyorBeltMkIII",
+      "PlanetaryLogisticsStation"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "InterstellarLogisticsSystem",
+   "name": "Interstellar Logistics System",
+   "nameZh": "星际物流系统",
+   "id": 1605,
+   "prerequisites": [
+    "Planetary Logistics System",
+    "High-Strength Titanium Alloy"
+   ],
+   "prerequisitesImplicit": [
+    "Reinforced Thruster"
+   ],
+   "cost": {
+    "hashes": 216000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 2
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "InterstellarLogisticsVessel"
+    ],
+    "buildings": [
+     "InterstellarLogisticsStation"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 21,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "InterstellarLogisticsVessel"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "InterstellarLogisticsStation"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "GasGiantsExploitation",
+   "name": "Gas Giants Exploitation",
+   "nameZh": "气态行星开采",
+   "id": 1606,
+   "prerequisites": [
+    "Interstellar Logistics System",
+    "Interstellar Power Transmission"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 432000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "OrbitalCollector"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 13,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "OrbitalCollector"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "IntegratedLogisticsSystem",
+   "name": "Integrated Logistics System",
+   "nameZh": "集装物流系统",
+   "id": 1607,
+   "prerequisites": [
+    "High-Efficiency Logistics System"
+   ],
+   "prerequisitesImplicit": [
+    "Super Magnetic Field Generator"
+   ],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 1
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "AutomaticPiler",
+     "PileSorter"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 17,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "AutomaticPiler",
+      "PileSorter"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "DistributionLogisticsSystem",
+   "name": "Distribution Logistics System",
+   "nameZh": "配送物流系统",
+   "id": 1608,
+   "prerequisites": [
+    "Upgraded Logistics System"
+   ],
+   "prerequisitesImplicit": [
+    "Magnetic Levitation"
+   ],
+   "cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "LogisticsBot"
+    ],
+    "buildings": [
+     "LogisticsDistributor"
+    ],
+    "functions": [
+     32
+    ],
+    "functionValues": [
+     1.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 17,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "LogisticsBot"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "LogisticsDistributor"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      32
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ElectromagneticDrive",
+   "name": "Electromagnetic Drive",
+   "nameZh": "电磁驱动",
+   "id": 1701,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 9000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ElectricMotor"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -35,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ElectricMotor"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MagneticLevitation",
+   "name": "Magnetic Levitation",
+   "nameZh": "磁悬浮",
+   "id": 1702,
+   "prerequisites": [
+    "Electromagnetic Drive"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ElectromagneticTurbine"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -35,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ElectromagneticTurbine"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MagneticParticleTrap",
+   "name": "Magnetic Particle Trap",
+   "nameZh": "粒子磁力阱",
+   "id": 1703,
+   "prerequisites": [
+    "Magnetic Levitation"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ParticleContainer",
+     "ParticleContainer"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -35,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ParticleContainer",
+      "ParticleContainer"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "GravitationalWaveRefraction",
+   "name": "Gravitational Wave Refraction",
+   "nameZh": "引力波折射",
+   "id": 1704,
+   "prerequisites": [
+    "Strange Matter",
+    "Magnetic Particle Trap"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "GravitonLens",
+     "SpaceWarper"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -35,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "GravitonLens",
+      "SpaceWarper"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "GravityMatrix",
+   "name": "Gravity Matrix",
+   "nameZh": "引力矩阵",
+   "id": 1705,
+   "prerequisites": [
+    "Quantum Chip",
+    "Gravitational Wave Refraction"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 576000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "GravityMatrix",
+     "SpaceWarper"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -35,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "GravityMatrix",
+      "SpaceWarper"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SuperMagneticFieldGenerator",
+   "name": "Super Magnetic Field Generator",
+   "nameZh": "超级磁场发生器",
+   "id": 1711,
+   "prerequisites": [
+    "Magnetic Levitation"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SupermagneticRing"
+    ],
+    "buildings": [],
+    "functions": [
+     42
+    ],
+    "functionValues": [
+     1.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -39,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SupermagneticRing"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      42
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SatellitePowerDistributionSystem",
+   "name": "Satellite Power Distribution System",
+   "nameZh": "卫星配电系统",
+   "id": 1712,
+   "prerequisites": [
+    "Super Magnetic Field Generator"
+   ],
+   "prerequisitesImplicit": [
+    "High-Strength Lightweight Structure"
+   ],
+   "cost": {
+    "hashes": 240000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "SatelliteSubstation"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -39,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "SatelliteSubstation"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "WeaponSystem",
+   "name": "Weapon System",
+   "nameZh": "武器系统",
+   "id": 1801,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [
+    "Automatic Metallurgy"
+   ],
+   "cost": {
+    "hashes": 7200,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "MagnumAmmoBox"
+    ],
+    "buildings": [
+     "GaussTurret"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": [
+     "MagnumAmmoBox"
+    ]
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -47,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "MagnumAmmoBox"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "GaussTurret"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "CombustibleUnit",
+   "name": "Combustible Unit",
+   "nameZh": "燃烧单元",
+   "id": 1802,
+   "prerequisites": [
+    "Automatic Metallurgy"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 21600,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "CombustibleUnit"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": 9,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "CombustibleUnit"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ExplosiveUnit",
+   "name": "Explosive Unit",
+   "nameZh": "爆破单元",
+   "id": 1803,
+   "prerequisites": [
+    "High-Strength Crystal"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ExplosiveUnit"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -27,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ExplosiveUnit"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "CrystalExplosiveUnit",
+   "name": "Crystal Explosive Unit",
+   "nameZh": "晶石爆破单元",
+   "id": 1804,
+   "prerequisites": [
+    "Casimir Crystal"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 216000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "CrystalExplosiveUnit"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -27,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "CrystalExplosiveUnit"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Engine",
+   "name": "Engine",
+   "nameZh": "动力引擎",
+   "id": 1805,
+   "prerequisites": [
+    "Electromagnetism"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 7200,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Engine"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -43,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Engine"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "MissileTurret",
+   "name": "Missile Turret",
+   "nameZh": "导弹防御塔",
+   "id": 1806,
+   "prerequisites": [
+    "Engine",
+    "Weapon System"
+   ],
+   "prerequisitesImplicit": [
+    "Combustible Unit"
+   ],
+   "cost": {
+    "hashes": 54000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "MissileSet"
+    ],
+    "buildings": [
+     "MissileTurret"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -47,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "MissileSet"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "MissileTurret"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "ImplosionCannon",
+   "name": "Implosion Cannon",
+   "nameZh": "聚爆加农炮",
+   "id": 1807,
+   "prerequisites": [
+    "Missile Turret"
+   ],
+   "prerequisitesImplicit": [
+    "Magnetic Levitation"
+   ],
+   "cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "ShellSet"
+    ],
+    "buildings": [
+     "ImplosionCannon"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -47,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "ShellSet"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "ImplosionCannon"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SignalTower",
+   "name": "Signal Tower",
+   "nameZh": "信号塔",
+   "id": 1808,
+   "prerequisites": [
+    "Missile Turret"
+   ],
+   "prerequisitesImplicit": [
+    "High-Efficiency Plasma Control"
+   ],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "SignalTower"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -43,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "SignalTower"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PlanetaryDefenseSystem",
+   "name": "Planetary Defense System",
+   "nameZh": "行星防御系统",
+   "id": 1809,
+   "prerequisites": [
+    "Implosion Cannon"
+   ],
+   "prerequisitesImplicit": [
+    "Magnetic Particle Trap"
+   ],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "LaserTurret",
+     "PlanetaryShieldGenerator"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -47,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "LaserTurret",
+      "PlanetaryShieldGenerator"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "JammerTower",
+   "name": "Jammer Tower",
+   "nameZh": "干扰塔",
+   "id": 1810,
+   "prerequisites": [
+    "Missile Turret"
+   ],
+   "prerequisitesImplicit": [
+    "Processor"
+   ],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "JammingCapsule"
+    ],
+    "buildings": [
+     "JammerTower"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -51,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "JammingCapsule"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "JammerTower"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PlasmaTurret",
+   "name": "Plasma Turret",
+   "nameZh": "磁化电浆炮",
+   "id": 1811,
+   "prerequisites": [
+    "Planetary Defense System"
+   ],
+   "prerequisitesImplicit": [
+    "High-Strength Glass"
+   ],
+   "cost": {
+    "hashes": 300000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 12
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 6
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "PlasmaCapsule"
+    ],
+    "buildings": [
+     "PlasmaTurret",
+     "SRPlasmaTurret"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -47,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "PlasmaCapsule"
+     ]
+    },
+    {
+     "kind": "building",
+     "buildings": [
+      "PlasmaTurret",
+      "SRPlasmaTurret"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "TitaniumAmmoBox",
+   "name": "Titanium Ammo Box",
+   "nameZh": "钛化弹箱",
+   "id": 1812,
+   "prerequisites": [
+    "Weapon System"
+   ],
+   "prerequisitesImplicit": [
+    "Titanium Smelting"
+   ],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "TitaniumAmmoBox"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -55,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "TitaniumAmmoBox"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SuperalloyAmmoBox",
+   "name": "Superalloy Ammo Box",
+   "nameZh": "超合金弹箱",
+   "id": 1813,
+   "prerequisites": [
+    "Titanium Ammo Box"
+   ],
+   "prerequisitesImplicit": [
+    "High-Strength Titanium Alloy"
+   ],
+   "cost": {
+    "hashes": 216000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SuperalloyAmmoBox"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -55,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SuperalloyAmmoBox"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "HighExplosiveShellSet",
+   "name": "High-Explosive Shell Set",
+   "nameZh": "高爆炮弹组",
+   "id": 1814,
+   "prerequisites": [
+    "Implosion Cannon"
+   ],
+   "prerequisitesImplicit": [
+    "Titanium Smelting"
+   ],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "HighExplosiveShellSet"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -43,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "HighExplosiveShellSet"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SupersonicMissileSet",
+   "name": "Supersonic Missile Set",
+   "nameZh": "超音速导弹组",
+   "id": 1815,
+   "prerequisites": [
+    "High-Explosive Shell Set"
+   ],
+   "prerequisitesImplicit": [
+    "Thruster"
+   ],
+   "cost": {
+    "hashes": 240000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 12
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 12
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 3
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SupersonicMissileSet"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -43,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SupersonicMissileSet"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "CrystalShellSet",
+   "name": "Crystal Shell Set",
+   "nameZh": "晶石炮弹组",
+   "id": 1816,
+   "prerequisites": [
+    "Supersonic Missile Set"
+   ],
+   "prerequisitesImplicit": [
+    "High-Strength Titanium Alloy"
+   ],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "CrystalShellSet"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -43,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "CrystalShellSet"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "GravityMissileSet",
+   "name": "Gravity Missile Set",
+   "nameZh": "引力导弹组",
+   "id": 1817,
+   "prerequisites": [
+    "Crystal Shell Set"
+   ],
+   "prerequisitesImplicit": [
+    "Strange Matter"
+   ],
+   "cost": {
+    "hashes": 360000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "GravityMissileSet"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -43,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "GravityMissileSet"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "AntimatterCapsule",
+   "name": "Antimatter Capsule",
+   "nameZh": "反物质胶囊",
+   "id": 1818,
+   "prerequisites": [
+    "Controlled Annihilation Reaction",
+    "Plasma Turret"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 540000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 20
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 20
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "AntimatterCapsule"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -47,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "AntimatterCapsule"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Prototype",
+   "name": "Prototype",
+   "nameZh": "原型机",
+   "id": 1819,
+   "prerequisites": [
+    "Battlefield Analysis Base"
+   ],
+   "prerequisitesImplicit": [
+    "High-Efficiency Plasma Control"
+   ],
+   "cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Prototype"
+    ],
+    "buildings": [],
+    "functions": [
+     77,
+     78
+    ],
+    "functionValues": [
+     1.0,
+     4.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -59,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Prototype"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      77,
+      78
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "PrecisionDrone",
+   "name": "Precision Drone",
+   "nameZh": "精准无人机",
+   "id": 1820,
+   "prerequisites": [
+    "Prototype"
+   ],
+   "prerequisitesImplicit": [
+    "Photon Frequency Conversion"
+   ],
+   "cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "PrecisionDrone"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -59,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "PrecisionDrone"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "AttackDrone",
+   "name": "Attack Drone",
+   "nameZh": "攻击无人机",
+   "id": 1821,
+   "prerequisites": [
+    "Prototype"
+   ],
+   "prerequisitesImplicit": [
+    "Magnetic Particle Trap"
+   ],
+   "cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "AttackDrone"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -63,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "AttackDrone"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Corvette",
+   "name": "Corvette",
+   "nameZh": "护卫舰",
+   "id": 1822,
+   "prerequisites": [
+    "Planetary Defense System",
+    "Precision Drone"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 216000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Corvette"
+    ],
+    "buildings": [],
+    "functions": [
+     79,
+     80
+    ],
+    "functionValues": [
+     1.0,
+     4.0
+    ],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -59,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Corvette"
+     ]
+    },
+    {
+     "kind": "other",
+     "functions": [
+      79,
+      80
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "Destroyer",
+   "name": "Destroyer",
+   "nameZh": "驱逐舰",
+   "id": 1823,
+   "prerequisites": [
+    "Corvette",
+    "Attack Drone"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 288000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "Destroyer"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -63,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "Destroyer"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "SuppressingCapsule",
+   "name": "Suppressing Capsule",
+   "nameZh": "压制胶囊",
+   "id": 1824,
+   "prerequisites": [
+    "Jammer Tower"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 216000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "SuppressingCapsule"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -51,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "SuppressingCapsule"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "BattlefieldAnalysisBase",
+   "name": "Battlefield Analysis Base",
+   "nameZh": "战场分析基站",
+   "id": 1826,
+   "prerequisites": [
+    "Weapon System",
+    "Engine"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "BattlefieldAnalysisBase"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -59,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "BattlefieldAnalysisBase"
+     ]
+    }
+   ],
+   "hidden": false,
+   "note": ""
+  },
+  {
+   "key": "DigitalAnalogComputation",
+   "name": "Digital Analog Computation",
+   "nameZh": "数字模拟计算",
+   "id": 1901,
+   "prerequisites": [
+    "Information Matrix"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 24000,
+    "items": [
+     {
+      "item": "DarkFogMatrix",
+      "itemName": "Dark Fog Matrix",
+      "count": 120
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "SelfEvolutionLab"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -7,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "SelfevolutionLab"
+     ]
+    }
+   ],
+   "hidden": true,
+   "note": ""
+  },
+  {
+   "key": "MatterRecombination",
+   "name": "Matter Recombination",
+   "nameZh": "物质重组",
+   "id": 1902,
+   "prerequisites": [
+    "Quantum Printing"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "DarkFogMatrix",
+      "itemName": "Dark Fog Matrix",
+      "count": 120
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "RecomposingAssembler"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -7,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "RecomposingAssembler"
+     ]
+    }
+   ],
+   "hidden": true,
+   "note": ""
+  },
+  {
+   "key": "NegentropyRecursion",
+   "name": "Negentropy Recursion",
+   "nameZh": "负熵递归",
+   "id": 1903,
+   "prerequisites": [
+    "Plane-Filter Smelting"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "DarkFogMatrix",
+      "itemName": "Dark Fog Matrix",
+      "count": 120
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [],
+    "buildings": [
+     "NegentropySmelter"
+    ],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -23,
+   "effects": [
+    {
+     "kind": "building",
+     "buildings": [
+      "NegentropySmelter"
+     ]
+    }
+   ],
+   "hidden": true,
+   "note": ""
+  },
+  {
+   "key": "HighDensityControlledAnnihilation",
+   "name": "High-Density Controlled Annihilation",
+   "nameZh": "高密度可控湮灭",
+   "id": 1904,
+   "prerequisites": [
+    "Controlled Annihilation Reaction"
+   ],
+   "prerequisitesImplicit": [],
+   "cost": {
+    "hashes": 60000,
+    "items": [
+     {
+      "item": "DarkFogMatrix",
+      "itemName": "Dark Fog Matrix",
+      "count": 120
+     }
+    ]
+   },
+   "costNote": "protoset Items/ItemPoints; the EN wiki Technologies table and the biligame 科技 table list different counts (e.g. Electromagnetism: proto Magnetic Coil x30 vs wiki x10) - hashes match both wikis exactly",
+   "unlocks": {
+    "recipes": [
+     "StrangeAnnihilationFuelRod"
+    ],
+    "buildings": [],
+    "functions": [],
+    "functionValues": [],
+    "items": []
+   },
+   "levels": 0,
+   "repeatable": false,
+   "tier": -7,
+   "effects": [
+    {
+     "kind": "recipe",
+     "recipes": [
+      "StrangeAnnihilationFuelRod"
+     ]
+    }
+   ],
+   "hidden": true,
+   "note": ""
+  }
+ ],
+ "upgrades": [
+  {
+   "key": "AutoReconstructionMarking",
+   "name": "Auto Reconstruction Marking",
+   "nameZh": "自动标记重建",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    2951,
+    2952,
+    2953,
+    2954,
+    2955,
+    2956
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 76,
+       "value": 1.0
+      }
+     ],
+     "hashes": 18000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 76,
+       "value": 3.0
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 76,
+       "value": 6.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 76,
+       "value": 15.0
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 76,
+       "value": 30.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 76,
+       "value": 9999.0
+      }
+     ],
+     "hashes": 1440000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "CombatDroneAttackSpeed",
+   "name": "Combat Drone Attack Speed",
+   "nameZh": "战斗无人机射速",
+   "maxLevel": 5,
+   "levelsDefined": 5,
+   "levelIds": [
+    5401,
+    5402,
+    5403,
+    5404,
+    5405
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 68,
+       "value": 0.1
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 68,
+       "value": 0.1
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 68,
+       "value": 0.2
+      },
+      {
+       "function": 72,
+       "value": 0.3
+      }
+     ],
+     "hashes": 288000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 68,
+       "value": 0.2
+      },
+      {
+       "function": 72,
+       "value": 0.3
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 68,
+       "value": 0.4
+      },
+      {
+       "function": 72,
+       "value": 0.4
+      }
+     ],
+     "hashes": 1440000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+10%/+20%/+40% ground drone fire rate per level, +30%/+40% space warship fire rate",
+   "notes": "biligame 战斗无人机射速."
+  },
+  {
+   "key": "CombatDroneDamage",
+   "name": "Combat Drone Damage",
+   "nameZh": "战斗无人机伤害",
+   "maxLevel": 10000,
+   "levelsDefined": 5,
+   "levelIds": [
+    5301,
+    5302,
+    5303,
+    5304,
+    5305
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -43200000,
+    "note": "hashes for level N>=6 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 67,
+       "value": 0.1
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 67,
+       "value": 0.1
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 67,
+       "value": 0.15
+      },
+      {
+       "function": 71,
+       "value": 0.25
+      }
+     ],
+     "hashes": 480000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 67,
+       "value": 0.15
+      },
+      {
+       "function": 71,
+       "value": 0.25
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 67,
+       "value": 0.2
+      },
+      {
+       "function": 71,
+       "value": 0.2
+      }
+     ],
+     "hashes": 84600000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+10%/+15%/+20% ground drone damage per level and +25%/+20% space warship damage",
+   "notes": "biligame 战斗无人机伤害."
+  },
+  {
+   "key": "CombatDroneDurability",
+   "name": "Combat Drone Durability",
+   "nameZh": "战斗无人机耐久",
+   "maxLevel": 5,
+   "levelsDefined": 5,
+   "levelIds": [
+    5601,
+    5602,
+    5603,
+    5604,
+    5605
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 69,
+       "value": 0.1
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 69,
+       "value": 0.1
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 69,
+       "value": 0.2
+      },
+      {
+       "function": 73,
+       "value": 0.3
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 69,
+       "value": 0.2
+      },
+      {
+       "function": 73,
+       "value": 0.3
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 69,
+       "value": 0.4
+      },
+      {
+       "function": 73,
+       "value": 0.4
+      }
+     ],
+     "hashes": 1800000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+10%/+20%/+40% ground drone durability, +30%/+40% space warship durability",
+   "notes": "biligame 战斗无人机耐久."
+  },
+  {
+   "key": "CommunicationControl",
+   "name": "Communication Control",
+   "nameZh": "通讯控制",
+   "maxLevel": 88,
+   "levelsDefined": 7,
+   "levelIds": [
+    2401,
+    2402,
+    2403,
+    2404,
+    2405,
+    2406,
+    2407
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 9000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -21600000,
+    "note": "hashes for level N>=8 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 1,
+       "value": 1.0
+      }
+     ],
+     "hashes": 9000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 1,
+       "value": 2.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 9,
+       "value": 1.0
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 1,
+       "value": 3.0
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 1,
+       "value": 3.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 9,
+       "value": 2.0
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 1,
+       "value": 3.0
+      }
+     ],
+     "hashes": 64800000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "CosmicExploration",
+   "name": "Cosmic Exploration",
+   "nameZh": "宇宙探索",
+   "maxLevel": 4,
+   "levelsDefined": 4,
+   "levelIds": [
+    4101,
+    4102,
+    4103,
+    4104
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 1800,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 23,
+       "value": 1.0
+      }
+     ],
+     "hashes": 1800
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 23,
+       "value": 2.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 23,
+       "value": 3.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 23,
+       "value": 4.0
+      }
+     ],
+     "hashes": 1200000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "other",
+    "value": null
+   },
+   "effectKindNote": "planet/system vision",
+   "curve": "level n unlocks planetary / system / 6 ly / all-system resource vision",
+   "notes": "biligame 宇宙探索."
+  },
+  {
+   "key": "DistributionRange",
+   "name": "Distribution Range",
+   "nameZh": "配送范围",
+   "maxLevel": 5,
+   "levelsDefined": 5,
+   "levelIds": [
+    4001,
+    4002,
+    4003,
+    4004,
+    4005
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 36,
+       "value": 20.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 36,
+       "value": 20.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 36,
+       "value": 30.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 36,
+       "value": 30.0
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 36,
+       "value": 40.0
+      }
+     ],
+     "hashes": 360000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+20 m drone/vessel distribution range per level",
+   "notes": "protoset UnlockValues 20,40,..."
+  },
+  {
+   "key": "DriveEngine",
+   "name": "Drive Engine",
+   "nameZh": "驱动引擎",
+   "maxLevel": 100,
+   "levelsDefined": 6,
+   "levelIds": [
+    2901,
+    2902,
+    2903,
+    2904,
+    2905,
+    2906
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "Coal",
+      "itemName": "Coal",
+      "count": 30
+     },
+     {
+      "item": "Engine",
+      "itemName": "Engine",
+      "count": 10
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -1800000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 4,
+       "value": 1.0
+      }
+     ],
+     "hashes": 18000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 4,
+       "value": 2.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 11,
+       "value": 1000.0
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 4,
+       "value": 3.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 27,
+       "value": 3.0
+      }
+     ],
+     "hashes": 1080000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 27,
+       "value": 3.0
+      }
+     ],
+     "hashes": 0
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "DroneEngine",
+   "name": "Drone Engine",
+   "nameZh": "无人机引擎",
+   "maxLevel": 24,
+   "levelsDefined": 6,
+   "levelIds": [
+    2601,
+    2602,
+    2603,
+    2604,
+    2605,
+    2606
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 18000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -18000000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 10,
+       "value": 2.0
+      }
+     ],
+     "hashes": 18000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 10,
+       "value": 2.0
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 10,
+       "value": 2.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 10,
+       "value": 3.0
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 10,
+       "value": 3.0
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 10,
+       "value": 3.0
+      }
+     ],
+     "hashes": 45000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "DysonSphereStressSystem",
+   "name": "Dyson Sphere Stress System",
+   "nameZh": "戴森球应力系统",
+   "maxLevel": 6,
+   "levelsDefined": 1,
+   "levelIds": [
+    1523
+   ],
+   "prerequisites": [
+    "Vertical Launching Silo"
+   ],
+   "level1Cost": {
+    "hashes": 180000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 20
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 20
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": 180000,
+    "note": "hashes for level N>=2 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 26,
+       "value": 15.0
+      }
+     ],
+     "hashes": 180000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "EMWeaponStrength",
+   "name": "EM Weapon Strength",
+   "nameZh": "电磁武器效果",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    6101,
+    6102,
+    6103,
+    6104,
+    6105,
+    6106
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 64,
+       "value": 0.05
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 64,
+       "value": 0.05
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 64,
+       "value": 0.1
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 64,
+       "value": 0.1
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 64,
+       "value": 0.1
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 64,
+       "value": 0.1
+      }
+     ],
+     "hashes": 3600000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+5% for level 1, +10% per level afterwards",
+   "notes": "biligame 电磁武器效果."
+  },
+  {
+   "key": "EnergyCircuit",
+   "name": "Energy Circuit",
+   "nameZh": "能量回路",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    2501,
+    2502,
+    2503,
+    2504,
+    2505,
+    2506
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 7200,
+    "items": [
+     {
+      "item": "Log",
+      "itemName": "Log",
+      "count": 30
+     },
+     {
+      "item": "Coal",
+      "itemName": "Coal",
+      "count": 30
+     },
+     {
+      "item": "EnergeticGraphite",
+      "itemName": "Energetic Graphite",
+      "count": 30
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -16200000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 2,
+       "value": 200000.0
+      }
+     ],
+     "hashes": 7200
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 2,
+       "value": 200000.0
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 2,
+       "value": 200000.0
+      }
+     ],
+     "hashes": 216000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 2,
+       "value": 200000.0
+      }
+     ],
+     "hashes": 600000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 2,
+       "value": 800000.0
+      }
+     ],
+     "hashes": 2700000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 2,
+       "value": 1000000.0
+      }
+     ],
+     "hashes": 36000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "EnergyShield",
+   "name": "Energy Shield",
+   "nameZh": "能量护盾",
+   "maxLevel": 10000,
+   "levelsDefined": 7,
+   "levelIds": [
+    2801,
+    2802,
+    2803,
+    2804,
+    2805,
+    2806,
+    2807
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 9000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -8100000,
+    "note": "hashes for level N>=27 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 75,
+       "value": 1.0
+      },
+      {
+       "function": 65,
+       "value": 2.0
+      },
+      {
+       "function": 66,
+       "value": 100000000.0
+      }
+     ],
+     "hashes": 9000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 65,
+       "value": 0.5
+      },
+      {
+       "function": 66,
+       "value": 200000000.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 65,
+       "value": 0.5
+      },
+      {
+       "function": 66,
+       "value": 200000000.0
+      },
+      {
+       "function": 86,
+       "value": 1.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 65,
+       "value": 1.0
+      },
+      {
+       "function": 66,
+       "value": 200000000.0
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 65,
+       "value": 1.0
+      },
+      {
+       "function": 66,
+       "value": 300000000.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 65,
+       "value": 1.0
+      },
+      {
+       "function": 66,
+       "value": 500000000.0
+      }
+     ],
+     "hashes": 18000000
+    },
+    {
+     "level": 26,
+     "effects": [
+      {
+       "function": 66,
+       "value": 500000000.0
+      }
+     ],
+     "hashes": 18000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "mecha shield capacity/radius",
+   "notes": "Raw function ids differ per level (65/66/75/86)."
+  },
+  {
+   "key": "EnergyWeaponDamage",
+   "name": "Energy Weapon Damage",
+   "nameZh": "能量武器伤害",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    5101,
+    5102,
+    5103,
+    5104,
+    5105,
+    5106
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -54000000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 62,
+       "value": 0.1
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 62,
+       "value": 0.1
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 62,
+       "value": 0.2
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 62,
+       "value": 0.3
+      }
+     ],
+     "hashes": 480000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 62,
+       "value": 0.3
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 62,
+       "value": 0.2
+      }
+     ],
+     "hashes": 135000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "EnhancedStructure",
+   "name": "Enhanced Structure",
+   "nameZh": "结构强化",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005,
+    6006
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 72000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -3150000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 84,
+       "value": 0.04
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 84,
+       "value": 0.04
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 84,
+       "value": 0.04
+      }
+     ],
+     "hashes": 216000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 84,
+       "value": 0.04
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 84,
+       "value": 0.04
+      }
+     ],
+     "hashes": 900000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 84,
+       "value": 0.04
+      }
+     ],
+     "hashes": 4500000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+4% durability for mecha, buildings and combat drones per level",
+   "notes": "protoset value 0.04/level."
+  },
+  {
+   "key": "ExplosiveWeaponDamage",
+   "name": "Explosive Weapon Damage",
+   "nameZh": "爆破武器伤害",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    5201,
+    5202,
+    5203,
+    5204,
+    5205,
+    5206
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -16200000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 63,
+       "value": 0.1
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 63,
+       "value": 0.1
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 63,
+       "value": 0.2
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 63,
+       "value": 0.3
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 63,
+       "value": 0.3
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 63,
+       "value": 0.2
+      }
+     ],
+     "hashes": 36000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "GroundSquadronExpansion",
+   "name": "Ground Squadron Expansion",
+   "nameZh": "地面编队扩容",
+   "maxLevel": 7,
+   "levelsDefined": 7,
+   "levelIds": [
+    5801,
+    5802,
+    5803,
+    5804,
+    5805,
+    5806,
+    5807
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 78,
+       "value": 2.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 78,
+       "value": 2.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 77,
+       "value": 1.0
+      }
+     ],
+     "hashes": 288000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 78,
+       "value": 4.0
+      }
+     ],
+     "hashes": 432000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 77,
+       "value": 2.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 77,
+       "value": 2.0
+      }
+     ],
+     "hashes": 1080000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 77,
+       "value": 2.0
+      }
+     ],
+     "hashes": 1440000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "InventoryCapacity",
+   "name": "Inventory Capacity",
+   "nameZh": "机舱容量",
+   "maxLevel": 7,
+   "levelsDefined": 7,
+   "levelIds": [
+    2301,
+    2302,
+    2303,
+    2304,
+    2305,
+    2306,
+    2307
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 7200,
+    "items": [
+     {
+      "item": "Steel",
+      "itemName": "Steel",
+      "count": 60
+     },
+     {
+      "item": "CircuitBoard",
+      "itemName": "Circuit Board",
+      "count": 60
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 5,
+       "value": 1.0
+      }
+     ],
+     "hashes": 7200
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 5,
+       "value": 1.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 5,
+       "value": 1.0
+      },
+      {
+       "function": 33,
+       "value": 2.0
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 5,
+       "value": 1.0
+      },
+      {
+       "function": 32,
+       "value": 1.0
+      },
+      {
+       "function": 33,
+       "value": 2.0
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 5,
+       "value": 2.0
+      },
+      {
+       "function": 33,
+       "value": 2.0
+      }
+     ],
+     "hashes": 240000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 5,
+       "value": 2.0
+      },
+      {
+       "function": 33,
+       "value": 2.0
+      }
+     ],
+     "hashes": 600000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 38,
+       "value": 2.0
+      },
+      {
+       "function": 32,
+       "value": 1.0
+      }
+     ],
+     "hashes": 900000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "inventoryCapacity",
+    "value": 1
+   },
+   "effectKindNote": "inventory rows",
+   "curve": "+1 inventory row per level (some levels also add a logistics column or +2 rows)",
+   "notes": "Confirmed against biligame 机舱容量 table: rows 5,6,7,8,10,12,14 at levels 1..7."
+  },
+  {
+   "key": "KineticWeaponDamage",
+   "name": "Kinetic Weapon Damage",
+   "nameZh": "动能武器伤害",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    5001,
+    5002,
+    5003,
+    5004,
+    5005,
+    5006
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -16200000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 61,
+       "value": 0.1
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 61,
+       "value": 0.1
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 61,
+       "value": 0.2
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 61,
+       "value": 0.3
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 61,
+       "value": 0.3
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 61,
+       "value": 0.2
+      }
+     ],
+     "hashes": 36000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "LogisticsCarrierCapacity",
+   "name": "Logistics Carrier Capacity",
+   "nameZh": "运输机舱扩容",
+   "maxLevel": 13,
+   "levelsDefined": 10,
+   "levelIds": [
+    3501,
+    3502,
+    3503,
+    3504,
+    3505,
+    3506,
+    3507,
+    3508,
+    3509,
+    3510
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": 4800000,
+    "note": "hashes for level N>=13 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 35,
+       "value": 1.0
+      },
+      {
+       "function": 18,
+       "value": 5.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 35,
+       "value": 1.0
+      },
+      {
+       "function": 18,
+       "value": 5.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 35,
+       "value": 2.0
+      },
+      {
+       "function": 18,
+       "value": 5.0
+      },
+      {
+       "function": 19,
+       "value": 100.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 35,
+       "value": 2.0
+      },
+      {
+       "function": 18,
+       "value": 10.0
+      },
+      {
+       "function": 19,
+       "value": 100.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 35,
+       "value": 2.0
+      },
+      {
+       "function": 18,
+       "value": 10.0
+      },
+      {
+       "function": 19,
+       "value": 100.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 35,
+       "value": 2.0
+      },
+      {
+       "function": 18,
+       "value": 10.0
+      },
+      {
+       "function": 19,
+       "value": 100.0
+      }
+     ],
+     "hashes": 960000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 35,
+       "value": 2.0
+      },
+      {
+       "function": 18,
+       "value": 10.0
+      },
+      {
+       "function": 19,
+       "value": 200.0
+      }
+     ],
+     "hashes": 2400000
+    },
+    {
+     "level": 8,
+     "effects": [
+      {
+       "function": 18,
+       "value": 20.0
+      },
+      {
+       "function": 19,
+       "value": 200.0
+      }
+     ],
+     "hashes": 4800000
+    },
+    {
+     "level": 9,
+     "effects": [
+      {
+       "function": 18,
+       "value": 20.0
+      },
+      {
+       "function": 19,
+       "value": 200.0
+      },
+      {
+       "function": 30,
+       "value": 1000.0
+      },
+      {
+       "function": 31,
+       "value": 2000.0
+      }
+     ],
+     "hashes": -14400000
+    },
+    {
+     "level": 12,
+     "effects": [
+      {
+       "function": 18,
+       "value": 20.0
+      },
+      {
+       "function": 19,
+       "value": 200.0
+      },
+      {
+       "function": 30,
+       "value": 1000.0
+      },
+      {
+       "function": 31,
+       "value": 2000.0
+      }
+     ],
+     "hashes": -43200000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "LogisticsCarrierEngine",
+   "name": "Logistics Carrier Engine",
+   "nameZh": "运输船引擎",
+   "maxLevel": 10000,
+   "levelsDefined": 7,
+   "levelIds": [
+    3401,
+    3402,
+    3403,
+    3404,
+    3405,
+    3406,
+    3407
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -21600000,
+    "note": "hashes for level N>=8 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.2
+      },
+      {
+       "function": 34,
+       "value": 0.1
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.2
+      },
+      {
+       "function": 34,
+       "value": 0.1
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.3
+      },
+      {
+       "function": 34,
+       "value": 0.15
+      },
+      {
+       "function": 16,
+       "value": 0.5
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.3
+      },
+      {
+       "function": 34,
+       "value": 0.15
+      },
+      {
+       "function": 16,
+       "value": 0.5
+      },
+      {
+       "function": 17,
+       "value": 1.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.4
+      },
+      {
+       "function": 34,
+       "value": 0.15
+      },
+      {
+       "function": 16,
+       "value": 0.5
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.4
+      },
+      {
+       "function": 34,
+       "value": 0.15
+      },
+      {
+       "function": 16,
+       "value": 0.5
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 15,
+       "value": 0.5
+      },
+      {
+       "function": 34,
+       "value": 0.2
+      },
+      {
+       "function": 16,
+       "value": 0.5
+      }
+     ],
+     "hashes": 64800000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "MassConstruction",
+   "name": "Mass Construction",
+   "nameZh": "批量建造",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    2701,
+    2702,
+    2703,
+    2704,
+    2705,
+    2706
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 12000,
+    "items": [
+     {
+      "item": "CircuitBoard",
+      "itemName": "Circuit Board",
+      "count": 30
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 28,
+       "value": 150.0
+      },
+      {
+       "function": 44,
+       "value": 1200.0
+      }
+     ],
+     "hashes": 12000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 28,
+       "value": 300.0
+      },
+      {
+       "function": 44,
+       "value": 2400.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 28,
+       "value": 900.0
+      },
+      {
+       "function": 44,
+       "value": 7200.0
+      }
+     ],
+     "hashes": 60000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 28,
+       "value": 3600.0
+      },
+      {
+       "function": 44,
+       "value": 28800.0
+      }
+     ],
+     "hashes": 192000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 28,
+       "value": 1048576.0
+      },
+      {
+       "function": 44,
+       "value": 45000.0
+      }
+     ],
+     "hashes": 240000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 44,
+       "value": 1048576.0
+      }
+     ],
+     "hashes": 480000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "blueprint building/Foundation limits: 150/300/900/3600/unlimited",
+   "notes": "biligame 批量建造."
+  },
+  {
+   "key": "MechaCore",
+   "name": "Mecha Core",
+   "nameZh": "机甲核心",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    2101,
+    2102,
+    2103,
+    2104,
+    2105,
+    2106
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 3600,
+    "items": [
+     {
+      "item": "IronIngot",
+      "itemName": "Iron Ingot",
+      "count": 20
+     },
+     {
+      "item": "CopperIngot",
+      "itemName": "Copper Ingot",
+      "count": 20
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": -8100000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 6,
+       "value": 80000000.0
+      },
+      {
+       "function": 81,
+       "value": 30000.0
+      },
+      {
+       "function": 82,
+       "value": 1.0
+      }
+     ],
+     "hashes": 3600
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 6,
+       "value": 200000000.0
+      },
+      {
+       "function": 81,
+       "value": 30000.0
+      },
+      {
+       "function": 82,
+       "value": 1.0
+      },
+      {
+       "function": 83,
+       "value": 200.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 6,
+       "value": 400000000.0
+      },
+      {
+       "function": 81,
+       "value": 30000.0
+      },
+      {
+       "function": 82,
+       "value": 2.0
+      },
+      {
+       "function": 83,
+       "value": 200.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 6,
+       "value": 800000000.0
+      },
+      {
+       "function": 81,
+       "value": 30000.0
+      },
+      {
+       "function": 82,
+       "value": 2.0
+      },
+      {
+       "function": 83,
+       "value": 200.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 6,
+       "value": 1600000000.0
+      },
+      {
+       "function": 81,
+       "value": 30000.0
+      },
+      {
+       "function": 82,
+       "value": 2.0
+      },
+      {
+       "function": 83,
+       "value": 200.0
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 6,
+       "value": 2400000000.0
+      },
+      {
+       "function": 81,
+       "value": 20000.0
+      },
+      {
+       "function": 83,
+       "value": 200.0
+      }
+     ],
+     "hashes": 18000000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "MechanicalFrame",
+   "name": "Mechanical Frame",
+   "nameZh": "机械骨骼",
+   "maxLevel": 8,
+   "levelsDefined": 8,
+   "levelIds": [
+    2201,
+    2202,
+    2203,
+    2204,
+    2205,
+    2206,
+    2207,
+    2208
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 7200,
+    "items": [
+     {
+      "item": "ElectricMotor",
+      "itemName": "Electric Motor",
+      "count": 30
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 3,
+       "value": 1.0
+      }
+     ],
+     "hashes": 7200
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 3,
+       "value": 1.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 3,
+       "value": 1.0
+      }
+     ],
+     "hashes": 72000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 3,
+       "value": 1.0
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 3,
+       "value": 1.0
+      }
+     ],
+     "hashes": 240000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 3,
+       "value": 1.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 3,
+       "value": 2.0
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 8,
+     "effects": [
+      {
+       "function": 3,
+       "value": 2.0
+      }
+     ],
+     "hashes": 1200000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+1 m/s mecha walking speed per level (+2 for the last levels)",
+   "notes": "biligame 机械骨骼."
+  },
+  {
+   "key": "PileSorterUpgrade",
+   "name": "Pile Sorter Upgrade",
+   "nameZh": "集装分拣器改良",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    3311,
+    3312,
+    3313,
+    3314,
+    3315,
+    3316
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 60000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 30
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 30
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 30
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 39,
+       "value": 2.0
+      }
+     ],
+     "hashes": 60000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 41,
+       "value": 3.0
+      }
+     ],
+     "hashes": 96000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 39,
+       "value": 3.0
+      }
+     ],
+     "hashes": 120000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 41,
+       "value": 4.0
+      }
+     ],
+     "hashes": 288000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 39,
+       "value": 4.0
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 40,
+       "value": 1.0
+      }
+     ],
+     "hashes": 1200000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "other",
+    "value": null
+   },
+   "effectKindNote": "pile sorter unload stacking",
+   "curve": "raises Pile Sorter load/unload stacking: L1 unload 2, L2 load 3, L3 unload 3, L4 load 4, L5 unload 4, L6 maximised",
+   "notes": "Pile Sorter single-trip time is 0.05 s/grid (20 trips/s)."
+  },
+  {
+   "key": "PlanetaryShield",
+   "name": "Planetary Shield",
+   "nameZh": "行星护盾",
+   "maxLevel": 5,
+   "levelsDefined": 5,
+   "levelIds": [
+    5701,
+    5702,
+    5703,
+    5704,
+    5705
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 5
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 5
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 5
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 74,
+       "value": 0.1
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 74,
+       "value": 0.15
+      }
+     ],
+     "hashes": 288000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 74,
+       "value": 0.2
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 74,
+       "value": 0.25
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 74,
+       "value": 0.3
+      }
+     ],
+     "hashes": 1800000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "RayTransmissionEfficiency",
+   "name": "Ray Transmission Efficiency",
+   "nameZh": "射线传输效率",
+   "maxLevel": 10000,
+   "levelsDefined": 8,
+   "levelIds": [
+    3201,
+    3202,
+    3203,
+    3204,
+    3205,
+    3206,
+    3207,
+    3208
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 54000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": 1800000,
+    "note": "hashes for level N>=9 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.9
+      }
+     ],
+     "hashes": 54000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.9
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.9
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.9
+      }
+     ],
+     "hashes": 360000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.9
+      }
+     ],
+     "hashes": 420000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.9
+      }
+     ],
+     "hashes": 480000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.85
+      }
+     ],
+     "hashes": 1620000
+    },
+    {
+     "level": 8,
+     "effects": [
+      {
+       "function": 13,
+       "value": 0.85
+      }
+     ],
+     "hashes": -12600000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "other",
+    "value": null
+   },
+   "effectKindNote": "solar sail energy loss reduction",
+   "curve": "-10% ray energy loss per level for the first 6 levels, -15% for the last two",
+   "notes": "biligame 射线传输效率; 8 levels."
+  },
+  {
+   "key": "ResearchSpeed",
+   "name": "Research Speed",
+   "nameZh": "研究速度",
+   "maxLevel": 10000,
+   "levelsDefined": 4,
+   "levelIds": [
+    3901,
+    3902,
+    3903,
+    3904
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 600000,
+    "items": [
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 6
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": 14400000,
+    "note": "hashes for level N>=5 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 22,
+       "value": 1.0
+      }
+     ],
+     "hashes": 600000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 22,
+       "value": 1.0
+      }
+     ],
+     "hashes": 1200000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 22,
+       "value": 1.0
+      }
+     ],
+     "hashes": 2400000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 22,
+       "value": 1.0
+      }
+     ],
+     "hashes": -43200000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "labSpeed",
+    "value": 60.0
+   },
+   "effectKindNote": "+60 hash/s per lab per level (base lab speed is 60 hash/s)",
+   "curve": "+60 hash/s research speed per Matrix Lab per level (base lab research speed is 60 hash/s)",
+   "notes": "Multiplies the per-lab hash consumption rate; the hash value of each matrix is unchanged."
+  },
+  {
+   "key": "SolarSailAttachingSpeed",
+   "name": "Solar Sail Attaching Speed",
+   "nameZh": "太阳帆吸附速度",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    4201,
+    4202,
+    4203,
+    4204,
+    4205,
+    4206
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 108000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 20
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 20
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 20
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 20
+     },
+     {
+      "item": "GravityMatrix",
+      "itemName": "Gravity Matrix",
+      "count": 20
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 43,
+       "value": 240.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 43,
+       "value": 120.0
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 43,
+       "value": 60.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 43,
+       "value": 30.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 43,
+       "value": 15.0
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 43,
+       "value": 10.0
+      }
+     ],
+     "hashes": 2160000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "other",
+    "value": null
+   },
+   "effectKindNote": "solar sail attaching speed",
+   "curve": "+15/30/60/120/240/360 sails per minute absorbed by Vertical Launching Silos per level",
+   "notes": "biligame 太阳帆吸附速度 lists 15/30/60/120/240/360 per minute per level; protoset UnlockValues are 240..10 which do not match - unresolved."
+  },
+  {
+   "key": "SolarSailLife",
+   "name": "Solar Sail Life",
+   "nameZh": "太阳帆寿命",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 12,
+       "value": 300.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 12,
+       "value": 300.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 12,
+       "value": 600.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 12,
+       "value": 600.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 12,
+       "value": 900.0
+      }
+     ],
+     "hashes": 480000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 12,
+       "value": 900.0
+      }
+     ],
+     "hashes": 1200000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "other",
+    "value": null
+   },
+   "effectKindNote": "solar sail life seconds",
+   "curve": "+300 s per level for L1-L2, +600 s for L3-L4, +900 s for L5-L6 (protoset UnlockValues 300,300,600,600,900,900)",
+   "notes": "Base Solar Sail life 5400 s."
+  },
+  {
+   "key": "SorterCargoIntegration",
+   "name": "Sorter Cargo Integration",
+   "nameZh": null,
+   "maxLevel": 1,
+   "levelsDefined": 1,
+   "levelIds": [
+    3306
+   ],
+   "obsolete": true,
+   "prerequisites": [],
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 39,
+       "value": 1.0
+      },
+      {
+       "function": 40,
+       "value": 1.0
+      }
+     ],
+     "hashes": 1080000
+    }
+   ],
+   "level1Cost": {
+    "hashes": 1080000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 6
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 6
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 6
+     }
+    ]
+   },
+   "effectPerLevel": {
+    "kind": "other",
+    "value": null
+   },
+   "curve": "single level, replaced by Pile Sorter Upgrade",
+   "notes": "OBSOLETE in game version 0.10.35.29104 (TechProto.IsObsolete=true). This is the pre-0.10 sorter cargo-stacking chain; 0.10.x replaced it with \"Pile Sorter Upgrade\" (ids 3311-3316). Most likely explanation of the sorter throughput conflict: the EN wiki Transport-Rate table was written against this obsolete chain while the current GameData infobox reports max cargo stacking 6."
+  },
+  {
+   "key": "SorterCargoStacking",
+   "name": "Sorter Cargo Stacking",
+   "nameZh": "集装分拣器改良（旧）",
+   "maxLevel": 5,
+   "levelsDefined": 5,
+   "levelIds": [
+    3301,
+    3302,
+    3303,
+    3304,
+    3305
+   ],
+   "obsolete": true,
+   "prerequisites": [],
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 14,
+       "value": 4.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 14,
+       "value": 5.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 14,
+       "value": 6.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 14,
+       "value": 7.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 14,
+       "value": 8.0
+      }
+     ],
+     "hashes": 900000
+    }
+   ],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "effectPerLevel": {
+    "kind": "sorterSpeed",
+    "value": null
+   },
+   "curve": "cargo stack size 4/5/6/7/8 for Sorter Mk.III at levels 1-5 (=> 24/30/36/42/48 items/s at 1 grid)",
+   "notes": "OBSOLETE in game version 0.10.35.29104 (TechProto.IsObsolete=true). This is the pre-0.10 sorter cargo-stacking chain; 0.10.x replaced it with \"Pile Sorter Upgrade\" (ids 3311-3316). Most likely explanation of the sorter throughput conflict: the EN wiki Transport-Rate table was written against this obsolete chain while the current GameData infobox reports max cargo stacking 6."
+  },
+  {
+   "key": "SpaceFleetExpansion",
+   "name": "Space Fleet Expansion",
+   "nameZh": "太空编队扩容",
+   "maxLevel": 7,
+   "levelsDefined": 7,
+   "levelIds": [
+    5901,
+    5902,
+    5903,
+    5904,
+    5905,
+    5906,
+    5907
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 144000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 10
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 10
+     },
+     {
+      "item": "StructureMatrix",
+      "itemName": "Structure Matrix",
+      "count": 10
+     },
+     {
+      "item": "InformationMatrix",
+      "itemName": "Information Matrix",
+      "count": 10
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 80,
+       "value": 4.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 80,
+       "value": 4.0
+      }
+     ],
+     "hashes": 288000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 79,
+       "value": 1.0
+      }
+     ],
+     "hashes": 432000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 79,
+       "value": 1.0
+      }
+     ],
+     "hashes": 720000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 79,
+       "value": 1.0
+      }
+     ],
+     "hashes": 1080000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 79,
+       "value": 2.0
+      }
+     ],
+     "hashes": 1440000
+    },
+    {
+     "level": 7,
+     "effects": [
+      {
+       "function": 79,
+       "value": 2.0
+      }
+     ],
+     "hashes": 2160000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "no UnlockFunctions mapping recorded",
+   "notes": ""
+  },
+  {
+   "key": "StationIntegratedLogistics",
+   "name": "Station Integrated Logistics",
+   "nameZh": "运输站集装物流",
+   "maxLevel": 3,
+   "levelsDefined": 3,
+   "levelIds": [
+    3801,
+    3802,
+    3803
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 9600000,
+    "items": [
+     {
+      "item": "UniverseMatrix",
+      "itemName": "Universe Matrix",
+      "count": 3
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 29,
+       "value": 1.0
+      }
+     ],
+     "hashes": 9600000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 29,
+       "value": 1.0
+      }
+     ],
+     "hashes": 28800000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 29,
+       "value": 1.0
+      }
+     ],
+     "hashes": 43200000
+    }
+   ],
+   "effectPerLevel": null,
+   "effectKindNote": "no UnlockFunctions mapping recorded",
+   "curve": "+station output cargo stacking per level",
+   "notes": "Requires Universe Matrix; 3 levels."
+  },
+  {
+   "key": "VeinUtilization",
+   "name": "Vein Utilization",
+   "nameZh": "矿物利用",
+   "maxLevel": 10000,
+   "levelsDefined": 6,
+   "levelIds": [
+    3601,
+    3602,
+    3603,
+    3604,
+    3605,
+    3606
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "ElectromagneticMatrix",
+      "itemName": "Electromagnetic Matrix",
+      "count": 40
+     },
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "repeatCost": {
+    "hashes": 3600000,
+    "note": "hashes for level N>=7 grow linearly (LevelCoef1)"
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 20,
+       "value": 0.94
+      },
+      {
+       "function": 21,
+       "value": 0.1
+      },
+      {
+       "function": 85,
+       "value": 0.04
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 20,
+       "value": 0.94
+      },
+      {
+       "function": 21,
+       "value": 0.1
+      },
+      {
+       "function": 85,
+       "value": 0.04
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 20,
+       "value": 0.94
+      },
+      {
+       "function": 21,
+       "value": 0.1
+      },
+      {
+       "function": 85,
+       "value": 0.04
+      }
+     ],
+     "hashes": 180000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 20,
+       "value": 0.94
+      },
+      {
+       "function": 21,
+       "value": 0.1
+      },
+      {
+       "function": 85,
+       "value": 0.04
+      }
+     ],
+     "hashes": 480000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 20,
+       "value": 0.94
+      },
+      {
+       "function": 21,
+       "value": 0.1
+      },
+      {
+       "function": 85,
+       "value": 0.04
+      }
+     ],
+     "hashes": 1800000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 20,
+       "value": 0.94
+      },
+      {
+       "function": 21,
+       "value": 0.1
+      },
+      {
+       "function": 85,
+       "value": 0.04
+      }
+     ],
+     "hashes": -18000000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "veinAmountMultiplier",
+    "value": 0.94
+   },
+   "effectKindNote": "per-level multiplier on ore consumed per item (compounding)",
+   "curve": "+10% mining speed (additive) and x0.94 ore consumed per item (compounding) per level; +4% debris yield per level",
+   "notes": "Affects Mining Machine, Advanced Mining Machine, Water Pump, Oil Extractor and Orbital Collector gathering speed. Max level 10000 (practically uncapped). Level >=6 cost: 4000*(n-5) Universe Matrix, 3600000*(n-5) hashes. Ore consumption per item = 0.94^n; mining speed multiplier = 1+0.1*n."
+  },
+  {
+   "key": "VerticalConstruction",
+   "name": "Vertical Construction",
+   "nameZh": "垂直建造",
+   "maxLevel": 6,
+   "levelsDefined": 6,
+   "levelIds": [
+    3701,
+    3702,
+    3703,
+    3704,
+    3705,
+    3706
+   ],
+   "prerequisites": [],
+   "level1Cost": {
+    "hashes": 36000,
+    "items": [
+     {
+      "item": "EnergyMatrix",
+      "itemName": "Energy Matrix",
+      "count": 40
+     }
+    ]
+   },
+   "perLevel": [
+    {
+     "level": 1,
+     "effects": [
+      {
+       "function": 24,
+       "value": 1.0
+      },
+      {
+       "function": 25,
+       "value": 2.0
+      }
+     ],
+     "hashes": 36000
+    },
+    {
+     "level": 2,
+     "effects": [
+      {
+       "function": 24,
+       "value": 1.0
+      },
+      {
+       "function": 25,
+       "value": 2.0
+      }
+     ],
+     "hashes": 108000
+    },
+    {
+     "level": 3,
+     "effects": [
+      {
+       "function": 24,
+       "value": 1.0
+      },
+      {
+       "function": 25,
+       "value": 2.0
+      }
+     ],
+     "hashes": 144000
+    },
+    {
+     "level": 4,
+     "effects": [
+      {
+       "function": 24,
+       "value": 1.0
+      },
+      {
+       "function": 25,
+       "value": 2.0
+      }
+     ],
+     "hashes": 300000
+    },
+    {
+     "level": 5,
+     "effects": [
+      {
+       "function": 24,
+       "value": 1.0
+      },
+      {
+       "function": 25,
+       "value": 2.0
+      }
+     ],
+     "hashes": 480000
+    },
+    {
+     "level": 6,
+     "effects": [
+      {
+       "function": 24,
+       "value": 1.0
+      },
+      {
+       "function": 25,
+       "value": 2.0
+      }
+     ],
+     "hashes": 1200000
+    }
+   ],
+   "effectPerLevel": {
+    "kind": "other",
+    "value": 1
+   },
+   "effectKindNote": "vertical build limit",
+   "curve": "vertical build limit",
+   "notes": ""
+  }
+ ],
+ "notes": {
+  "technologies": "108 non-repeatable published technologies (TechProtoSet entries with MaxLevel=0, IsObsolete=false), including hidden ones flagged with hidden=true",
+  "upgrades": "34 repeatable upgrade chains (MaxLevel>0). levelsDefined = number of distinct TechProto level entries shipped; maxLevel = hard cap (10000 = effectively uncapped)",
+  "effectKinds": "effectPerLevel.kind uses the fixed vocabulary from the spec; raw UnlockFunctions ids are preserved in perLevel for exactness",
+  "conflicts": [
+   "Sorter Cargo Stacking: protoset UnlockValues 4,5,6,7,8 vs wiki table 2,3,4,5,6 (12/18/24/30/36 items/s). Chose the wiki (36 items/s max) - see report.",
+   "Tech cost item counts: protoset ItemPoints disagree with both wiki tables; hashes agree."
+  ],
+  "zhNames": "tech/upgrade zh-CN names from wiki.biligame.com Category:科技 / Category:升级 page titles. The zh-CN name of \"Sorter Cargo Stacking\" is null (not present in the biligame upgrade category).",
+  "obsoleteUpgrades": "2 additional repeatable chains are shipped but marked IsObsolete=true in 0.10.35: \"Sorter Cargo Stacking\" (3301-3305) and \"Sorter Cargo Integration\" (3306). They are included for completeness and flagged with obsolete=true. The 34 non-obsolete chains are the ones in the live Upgrades page."
+ },
+ "conflicts": [
+  {
+   "field": "Sorter Cargo Stacking effectPerLevel",
+   "a": "game protoset UnlockValues 4,5,6,7,8 per level (=> 24/30/36/42/48 items/s at 1 grid)",
+   "b": "EN wiki Transport-Rate table + GameData-rendered Sorter Mk.III infobox: stack 2..6 (=> 12/18/24/30/36 items/s)",
+   "resolved": "choosing the wiki values for Sorter Mk.III",
+   "why": "the 5-level chain is IsObsolete in 0.10.35, so its values no longer describe the live game; exact live sorter stacking is still unconfirmed"
+  },
+  {
+   "field": "technology cost.items",
+   "a": "game protoset Items/ItemPoints, e.g. Electromagnetism = Magnetic Coil x30",
+   "b": "EN wiki Technologies table and biligame 科技 table: Magnetic Coil x10",
+   "resolved": "both are stored (cost.items = protoset, costNote records the wiki value)",
+   "why": "HashNeeded matches the wikis exactly (1200 / 72000 / 360000 / 432000 / 3600000 all verified), the item counts do not"
+  }
+ ]
+}

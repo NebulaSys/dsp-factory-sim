@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>戴森球计划 · 生产线模拟器 (DSP Factory Simulator)</title>
+    <link rel="stylesheet" href="/src/ui/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">◈</span>
+        <div>
+          <h1>戴森球计划 · 生产线模拟器</h1>
+          <p class="subtitle">Dyson Sphere Program production-line simulator — engine v0.1</p>
+        </div>
+      </div>
+      <div class="topbar-meta" id="dataset-meta"></div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="blueprint" role="tab">蓝图分析</button>
+      <button class="tab" data-tab="planner" role="tab">生产规划</button>
+      <button class="tab" data-tab="tech" role="tab">科技与加成</button>
+      <button class="tab" data-tab="mining" role="tab">采矿与物流</button>
+      <button class="tab" data-tab="about" role="tab">关于 / 数据来源</button>
+    </nav>
+
+    <main>
+      <!-- ---------------------------------------------------------------- -->
+      <section class="panel active" id="panel-blueprint">
+        <div class="split">
+          <aside class="side">
+            <h2>蓝图导入 / 导出</h2>
+            <p class="hint">
+              支持游戏内 <code>BLUEPRINT:…</code> 文本串与 <code>DYBP</code> 容器串。粘贴后自动解析建筑、
+              配方与分拣器连接，并按真实公式计算每条产线的速率。
+            </p>
+            <textarea id="bp-input" rows="7" placeholder="BLUEPRINT:0,10,0,0,0,0,0,0,……&#10;或 DYBP…"></textarea>
+            <div class="row">
+              <button id="bp-load" class="primary">导入并分析</button>
+              <button id="bp-sample">载入示例</button>
+              <button id="bp-clear">清空</button>
+            </div>
+            <!-- Real game blueprints bundled under /samples; filled in by the view when
+                 the manifest is present. -->
+            <div class="row" id="bp-real"></div>
+
+            <h3>从 GitHub 载入</h3>
+            <p class="hint">
+              填入仓库（<code>owner/repo</code>、仓库链接，或指向某个文件夹的链接），列出其中的蓝图后点选即可载入。
+              只列出 <code>.txt</code> 与 <code>.dybp</code>；未登录的 GitHub 接口每小时限 60 次请求，超额会提示。
+            </p>
+            <div class="row">
+              <input id="bp-gh-repo" type="text" placeholder="owner/repo 或 https://github.com/owner/repo" />
+              <button id="bp-gh-list" class="primary">列出蓝图</button>
+            </div>
+            <!-- One-click entry points; filled in by the view from BLUEPRINT_REPOS. -->
+            <div class="row" id="bp-gh-presets"></div>
+            <!-- Divides the fixed shortcuts above from whatever a listing actually returned
+                 below, so the two groups of buttons do not read as one. Hidden until there is
+                 a result to divide from, by `listGithub`. -->
+            <hr class="gh-sep" id="bp-gh-sep" hidden />
+            <div class="row" id="bp-gh-nav"></div>
+            <div class="row" id="bp-gh-files"></div>
+            <div id="bp-status" class="status"></div>
+
+            <h3>导出</h3>
+            <div class="row">
+              <button id="bp-export-text">导出 BLUEPRINT 串</button>
+              <button id="bp-export-binary">导出 DYBP 串</button>
+              <button id="bp-copy">复制</button>
+            </div>
+            <textarea id="bp-output" rows="5" readonly placeholder="导出的蓝图串会出现在这里"></textarea>
+
+            <h3>全局设置</h3>
+            <label class="field">
+              <span>增产剂</span>
+              <select id="bp-mark"></select>
+            </label>
+            <label class="field">
+              <span>增产模式</span>
+              <select id="bp-mode">
+                <option value="none">不使用</option>
+                <option value="extraProducts">额外产出</option>
+                <option value="speedup">生产加速</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>产线负荷</span>
+              <input id="bp-throughput" type="range" min="10" max="100" value="100" />
+              <output id="bp-throughput-out">100%</output>
+            </label>
+          </aside>
+
+          <div class="main-col">
+            <div class="stats" id="bp-stats"></div>
+
+            <!-- Tables sit above the view so the canvas can take the remaining height and the
+                 column never needs to scroll. Side by side, because a full-width row of two
+                 stacked tables would leave too little room for the canvas. -->
+            <div class="table-grid">
+              <div>
+                <h2>产线速率表</h2>
+                <div class="table-wrap"><table id="bp-lines"></table></div>
+              </div>
+              <div>
+                <h2>物料平衡（每分钟）</h2>
+                <div class="table-wrap"><table id="bp-balance"></table></div>
+              </div>
+            </div>
+
+            <h2>简化产线视图</h2>
+            <p class="hint">
+              按真实比例绘制：1 格 = 1 米，建筑用游戏内图标，尺寸与朝向取自蓝图数据（例：制造台 Mk.I 为 3×3，传送带为 1×1）。堆叠蓝图（多层共用同一平面）会按层错开绘制。
+              图标取自 <a href="https://dsp-wiki.com/Buildings" target="_blank" rel="noreferrer">dsp-wiki.com/Buildings</a>。
+            </p>
+            <div class="toolbar">
+              <label class="field inline">
+                <span>缩放</span>
+                <input id="bp-zoom" type="range" min="5" max="800" value="100" />
+                <output id="bp-zoom-out">100%</output>
+              </label>
+              <label class="field check inline">
+                <input id="bp-labels" type="checkbox" checked />
+                <span>显示配方/速率</span>
+              </label>
+              <label class="field check inline">
+                <input id="bp-links" type="checkbox" checked />
+                <span>显示分拣器连线</span>
+              </label>
+              <label class="field check inline" title="堆叠蓝图的多层共用同一 (x,y) 平面，错开绘制才能分辨；取消勾选即为真实俯视重合。">
+                <input id="bp-layers" type="checkbox" checked />
+                <span>分离堆叠层</span>
+              </label>
+              <label class="field check inline" title="只影响绘制：传送带密集时把它们隐去，便于看清机器；统计数字仍然统计全部传送带。">
+                <input id="bp-hide-belts" type="checkbox" />
+                <span>隐藏传送带</span>
+              </label>
+              <button id="bp-pan-reset" type="button" title="回到适配视图：居中，并把缩放重置为 100%（也可以在图上双击）。">重置视图</button>
+            </div>
+            <p class="hint">拖动可以平移视图；滚轮以光标为中心缩放；Shift+滚轮左右平移；双击或「重置视图」回到居中并把缩放重置为 100%。</p>
+            <canvas id="bp-canvas" width="900" height="520"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------- -->
+      <section class="panel" id="panel-planner">
+        <div class="split">
+          <aside class="side">
+            <h2>目标产物</h2>
+            <label class="field">
+              <span>物品</span>
+              <select id="plan-target"></select>
+            </label>
+            <label class="field">
+              <span>每分钟产量</span>
+              <input id="plan-rate" type="number" min="1" step="1" value="60" />
+            </label>
+            <label class="field">
+              <span>增产剂</span>
+              <select id="plan-mark"></select>
+            </label>
+            <label class="field">
+              <span>增产模式</span>
+              <select id="plan-mode">
+                <option value="none">不使用</option>
+                <option value="extraProducts">额外产出</option>
+                <option value="speedup">生产加速</option>
+              </select>
+            </label>
+            <label class="field check">
+              <input id="plan-alternates" type="checkbox" />
+              <span>允许稀有/替代配方</span>
+            </label>
+            <div class="row">
+              <button id="plan-run" class="primary">生成生产链</button>
+            </div>
+            <h3>研究等级</h3>
+            <div id="plan-upgrades" class="upgrade-list"></div>
+          </aside>
+          <div class="main-col">
+            <div class="stats" id="plan-stats"></div>
+            <h2>生产链树</h2>
+            <div id="plan-tree" class="tree"></div>
+            <h2>购物清单</h2>
+            <div class="table-wrap"><table id="plan-buildings"></table></div>
+            <h2>原料需求（每分钟）</h2>
+            <div class="table-wrap"><table id="plan-raw"></table></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------- -->
+      <section class="panel" id="panel-tech">
+        <h2>科技树</h2>
+        <p class="hint">勾选已研究的科技会解锁对应配方并启用其加成；下面的重复研究升级可拖动设置等级。</p>
+        <div class="row">
+          <input id="tech-filter" type="search" placeholder="搜索科技 / 建筑 / 配方…" />
+          <button id="tech-all">全部研究</button>
+          <button id="tech-none">全部取消</button>
+        </div>
+        <div id="tech-list" class="tech-list"></div>
+      </section>
+
+      <!-- ---------------------------------------------------------------- -->
+      <section class="panel" id="panel-mining">
+        <h2>采矿速率</h2>
+        <p class="hint">
+          矿机对每个覆盖到的矿脉产出 <strong>30 个/分钟</strong>（所有矿物相同）。矿脉利用每级 +10% 采矿速度，
+          并以 0.94 的指数降低矿脉消耗。
+        </p>
+        <label class="field">
+          <span>矿脉利用等级</span>
+          <input id="mine-level" type="range" min="0" max="60" value="0" />
+          <output id="mine-level-out">0</output>
+        </label>
+        <label class="field">
+          <span>覆盖矿脉数</span>
+          <input id="mine-veins" type="number" min="1" max="64" value="6" />
+        </label>
+        <label class="field">
+          <span>资源倍率</span>
+          <select id="mine-resource">
+            <option value="0.5">0.5×（贫瘠）</option>
+            <option value="1" selected>1×（标准）</option>
+            <option value="2">2×（丰富）</option>
+            <option value="5">5×（无限近似）</option>
+          </select>
+        </label>
+        <div class="stats" id="mine-stats"></div>
+
+        <h2>物流吞吐</h2>
+        <div class="table-wrap"><table id="belt-table"></table></div>
+      </section>
+
+      <!-- ---------------------------------------------------------------- -->
+      <section class="panel" id="panel-about">
+        <h2>这个模拟器做什么</h2>
+        <ul class="about">
+          <li><strong>底层引擎</strong>：纯 TypeScript，无框架依赖，实现游戏的生产公式（配方时间 × 机器速度 × 科技加成 × 增产剂）。</li>
+          <li><strong>蓝图互通</strong>：解析与生成游戏内蓝图串（<code>BLUEPRINT:</code> 文本格式与 <code>DYBP</code> 容器格式），包括游戏专用的 MD5F 校验哈希与 gzip 负载。</li>
+          <li><strong>科技与加成</strong>：可研究科技树、重复升级等级，实时作用于速率。</li>
+          <li><strong>采集加成</strong>：矿机 30/分钟·矿脉、矿脉利用的 +10% 速度与 −6% 消耗。</li>
+        </ul>
+        <h2>数据来源</h2>
+        <div id="about-sources"></div>
+        <h2>建筑图标与占格</h2>
+        <div id="about-icons"></div>
+        <h2>已知限制</h2>
+        <ul class="about" id="about-limits"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span id="footer-status">引擎就绪</span>
+    </footer>
+
+    <script type="module" src="/src/ui/main.ts"></script>
+  </body>
+</html>

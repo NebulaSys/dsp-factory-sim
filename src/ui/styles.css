@@ -1,0 +1,237 @@
+/* DSP Factory Simulator — dark, data-dense UI in the game's colour language. */
+
+:root {
+  --bg: #0b1015;
+  --bg-2: #121a22;
+  --bg-3: #18232d;
+  --line: #24323f;
+  --fg: #d8e4ee;
+  --fg-dim: #8ba0b3;
+  --accent: #4fc3f7;
+  --accent-2: #ffb74d;
+  --ok: #66bb6a;
+  --warn: #ffa726;
+  --bad: #ef5350;
+  --raw: #7e57c2;
+  --mid: #26a69a;
+  --comp: #42a5f5;
+  --matrix: #ab47bc;
+  --prod: #26a69a;
+  --belt: #546e7a;
+  --sorter: #8d6e63;
+  --power: #ffca28;
+  --logi: #5c6bc0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.55 "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+}
+
+h1 { font-size: 17px; margin: 0; letter-spacing: 0.02em; }
+h2 { font-size: 14px; margin: 18px 0 8px; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+h3 { font-size: 13px; margin: 16px 0 6px; color: var(--fg); }
+p { margin: 6px 0; }
+code { background: var(--bg-3); padding: 1px 5px; border-radius: 3px; color: var(--accent-2); font-size: 12px; }
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px 20px; background: linear-gradient(180deg, #16222c, #0e161d);
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { font-size: 26px; color: var(--accent); }
+.subtitle { margin: 2px 0 0; font-size: 11px; color: var(--fg-dim); }
+.topbar-meta { font-size: 11px; color: var(--fg-dim); text-align: right; }
+
+.tabs { display: flex; gap: 2px; padding: 0 16px; background: var(--bg-2); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tab {
+  background: transparent; border: 1px solid transparent; border-bottom: none;
+  color: var(--fg-dim); padding: 9px 16px; cursor: pointer; font-size: 13px;
+  border-radius: 5px 5px 0 0;
+}
+.tab:hover { color: var(--fg); background: var(--bg-3); }
+.tab.active { color: var(--accent); background: var(--bg); border-color: var(--line); border-bottom-color: var(--bg); margin-bottom: -1px; }
+
+main { padding: 16px 20px 40px; }
+.panel { display: none; }
+.panel.active { display: block; }
+
+.split { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 1100px) { .split { grid-template-columns: 1fr; } }
+
+.side {
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px;
+  position: sticky; top: 12px;
+}
+.main-col { min-width: 0; }
+
+/* ------------------------------------------------------------------ blueprint tab layout
+   The factory view is a fixed-size instrument, so this one tab fills the viewport instead of
+   growing the page: the right column never scrolls and the canvas takes whatever height is
+   left, while the left column scrolls on its own. Scoped with `:has()` so the other tabs keep
+   their normal document flow.
+
+   Below 1100px the two columns stack, and a fixed viewport height would squeeze the canvas to
+   nothing, so the whole thing reverts to ordinary scrolling there. */
+body:has(#panel-blueprint.active) {
+  display: flex; flex-direction: column; height: 100vh; overflow: hidden;
+}
+body:has(#panel-blueprint.active) main {
+  flex: 1; min-height: 0; overflow: hidden; padding: 12px 20px;
+}
+body:has(#panel-blueprint.active) #panel-blueprint { height: 100%; }
+body:has(#panel-blueprint.active) .split { height: 100%; align-items: stretch; }
+body:has(#panel-blueprint.active) .side { position: static; overflow-y: auto; }
+body:has(#panel-blueprint.active) .main-col {
+  display: flex; flex-direction: column; gap: 8px; min-height: 0; overflow: hidden;
+}
+
+/* Two tables side by side: stacked they cost ~340px of height, which comes straight out of
+   the canvas. Each keeps its own inner scrollbar so a long table cannot push the canvas. */
+.table-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; flex: none; }
+.table-grid h2 { margin-top: 0; }
+#panel-blueprint .table-grid .table-wrap { max-height: 168px; }
+
+/* The canvas is the only flexible child, so it absorbs the leftover height.
+ *
+ * `flex-basis: 0` rather than `auto` on purpose: with `auto` the flex base size comes from the
+ * canvas's `height` attribute, which `drawScene` rewrites to sync the backing store. The layout
+ * box would then depend on the drawing, and the ResizeObserver that redraws on box changes would
+ * feed itself. A zero basis makes the height purely a function of the flex distribution. */
+#panel-blueprint #bp-canvas { flex: 1 1 0; min-height: 200px; }
+
+/* Below 1100px the columns stack, and a fixed viewport height would squeeze the canvas to
+   nothing. A short window has the same problem from the other direction: the fixed stack needs
+   roughly 760px, and clipping content that cannot be scrolled to is worse than a scrollbar. So
+   both cases revert to ordinary document flow. */
+@media (max-width: 1100px), (max-height: 700px) {
+  body:has(#panel-blueprint.active) { display: block; height: auto; overflow: visible; }
+  body:has(#panel-blueprint.active) main { height: auto; overflow: visible; padding: 16px 20px 40px; }
+  body:has(#panel-blueprint.active) #panel-blueprint { height: auto; }
+  body:has(#panel-blueprint.active) .split { height: auto; }
+  body:has(#panel-blueprint.active) .side { overflow-y: visible; }
+  body:has(#panel-blueprint.active) .main-col { overflow: visible; }
+  .table-grid { grid-template-columns: 1fr; }
+  body:has(#panel-blueprint.active) .table-grid .table-wrap { max-height: 260px; }
+  #panel-blueprint #bp-canvas { min-height: 340px; }
+}
+
+/* Divider between the fixed GitHub shortcuts and the listing they produce. `hr` carries default
+   margins and a groove border, so both are replaced. */
+.gh-sep {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 10px 0;
+}
+.gh-sep[hidden] { display: none; }
+
+.hint { font-size: 12px; color: var(--fg-dim); }
+
+textarea, input[type="text"], input[type="number"], input[type="search"], select {
+  width: 100%; background: var(--bg-3); color: var(--fg); border: 1px solid var(--line);
+  border-radius: 5px; padding: 7px 9px; font: inherit; font-size: 12px;
+}
+textarea { resize: vertical; font-family: ui-monospace, Consolas, monospace; }
+input[type="range"] { width: 100%; accent-color: var(--accent); }
+input[type="checkbox"] { accent-color: var(--accent); }
+
+button {
+  background: var(--bg-3); color: var(--fg); border: 1px solid var(--line);
+  border-radius: 5px; padding: 7px 13px; cursor: pointer; font: inherit; font-size: 12px;
+}
+button:hover { background: #22303c; border-color: #33475a; }
+button.primary { background: #16506b; border-color: #1d6f92; color: #e8f6ff; }
+button.primary:hover { background: #1b6285; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+
+.field { display: flex; align-items: center; gap: 8px; margin: 7px 0; font-size: 12px; }
+.field > span:first-child { flex: 0 0 84px; color: var(--fg-dim); }
+.field.check { gap: 6px; }
+.field.check > span { flex: 1; color: var(--fg); }
+.field output { min-width: 42px; text-align: right; color: var(--accent-2); font-variant-numeric: tabular-nums; }
+
+.status { font-size: 12px; margin-top: 8px; min-height: 18px; }
+.status.ok { color: var(--ok); }
+.status.err { color: var(--bad); }
+.status.warn { color: var(--warn); }
+
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.stat {
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;
+  padding: 8px 12px; min-width: 118px; max-width: 220px;
+}
+.stat .k { font-size: 11px; color: var(--fg-dim); }
+.stat .v { font-size: 17px; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat .hint { font-size: 10px; line-height: 1.3; color: var(--fg-dim); opacity: 0.75; margin-top: 4px; }
+.stat.warn .v { color: var(--warn); }
+.stat.bad .v { color: var(--bad); }
+.stat.ok .v { color: var(--ok); }
+
+canvas { background: #0d1319; border: 1px solid var(--line); border-radius: 6px; width: 100%; height: auto; display: block; }
+
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center;
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px;
+  padding: 6px 12px; margin: 8px 0;
+}
+.field.inline { margin: 0; flex: 0 0 auto; }
+.field.inline > span:first-child { flex: 0 0 auto; }
+.field.inline input[type="range"] { width: 130px; }
+
+.table-wrap { overflow: auto; max-height: 420px; border: 1px solid var(--line); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 12px; }
+th, td { padding: 5px 9px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { background: var(--bg-3); position: sticky; top: 0; color: var(--accent); font-weight: 600; z-index: 1; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr:hover td { background: #16202a; }
+td.item { color: var(--fg); }
+
+.badge { display: inline-block; padding: 0 6px; border-radius: 9px; font-size: 10px; line-height: 16px; background: var(--bg-3); color: var(--fg-dim); }
+.badge.raw { background: #2b2140; color: #b39ddb; }
+.badge.mid { background: #14332f; color: #4db6ac; }
+.badge.comp { background: #102c44; color: #64b5f6; }
+.badge.matrix { background: #33163a; color: #ce93d8; }
+.badge.building { background: #3a2c14; color: #ffcc80; }
+.badge.proliferator { background: #3d3410; color: #ffe082; }
+.badge.fuel { background: #3c1f1f; color: #ef9a9a; }
+.badge.ammo { background: #2a2f38; color: #b0bec5; }
+
+.tree { font-size: 12px; }
+.tree-node { border-left: 2px solid var(--line); margin: 2px 0 2px 9px; padding: 3px 0 3px 11px; }
+.tree-node.recipe { border-left-color: var(--prod); }
+.tree-node.raw { border-left-color: var(--raw); }
+.tree-node.cycle { border-left-color: var(--warn); }
+.tree-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.tree-item { font-weight: 600; }
+.tree-meta { color: var(--fg-dim); }
+.tree-meta b { color: var(--accent-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.upgrade-list { max-height: 320px; overflow: auto; }
+.upgrade { margin: 8px 0; }
+.upgrade .label { display: flex; justify-content: space-between; font-size: 12px; }
+.upgrade .label .lvl { color: var(--accent-2); font-variant-numeric: tabular-nums; }
+
+.tech-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; margin-top: 10px; }
+.tech-card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 6px; padding: 9px 11px; cursor: pointer; }
+.tech-card:hover { border-color: #33475a; }
+.tech-card.researched { border-color: var(--ok); background: #14231a; }
+.tech-card h4 { margin: 0 0 4px; font-size: 12px; }
+.tech-card .meta { font-size: 11px; color: var(--fg-dim); }
+.tech-card .unlocks { font-size: 11px; color: var(--int, #7fd1ff); margin-top: 4px; word-break: break-word; }
+
+.about { font-size: 12px; color: var(--fg-dim); line-height: 1.8; }
+.about strong { color: var(--fg); }
+#about-sources a { color: var(--accent); font-size: 12px; }
+
+.footer {
+  border-top: 1px solid var(--line); padding: 9px 20px; font-size: 11px; color: var(--fg-dim);
+  background: var(--bg-2); position: sticky; bottom: 0;
+}

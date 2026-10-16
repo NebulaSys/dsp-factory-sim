@@ -1,0 +1,1106 @@
+{
+ "generatedAt": "2026-10-15T00:59:54.591Z",
+ "source": "https://dsp-wiki.com/Buildings",
+ "license": "Icons belong to Youthcat Studio / dsp-wiki.com contributors; this is a fan tool.",
+ "note": "bbox is the tight opaque box in the source image; palette is sampled from the art.",
+ "icons": {
+  "Accumulator": {
+   "file": "/icons/Icon_Accumulator.png",
+   "width": 58,
+   "height": 79,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 54,
+    "h": 75
+   },
+   "palette": {
+    "accent": "#566069",
+    "mean": "#788082",
+    "dark": "#2b2e32"
+   },
+   "source": "https://media.dsp-wiki.com/7/71/Icon_Accumulator.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "AdvancedMiningMachine": {
+   "file": "/icons/Icon_Advanced_Mining_Machine.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 1,
+    "y": 1,
+    "w": 76,
+    "h": 79
+   },
+   "palette": {
+    "accent": "#82a3dd",
+    "mean": "#8495b4",
+    "dark": "#3b485e"
+   },
+   "source": "https://media.dsp-wiki.com/5/55/Icon_Advanced_Mining_Machine.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ArcSmelter": {
+   "file": "/icons/Icon_Arc_Smelter.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 5,
+    "y": 2,
+    "w": 70,
+    "h": 77
+   },
+   "palette": {
+    "accent": "#90a9db",
+    "mean": "#93a0ae",
+    "dark": "#414a5d"
+   },
+   "source": "https://media.dsp-wiki.com/6/60/Icon_Arc_Smelter.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ArtificialStar": {
+   "file": "/icons/Icon_Artificial_Star.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 6,
+    "y": 3,
+    "w": 67,
+    "h": 76
+   },
+   "palette": {
+    "accent": "#b6a052",
+    "mean": "#a79854",
+    "dark": "#4f4729"
+   },
+   "source": "https://media.dsp-wiki.com/b/b6/Icon_Artificial_Star.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "AssemblingMachineMk1": {
+   "file": "/icons/Icon_Assembling_Machine_Mk.I.png",
+   "width": 75,
+   "height": 78,
+   "bbox": {
+    "x": 5,
+    "y": 0,
+    "w": 68,
+    "h": 76
+   },
+   "palette": {
+    "accent": "#be9165",
+    "mean": "#917f6d",
+    "dark": "#524130"
+   },
+   "source": "https://media.dsp-wiki.com/8/8e/Icon_Assembling_Machine_Mk.I.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "AssemblingMachineMk2": {
+   "file": "/icons/Icon_Assembling_Machine_Mk.II.png",
+   "width": 75,
+   "height": 78,
+   "bbox": {
+    "x": 6,
+    "y": 4,
+    "w": 67,
+    "h": 72
+   },
+   "palette": {
+    "accent": "#52b4b2",
+    "mean": "#619393",
+    "dark": "#294e4e"
+   },
+   "source": "https://media.dsp-wiki.com/9/93/Icon_Assembling_Machine_Mk.II.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "AssemblingMachineMk3": {
+   "file": "/icons/Icon_Assembling_Machine_Mk.III.png",
+   "width": 80,
+   "height": 78,
+   "bbox": {
+    "x": 6,
+    "y": 4,
+    "w": 67,
+    "h": 72
+   },
+   "palette": {
+    "accent": "#5396b8",
+    "mean": "#5f8395",
+    "dark": "#2a4350"
+   },
+   "source": "https://media.dsp-wiki.com/8/8c/Icon_Assembling_Machine_Mk.III.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "AutomaticPiler": {
+   "file": "/icons/Icon_Automatic_Piler.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 4,
+    "y": 4,
+    "w": 70,
+    "h": 73
+   },
+   "palette": {
+    "accent": "#51639c",
+    "mean": "#778098",
+    "dark": "#293045"
+   },
+   "source": "https://media.dsp-wiki.com/1/1c/Icon_Automatic_Piler.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "BattlefieldAnalysisBase": {
+   "file": "/icons/Icon_Battlefield_Analysis_Base.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 11,
+    "y": 3,
+    "w": 57,
+    "h": 75
+   },
+   "palette": {
+    "accent": "#817e7e",
+    "mean": "#817f80",
+    "dark": "#3b3a3a"
+   },
+   "source": "https://media.dsp-wiki.com/c/c2/Icon_Battlefield_Analysis_Base.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ChemicalPlant": {
+   "file": "/icons/Icon_Chemical_Plant.png",
+   "width": 77,
+   "height": 77,
+   "bbox": {
+    "x": 2,
+    "y": 7,
+    "w": 73,
+    "h": 68
+   },
+   "palette": {
+    "accent": "#708b9f",
+    "mean": "#7f919c",
+    "dark": "#343f47"
+   },
+   "source": "https://media.dsp-wiki.com/f/f9/Icon_Chemical_Plant.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ConveyorBeltMk1": {
+   "file": "/icons/Icon_Conveyor_Belt_Mk.I.png",
+   "width": 79,
+   "height": 48,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 75,
+    "h": 44
+   },
+   "palette": {
+    "accent": "#daad7c",
+    "mean": "#887f72",
+    "dark": "#5d4c39"
+   },
+   "source": "https://media.dsp-wiki.com/7/78/Icon_Conveyor_Belt_Mk.I.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ConveyorBeltMk2": {
+   "file": "/icons/Icon_Conveyor_Belt_Mk.II.png",
+   "width": 79,
+   "height": 48,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 75,
+    "h": 44
+   },
+   "palette": {
+    "accent": "#68bbab",
+    "mean": "#6b807c",
+    "dark": "#31514b"
+   },
+   "source": "https://media.dsp-wiki.com/3/38/Icon_Conveyor_Belt_Mk.II.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ConveyorBeltMk3": {
+   "file": "/icons/Icon_Conveyor_Belt_Mk.III.png",
+   "width": 79,
+   "height": 48,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 75,
+    "h": 44
+   },
+   "palette": {
+    "accent": "#73b0d9",
+    "mean": "#6e7f89",
+    "dark": "#364d5c"
+   },
+   "source": "https://media.dsp-wiki.com/1/18/Icon_Conveyor_Belt_Mk.III.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "DepotMk1": {
+   "file": "/icons/Icon_Depot_Mk.I.png",
+   "width": 73,
+   "height": 61,
+   "bbox": {
+    "x": 7,
+    "y": 2,
+    "w": 64,
+    "h": 57
+   },
+   "palette": {
+    "accent": "#4d6884",
+    "mean": "#909aa1",
+    "dark": "#27323c"
+   },
+   "source": "https://media.dsp-wiki.com/a/a1/Icon_Depot_Mk.I.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "DepotMk2": {
+   "file": "/icons/Icon_Depot_Mk.II.png",
+   "width": 78,
+   "height": 60,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 73,
+    "h": 56
+   },
+   "palette": {
+    "accent": "#577494",
+    "mean": "#96a1a7",
+    "dark": "#2b3642"
+   },
+   "source": "https://media.dsp-wiki.com/e/e7/Icon_Depot_Mk.II.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "EMRailEjector": {
+   "file": "/icons/Icon_EM-Rail_Ejector.png",
+   "width": 79,
+   "height": 77,
+   "bbox": {
+    "x": 5,
+    "y": 1,
+    "w": 69,
+    "h": 74
+   },
+   "palette": {
+    "accent": "#6e7dbd",
+    "mean": "#858faf",
+    "dark": "#343952"
+   },
+   "source": "https://media.dsp-wiki.com/a/a2/Icon_EM-Rail_Ejector.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "EnergyExchanger": {
+   "file": "/icons/Icon_Energy_Exchanger.png",
+   "width": 80,
+   "height": 77,
+   "bbox": {
+    "x": 7,
+    "y": 2,
+    "w": 67,
+    "h": 73
+   },
+   "palette": {
+    "accent": "#5f92c0",
+    "mean": "#6287a9",
+    "dark": "#2e4153"
+   },
+   "source": "https://media.dsp-wiki.com/6/64/Icon_Energy_Exchanger.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "Fractionator": {
+   "file": "/icons/Icon_Fractionator.png",
+   "width": 62,
+   "height": 80,
+   "bbox": {
+    "x": 10,
+    "y": 3,
+    "w": 43,
+    "h": 74
+   },
+   "palette": {
+    "accent": "#648ca8",
+    "mean": "#708593",
+    "dark": "#303f4a"
+   },
+   "source": "https://media.dsp-wiki.com/2/28/Icon_Fractionator.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "AccumulatorFull": {
+   "file": "/icons/Icon_Full_Accumulator.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 8,
+    "y": 1,
+    "w": 59,
+    "h": 77
+   },
+   "palette": {
+    "accent": "#7d86bf",
+    "mean": "#8b92b3",
+    "dark": "#393d53"
+   },
+   "source": "https://media.dsp-wiki.com/6/67/Icon_Full_Accumulator.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "GaussTurret": {
+   "file": "/icons/Icon_Gauss_Turret.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 7,
+    "y": 6,
+    "w": 66,
+    "h": 71
+   },
+   "palette": {
+    "accent": "#e0a275",
+    "mean": "#928274",
+    "dark": "#5f4836"
+   },
+   "source": "https://media.dsp-wiki.com/a/a2/Icon_Gauss_Turret.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "GeothermalPowerStation": {
+   "file": "/icons/Icon_Geothermal_Power_Station.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 11,
+    "y": 1,
+    "w": 62,
+    "h": 78
+   },
+   "palette": {
+    "accent": "#8a7379",
+    "mean": "#84797e",
+    "dark": "#3f3638"
+   },
+   "source": "https://media.dsp-wiki.com/c/c3/Icon_Geothermal_Power_Station.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "HoloBeacon": {
+   "file": "/icons/Icon_Holo_Beacon.png",
+   "width": 68,
+   "height": 80,
+   "bbox": {
+    "x": 20,
+    "y": 2,
+    "w": 33,
+    "h": 76
+   },
+   "palette": {
+    "accent": "#a1c67e",
+    "mean": "#a3b595",
+    "dark": "#47553a"
+   },
+   "source": "https://media.dsp-wiki.com/9/94/Icon_Holo_Beacon.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ImplosionCannon": {
+   "file": "/icons/Icon_Implosion_Cannon.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 6,
+    "y": 9,
+    "w": 68,
+    "h": 67
+   },
+   "palette": {
+    "accent": "#b76f5c",
+    "mean": "#675c58",
+    "dark": "#4f342d"
+   },
+   "source": "https://media.dsp-wiki.com/7/70/Icon_Implosion_Cannon.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "InterstellarLogisticsStation": {
+   "file": "/icons/Icon_Interstellar_Logistics_Station.png",
+   "width": 67,
+   "height": 79,
+   "bbox": {
+    "x": 3,
+    "y": 2,
+    "w": 61,
+    "h": 75
+   },
+   "palette": {
+    "accent": "#62758a",
+    "mean": "#6c7782",
+    "dark": "#2f363e"
+   },
+   "source": "https://media.dsp-wiki.com/6/6c/Icon_Interstellar_Logistics_Station.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "JammerTower": {
+   "file": "/icons/Icon_Jammer_Tower.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 11,
+    "y": 7,
+    "w": 58,
+    "h": 70
+   },
+   "palette": {
+    "accent": "#7383ac",
+    "mean": "#657089",
+    "dark": "#363c4b"
+   },
+   "source": "https://media.dsp-wiki.com/c/cc/Icon_Jammer_Tower.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "LaserTurret": {
+   "file": "/icons/Icon_Laser_Turret.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 17,
+    "y": 5,
+    "w": 49,
+    "h": 74
+   },
+   "palette": {
+    "accent": "#7a87c0",
+    "mean": "#838997",
+    "dark": "#383d53"
+   },
+   "source": "https://media.dsp-wiki.com/7/76/Icon_Laser_Turret.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "LogisticsDistributor": {
+   "file": "/icons/Icon_Logistics_Distributor.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 13,
+    "y": 7,
+    "w": 59,
+    "h": 70
+   },
+   "palette": {
+    "accent": "#75798e",
+    "mean": "#606674",
+    "dark": "#363840"
+   },
+   "source": "https://media.dsp-wiki.com/b/b3/Icon_Logistics_Distributor.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "MatrixLab": {
+   "file": "/icons/Icon_Matrix_Lab.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 4,
+    "y": 3,
+    "w": 72,
+    "h": 71
+   },
+   "palette": {
+    "accent": "#6890b4",
+    "mean": "#7994a9",
+    "dark": "#32414e"
+   },
+   "source": "https://media.dsp-wiki.com/b/b7/Icon_Matrix_Lab.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "MiniFusionPowerPlant": {
+   "file": "/icons/Icon_Mini_Fusion_Power_Plant.png",
+   "width": 78,
+   "height": 57,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 74,
+    "h": 53
+   },
+   "palette": {
+    "accent": "#7295be",
+    "mean": "#979fa5",
+    "dark": "#354352"
+   },
+   "source": "https://media.dsp-wiki.com/0/03/Icon_Mini_Fusion_Power_Plant.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "MiniatureParticleCollider": {
+   "file": "/icons/Icon_Miniature_Particle_Collider.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 16,
+    "y": 2,
+    "w": 53,
+    "h": 77
+   },
+   "palette": {
+    "accent": "#668cb6",
+    "mean": "#6583a1",
+    "dark": "#313f4f"
+   },
+   "source": "https://media.dsp-wiki.com/a/aa/Icon_Miniature_Particle_Collider.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "MiningMachine": {
+   "file": "/icons/Icon_Mining_Machine.png",
+   "width": 80,
+   "height": 68,
+   "bbox": {
+    "x": 5,
+    "y": 8,
+    "w": 70,
+    "h": 58
+   },
+   "palette": {
+    "accent": "#9e8b95",
+    "mean": "#8c8890",
+    "dark": "#463f43"
+   },
+   "source": "https://media.dsp-wiki.com/c/cf/Icon_Mining_Machine.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "MissileTurret": {
+   "file": "/icons/Icon_Missile_Turret.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 5,
+    "y": 4,
+    "w": 69,
+    "h": 75
+   },
+   "palette": {
+    "accent": "#b7b274",
+    "mean": "#818473",
+    "dark": "#504e36"
+   },
+   "source": "https://media.dsp-wiki.com/4/45/Icon_Missile_Turret.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "NegentropySmelter": {
+   "file": "/icons/Icon_Negentropy_Smelter.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 5,
+    "y": 1,
+    "w": 70,
+    "h": 78
+   },
+   "palette": {
+    "accent": "#568188",
+    "mean": "#6f8182",
+    "dark": "#2b3b3e"
+   },
+   "source": "https://media.dsp-wiki.com/9/98/Icon_Negentropy_Smelter.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "OilExtractor": {
+   "file": "/icons/Icon_Oil_Extractor.png",
+   "width": 61,
+   "height": 80,
+   "bbox": {
+    "x": 2,
+    "y": 1,
+    "w": 57,
+    "h": 76
+   },
+   "palette": {
+    "accent": "#6477b8",
+    "mean": "#919bab",
+    "dark": "#303750"
+   },
+   "source": "https://media.dsp-wiki.com/8/8f/Icon_Oil_Extractor.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "OilRefinery": {
+   "file": "/icons/Icon_Oil_Refinery.png",
+   "width": 78,
+   "height": 80,
+   "bbox": {
+    "x": 11,
+    "y": 2,
+    "w": 50,
+    "h": 76
+   },
+   "palette": {
+    "accent": "#6883b2",
+    "mean": "#8b97a5",
+    "dark": "#313c4e"
+   },
+   "source": "https://media.dsp-wiki.com/7/74/Icon_Oil_Refinery.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "OrbitalCollector": {
+   "file": "/icons/Icon_Orbital_Collector.png",
+   "width": 75,
+   "height": 80,
+   "bbox": {
+    "x": 6,
+    "y": 3,
+    "w": 62,
+    "h": 77
+   },
+   "palette": {
+    "accent": "#647fa0",
+    "mean": "#6b7b8f",
+    "dark": "#303a47"
+   },
+   "source": "https://media.dsp-wiki.com/6/64/Icon_Orbital_Collector.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "PileSorter": {
+   "file": "/icons/Icon_Pile_Sorter.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 5,
+    "y": 7,
+    "w": 71,
+    "h": 66
+   },
+   "palette": {
+    "accent": "#8398a6",
+    "mean": "#a3abae",
+    "dark": "#3c4449"
+   },
+   "source": "https://media.dsp-wiki.com/7/72/Icon_Pile_Sorter.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "PlaneSmelter": {
+   "file": "/icons/Icon_Plane_Smelter.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 5,
+    "y": 2,
+    "w": 70,
+    "h": 77
+   },
+   "palette": {
+    "accent": "#c76c74",
+    "mean": "#a59092",
+    "dark": "#563336"
+   },
+   "source": "https://media.dsp-wiki.com/1/13/Icon_Plane_Smelter.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "PlanetaryLogisticsStation": {
+   "file": "/icons/Icon_Planetary_Logistics_Station.png",
+   "width": 50,
+   "height": 73,
+   "bbox": {
+    "x": 7,
+    "y": 4,
+    "w": 36,
+    "h": 67
+   },
+   "palette": {
+    "accent": "#63778b",
+    "mean": "#6a737d",
+    "dark": "#30373f"
+   },
+   "source": "https://media.dsp-wiki.com/e/e5/Icon_Planetary_Logistics_Station.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "PlanetaryShieldGenerator": {
+   "file": "/icons/Icon_Planetary_Shield_Generator.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 22,
+    "y": 2,
+    "w": 36,
+    "h": 75
+   },
+   "palette": {
+    "accent": "#6b94bf",
+    "mean": "#6a7c89",
+    "dark": "#334252"
+   },
+   "source": "https://media.dsp-wiki.com/4/40/Icon_Planetary_Shield_Generator.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "PlasmaTurret": {
+   "file": "/icons/Icon_Plasma_Turret.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 1,
+    "y": 11,
+    "w": 73,
+    "h": 65
+   },
+   "palette": {
+    "accent": "#9283b9",
+    "mean": "#8b899a",
+    "dark": "#423c50"
+   },
+   "source": "https://media.dsp-wiki.com/0/0e/Icon_Plasma_Turret.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "QuantumChemicalPlant": {
+   "file": "/icons/Icon_Quantum_Chemical_Plant.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 4,
+    "y": 4,
+    "w": 71,
+    "h": 72
+   },
+   "palette": {
+    "accent": "#789fce",
+    "mean": "#7490b2",
+    "dark": "#384658"
+   },
+   "source": "https://media.dsp-wiki.com/a/a9/Icon_Quantum_Chemical_Plant.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "RayReceiver": {
+   "file": "/icons/Icon_Ray_Receiver.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 4,
+    "y": 4,
+    "w": 74,
+    "h": 72
+   },
+   "palette": {
+    "accent": "#6c8bae",
+    "mean": "#6b85a0",
+    "dark": "#333f4c"
+   },
+   "source": "https://media.dsp-wiki.com/7/7b/Icon_Ray_Receiver.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "RecomposingAssembler": {
+   "file": "/icons/Icon_Re-composing_Assembler.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 6,
+    "y": 4,
+    "w": 67,
+    "h": 73
+   },
+   "palette": {
+    "accent": "#538188",
+    "mean": "#546f73",
+    "dark": "#2a3b3e"
+   },
+   "source": "https://media.dsp-wiki.com/8/8d/Icon_Re-composing_Assembler.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SatelliteSubstation": {
+   "file": "/icons/Icon_Satellite_Substation.png",
+   "width": 76,
+   "height": 75,
+   "bbox": {
+    "x": 8,
+    "y": 2,
+    "w": 64,
+    "h": 72
+   },
+   "palette": {
+    "accent": "#837fa3",
+    "mean": "#9293a7",
+    "dark": "#3c3a48"
+   },
+   "source": "https://media.dsp-wiki.com/d/d7/Icon_Satellite_Substation.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SelfEvolutionLab": {
+   "file": "/icons/Icon_Self-evolution_Lab.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 5,
+    "y": 3,
+    "w": 70,
+    "h": 69
+   },
+   "palette": {
+    "accent": "#4b919b",
+    "mean": "#4e7f86",
+    "dark": "#264145"
+   },
+   "source": "https://media.dsp-wiki.com/5/54/Icon_Self-evolution_Lab.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SignalTower": {
+   "file": "/icons/Icon_Signal_Tower.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 17,
+    "y": 1,
+    "w": 47,
+    "h": 78
+   },
+   "palette": {
+    "accent": "#738ea9",
+    "mean": "#717e89",
+    "dark": "#36404a"
+   },
+   "source": "https://media.dsp-wiki.com/e/ec/Icon_Signal_Tower.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SolarPanel": {
+   "file": "/icons/Icon_Solar_Panel.png",
+   "width": 74,
+   "height": 71,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 70,
+    "h": 67
+   },
+   "palette": {
+    "accent": "#52668a",
+    "mean": "#6a768d",
+    "dark": "#29313e"
+   },
+   "source": "https://media.dsp-wiki.com/7/77/Icon_Solar_Panel.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SorterMk1": {
+   "file": "/icons/Icon_Sorter_Mk.I.png",
+   "width": 75,
+   "height": 70,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 71,
+    "h": 66
+   },
+   "palette": {
+    "accent": "#978973",
+    "mean": "#a2a099",
+    "dark": "#433e36"
+   },
+   "source": "https://media.dsp-wiki.com/4/4f/Icon_Sorter_Mk.I.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SorterMk2": {
+   "file": "/icons/Icon_Sorter_Mk.II.png",
+   "width": 75,
+   "height": 70,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 71,
+    "h": 66
+   },
+   "palette": {
+    "accent": "#598b8c",
+    "mean": "#89a1a3",
+    "dark": "#2c3f3f"
+   },
+   "source": "https://media.dsp-wiki.com/2/25/Icon_Sorter_Mk.II.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SorterMk3": {
+   "file": "/icons/Icon_Sorter_Mk.III.png",
+   "width": 75,
+   "height": 70,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 71,
+    "h": 66
+   },
+   "palette": {
+    "accent": "#608aaa",
+    "mean": "#8ca0af",
+    "dark": "#2e3f4b"
+   },
+   "source": "https://media.dsp-wiki.com/b/b5/Icon_Sorter_Mk.III.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "Splitter": {
+   "file": "/icons/Icon_Splitter.png",
+   "width": 64,
+   "height": 68,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 60,
+    "h": 64
+   },
+   "palette": {
+    "accent": "#576a7b",
+    "mean": "#6c767d",
+    "dark": "#2b3239"
+   },
+   "source": "https://media.dsp-wiki.com/d/d6/Icon_Splitter.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SprayCoater": {
+   "file": "/icons/Icon_Spray_Coater.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 3,
+    "y": 6,
+    "w": 74,
+    "h": 72
+   },
+   "palette": {
+    "accent": "#a29b78",
+    "mean": "#888883",
+    "dark": "#484538"
+   },
+   "source": "https://media.dsp-wiki.com/9/99/Icon_Spray_Coater.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "SRPlasmaTurret": {
+   "file": "/icons/Icon_SR_Plasma_Turret.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 22,
+    "y": 1,
+    "w": 37,
+    "h": 79
+   },
+   "palette": {
+    "accent": "#9687e2",
+    "mean": "#9893be",
+    "dark": "#433d60"
+   },
+   "source": "https://media.dsp-wiki.com/b/b8/Icon_SR_Plasma_Turret.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "StorageTank": {
+   "file": "/icons/Icon_Storage_Tank.png",
+   "width": 67,
+   "height": 63,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 63,
+    "h": 59
+   },
+   "palette": {
+    "accent": "#57829b",
+    "mean": "#768790",
+    "dark": "#2b3b45"
+   },
+   "source": "https://media.dsp-wiki.com/0/00/Icon_Storage_Tank.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "TeslaTower": {
+   "file": "/icons/Icon_Wireless_Power_Tower.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 7,
+    "y": 3,
+    "w": 65,
+    "h": 76
+   },
+   "palette": {
+    "accent": "#5a98e2",
+    "mean": "#5284c8",
+    "dark": "#2c4460"
+   },
+   "source": "https://media.dsp-wiki.com/c/c7/Icon_Wireless_Power_Tower.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "ThermalPowerPlant": {
+   "file": "/icons/Icon_Thermal_Power_Plant.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 3,
+    "y": 11,
+    "w": 75,
+    "h": 55
+   },
+   "palette": {
+    "accent": "#c1847f",
+    "mean": "#aaa3a1",
+    "dark": "#533c3a"
+   },
+   "source": "https://media.dsp-wiki.com/c/c5/Icon_Thermal_Power_Plant.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "TrafficMonitor": {
+   "file": "/icons/Icon_Traffic_Monitor.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 1,
+    "y": 9,
+    "w": 78,
+    "h": 62
+   },
+   "palette": {
+    "accent": "#5fc586",
+    "mean": "#759b87",
+    "dark": "#2e553d"
+   },
+   "source": "https://media.dsp-wiki.com/6/64/Icon_Traffic_Monitor.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "VerticalLaunchingSilo": {
+   "file": "/icons/Icon_Vertical_Launching_Silo.png",
+   "width": 80,
+   "height": 80,
+   "bbox": {
+    "x": 7,
+    "y": 2,
+    "w": 68,
+    "h": 78
+   },
+   "palette": {
+    "accent": "#61a0cc",
+    "mean": "#6d9dbc",
+    "dark": "#2f4758"
+   },
+   "source": "https://media.dsp-wiki.com/0/05/Icon_Vertical_Launching_Silo.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "WaterPump": {
+   "file": "/icons/Icon_Water_Pump.png",
+   "width": 80,
+   "height": 76,
+   "bbox": {
+    "x": 8,
+    "y": 2,
+    "w": 64,
+    "h": 71
+   },
+   "palette": {
+    "accent": "#459ba5",
+    "mean": "#6e9299",
+    "dark": "#244549"
+   },
+   "source": "https://media.dsp-wiki.com/6/69/Icon_Water_Pump.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  },
+  "WindTurbine": {
+   "file": "/icons/Icon_Wind_Turbine.png",
+   "width": 42,
+   "height": 75,
+   "bbox": {
+    "x": 2,
+    "y": 2,
+    "w": 38,
+    "h": 71
+   },
+   "palette": {
+    "accent": "#cf6571",
+    "mean": "#b57a81",
+    "dark": "#593035"
+   },
+   "source": "https://media.dsp-wiki.com/1/14/Icon_Wind_Turbine.png",
+   "wikiPage": "https://dsp-wiki.com/Buildings"
+  }
+ }
+}

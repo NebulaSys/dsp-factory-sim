@@ -1,0 +1,5359 @@
+{
+ "generatedAt": "2026-10-14T23:18:05Z",
+ "source": [
+  "https://dsp-wiki.com/api.php?action=query&prop=revisions&rvslots=main&rvprop=content&format=json&formatversion=2&titles=Module%3AGameData%2Fprotosets.json",
+  "https://dsp-wiki.com/api.php?action=parse&page=Modding:Recipe%20IDs&prop=wikitext&format=json&formatversion=2",
+  "https://dsp-wiki.com/api.php?action=parse&page=Technologies&prop=wikitext&format=json&formatversion=2",
+  "https://dsp-wiki.com/api.php?action=query&prop=revisions&rvslots=main&rvprop=content&format=json&formatversion=2&titles=<Item>/ItemInfo",
+  "https://raw.githubusercontent.com/antian369/dsp-calc/HEAD/data/Vanilla.json",
+  "https://raw.githubusercontent.com/cabmoomoo/dsp-calc/HEAD/data/data.json",
+  "https://registry.npmjs.org/@eurydos/dsp-item-registry/-/dsp-item-registry-1.0.16.tgz",
+  "https://raw.githubusercontent.com/Wesmania/dspbp/HEAD/src/data/enums.rs"
+ ],
+ "recipes": [
+  {
+   "id": 1,
+   "key": "IronIngot",
+   "outputs": [
+    {
+     "item": "IronIngot",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronOre",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "ArcSmelter",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 2,
+   "key": "Magnet",
+   "outputs": [
+    {
+     "item": "Magnet",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronOre",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.5,
+   "facility": "ArcSmelter",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 3,
+   "key": "CopperIngot",
+   "outputs": [
+    {
+     "item": "CopperIngot",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CopperOre",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "ArcSmelter",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 4,
+   "key": "StoneBrick",
+   "outputs": [
+    {
+     "item": "StoneBrick",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Stone",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "ArcSmelter",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 5,
+   "key": "Gear",
+   "outputs": [
+    {
+     "item": "Gear",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 6,
+   "key": "MagneticCoil",
+   "outputs": [
+    {
+     "item": "MagneticCoil",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Magnet",
+     "count": 2
+    },
+    {
+     "item": "CopperIngot",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=1.0s,in={1102: 2, 1104: 1},out={1202: 2}) | eurydos in={1104: 1, 1101: 2}"
+  },
+  {
+   "id": 7,
+   "key": "WindTurbine",
+   "outputs": [
+    {
+     "item": "WindTurbine",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 6
+    },
+    {
+     "item": "Gear",
+     "count": 1
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 3
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Electromagnetism",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 8,
+   "key": "TeslaTower",
+   "outputs": [
+    {
+     "item": "TeslaTower",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 2
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Electromagnetism",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 9,
+   "key": "ElectromagneticMatrix",
+   "outputs": [
+    {
+     "item": "ElectromagneticMatrix",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "MagneticCoil",
+     "count": 1
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "MatrixLab",
+   "tech": "Electromagnetic Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 10,
+   "key": "MatrixLab",
+   "outputs": [
+    {
+     "item": "MatrixLab",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 8
+    },
+    {
+     "item": "Glass",
+     "count": 4
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 4
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 4
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Electromagnetic Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 11,
+   "key": "Prism",
+   "outputs": [
+    {
+     "item": "Prism",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Glass",
+     "count": 3
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Efficiency Plasma Control",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 12,
+   "key": "PlasmaExciter",
+   "outputs": [
+    {
+     "item": "PlasmaExciter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "MagneticCoil",
+     "count": 4
+    },
+    {
+     "item": "Prism",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Efficiency Plasma Control",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 13,
+   "key": "WirelessPowerTower",
+   "outputs": [
+    {
+     "item": "WirelessPowerTower",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TeslaTower",
+     "count": 1
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 3
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Efficiency Plasma Control",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 14,
+   "key": "OilExtractor",
+   "outputs": [
+    {
+     "item": "OilExtractor",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 12
+    },
+    {
+     "item": "StoneBrick",
+     "count": 12
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 6
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 4
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Plasma Extract Refining",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 15,
+   "key": "OilRefinery",
+   "outputs": [
+    {
+     "item": "OilRefinery",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 10
+    },
+    {
+     "item": "StoneBrick",
+     "count": 10
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 6
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 6
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Plasma Extract Refining",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 16,
+   "key": "PlasmaRefining",
+   "outputs": [
+    {
+     "item": "Hydrogen",
+     "count": 1
+    },
+    {
+     "item": "RefinedOil",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CrudeOil",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "OilRefinery",
+   "tech": "Plasma Extract Refining",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "CrudeOil"
+   ]
+  },
+  {
+   "id": 17,
+   "key": "EnergeticGraphite",
+   "outputs": [
+    {
+     "item": "EnergeticGraphite",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Coal",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ArcSmelter",
+   "tech": "Smelting Purification",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 18,
+   "key": "EnergyMatrix",
+   "outputs": [
+    {
+     "item": "EnergyMatrix",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "EnergeticGraphite",
+     "count": 2
+    },
+    {
+     "item": "Hydrogen",
+     "count": 2
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "MatrixLab",
+   "tech": "Energy Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ]
+  },
+  {
+   "id": 19,
+   "key": "HydrogenFuelRod",
+   "outputs": [
+    {
+     "item": "HydrogenFuelRod",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumIngot",
+     "count": 1
+    },
+    {
+     "item": "Hydrogen",
+     "count": 10
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Hydrogen Fuel Rod",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ]
+  },
+  {
+   "id": 20,
+   "key": "Thruster",
+   "outputs": [
+    {
+     "item": "Thruster",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 2
+    },
+    {
+     "item": "CopperIngot",
+     "count": 3
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Thruster",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 21,
+   "key": "ReinforcedThruster",
+   "outputs": [
+    {
+     "item": "ReinforcedThruster",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 5
+    },
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 5
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Reinforced Thruster",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=6.0s,in={1107: 5, 1204: 5},out={1406: 1}) | eurydos out={1405: 1}"
+  },
+  {
+   "id": 22,
+   "key": "ChemicalPlant",
+   "outputs": [
+    {
+     "item": "ChemicalPlant",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 8
+    },
+    {
+     "item": "StoneBrick",
+     "count": 8
+    },
+    {
+     "item": "Glass",
+     "count": 8
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Basic Chemical Engineering",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 23,
+   "key": "Plastic",
+   "outputs": [
+    {
+     "item": "Plastic",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "RefinedOil",
+     "count": 2
+    },
+    {
+     "item": "EnergeticGraphite",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "ChemicalPlant",
+   "tech": "Basic Chemical Engineering",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "RefinedOil"
+   ]
+  },
+  {
+   "id": 24,
+   "key": "SulfuricAcid",
+   "outputs": [
+    {
+     "item": "SulfuricAcid",
+     "count": 4
+    }
+   ],
+   "inputs": [
+    {
+     "item": "RefinedOil",
+     "count": 6
+    },
+    {
+     "item": "Stone",
+     "count": 8
+    },
+    {
+     "item": "Water",
+     "count": 4
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "ChemicalPlant",
+   "tech": "Basic Chemical Engineering",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "RefinedOil",
+    "Water"
+   ]
+  },
+  {
+   "id": 25,
+   "key": "OrganicCrystal",
+   "outputs": [
+    {
+     "item": "OrganicCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Plastic",
+     "count": 2
+    },
+    {
+     "item": "RefinedOil",
+     "count": 1
+    },
+    {
+     "item": "Water",
+     "count": 1
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "ChemicalPlant",
+   "tech": "Polymer Chemical Engineering",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "RefinedOil",
+    "Water"
+   ]
+  },
+  {
+   "id": 26,
+   "key": "TitaniumCrystal",
+   "outputs": [
+    {
+     "item": "TitaniumCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "OrganicCrystal",
+     "count": 1
+    },
+    {
+     "item": "TitaniumIngot",
+     "count": 3
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Strength Crystal",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 27,
+   "key": "StructureMatrix",
+   "outputs": [
+    {
+     "item": "StructureMatrix",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Diamond",
+     "count": 1
+    },
+    {
+     "item": "TitaniumCrystal",
+     "count": 1
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "MatrixLab",
+   "tech": "Structure Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 28,
+   "key": "CasimirCrystal",
+   "outputs": [
+    {
+     "item": "CasimirCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumCrystal",
+     "count": 1
+    },
+    {
+     "item": "Graphene",
+     "count": 2
+    },
+    {
+     "item": "Hydrogen",
+     "count": 12
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Casimir Crystal",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ]
+  },
+  {
+   "id": 29,
+   "key": "CasimirCrystalAdvanced",
+   "outputs": [
+    {
+     "item": "CasimirCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "GratingCrystal",
+     "count": 8
+    },
+    {
+     "item": "Graphene",
+     "count": 2
+    },
+    {
+     "item": "Hydrogen",
+     "count": 12
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Casimir Crystal",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate",
+   "fluidInputs": [
+    "Hydrogen"
+   ]
+  },
+  {
+   "id": 30,
+   "key": "TitaniumGlass",
+   "outputs": [
+    {
+     "item": "TitaniumGlass",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Glass",
+     "count": 2
+    },
+    {
+     "item": "TitaniumIngot",
+     "count": 2
+    },
+    {
+     "item": "Water",
+     "count": 2
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Strength Glass",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Water"
+   ]
+  },
+  {
+   "id": 31,
+   "key": "Graphene",
+   "outputs": [
+    {
+     "item": "Graphene",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "EnergeticGraphite",
+     "count": 3
+    },
+    {
+     "item": "SulfuricAcid",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "ChemicalPlant",
+   "tech": "Applied Superconductor",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "SulfuricAcid"
+   ]
+  },
+  {
+   "id": 32,
+   "key": "GrapheneAdvanced",
+   "outputs": [
+    {
+     "item": "Graphene",
+     "count": 2
+    },
+    {
+     "item": "Hydrogen",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "FireIce",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ChemicalPlant",
+   "tech": "Applied Superconductor",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 33,
+   "key": "CarbonNanotube",
+   "outputs": [
+    {
+     "item": "CarbonNanotube",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Graphene",
+     "count": 3
+    },
+    {
+     "item": "TitaniumIngot",
+     "count": 1
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "ChemicalPlant",
+   "tech": "High-Strength Material",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 34,
+   "key": "SiliconOre",
+   "outputs": [
+    {
+     "item": "SiliconOre",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Stone",
+     "count": 10
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "ArcSmelter",
+   "tech": "Smelting Purification",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 35,
+   "key": "CarbonNanotubeAdvanced",
+   "outputs": [
+    {
+     "item": "CarbonNanotube",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "StalagmiteCrystal",
+     "count": 6
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "ChemicalPlant",
+   "tech": "High-Strength Material",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 36,
+   "key": "ParticleBroadband",
+   "outputs": [
+    {
+     "item": "ParticleBroadband",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CarbonNanotube",
+     "count": 2
+    },
+    {
+     "item": "CrystalSilicon",
+     "count": 2
+    },
+    {
+     "item": "Plastic",
+     "count": 1
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Particle Control",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 37,
+   "key": "CrystalSilicon",
+   "outputs": [
+    {
+     "item": "CrystalSilicon",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "HighpuritySilicon",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ArcSmelter",
+   "tech": "Crystal Smelting",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 38,
+   "key": "PlaneFilter",
+   "outputs": [
+    {
+     "item": "PlaneFilter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CasimirCrystal",
+     "count": 1
+    },
+    {
+     "item": "TitaniumGlass",
+     "count": 2
+    }
+   ],
+   "craftTime": 12.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Wave Function Interference",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 39,
+   "key": "MiniatureParticleCollider",
+   "outputs": [
+    {
+     "item": "MiniatureParticleCollider",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 20
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 20
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 25
+    },
+    {
+     "item": "Graphene",
+     "count": 10
+    },
+    {
+     "item": "Processor",
+     "count": 8
+    }
+   ],
+   "craftTime": 15.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Miniature Particle Collider",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 40,
+   "key": "Deuterium",
+   "outputs": [
+    {
+     "item": "Deuterium",
+     "count": 5
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Hydrogen",
+     "count": 10
+    }
+   ],
+   "craftTime": 2.5,
+   "facility": "MiniatureParticleCollider",
+   "tech": "Miniature Particle Collider",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ],
+   "note": "粒子对撞机产重氢；另一来源为分馏塔（配方 115）。"
+  },
+  {
+   "id": 41,
+   "key": "DeuteronFuelRod",
+   "outputs": [
+    {
+     "item": "DeuteronFuelRod",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 1
+    },
+    {
+     "item": "Deuterium",
+     "count": 20
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    }
+   ],
+   "craftTime": 12.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Mini Fusion Power Generation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Deuterium"
+   ]
+  },
+  {
+   "id": 42,
+   "key": "AnnihilationConstraintSphere",
+   "outputs": [
+    {
+     "item": "AnnihilationConstraintSphere",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ParticleContainer",
+     "count": 1
+    },
+    {
+     "item": "Processor",
+     "count": 1
+    }
+   ],
+   "craftTime": 20.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Controlled Annihilation Reaction",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 43,
+   "key": "ArtificialStar",
+   "outputs": [
+    {
+     "item": "ArtificialStar",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 20
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 20
+    },
+    {
+     "item": "AnnihilationConstraintSphere",
+     "count": 10
+    },
+    {
+     "item": "QuantumChip",
+     "count": 10
+    }
+   ],
+   "craftTime": 30.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Artificial Star",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 44,
+   "key": "AntimatterFuelRod",
+   "outputs": [
+    {
+     "item": "AntimatterFuelRod",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Antimatter",
+     "count": 12
+    },
+    {
+     "item": "Hydrogen",
+     "count": 12
+    },
+    {
+     "item": "AnnihilationConstraintSphere",
+     "count": 1
+    },
+    {
+     "item": "TitaniumAlloy",
+     "count": 1
+    }
+   ],
+   "craftTime": 24.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Controlled Annihilation Reaction",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ],
+   "note": "NonProductive：增产剂只能加速，不能触发额外产出。"
+  },
+  {
+   "id": 45,
+   "key": "AssemblingMachineMkI",
+   "outputs": [
+    {
+     "item": "AssemblingMachineMk1",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 4
+    },
+    {
+     "item": "Gear",
+     "count": 8
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 4
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Basic Assembling",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 46,
+   "key": "AssemblingMachineMkII",
+   "outputs": [
+    {
+     "item": "AssemblingMachineMk2",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "AssemblingMachineMk1",
+     "count": 1
+    },
+    {
+     "item": "Graphene",
+     "count": 8
+    },
+    {
+     "item": "Processor",
+     "count": 4
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Speed Assembling",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 47,
+   "key": "AssemblingMachineMkIII",
+   "outputs": [
+    {
+     "item": "AssemblingMachineMk3",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "AssemblingMachineMk2",
+     "count": 1
+    },
+    {
+     "item": "ParticleBroadband",
+     "count": 8
+    },
+    {
+     "item": "QuantumChip",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Quantum Printing",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 48,
+   "key": "MiningMachine",
+   "outputs": [
+    {
+     "item": "MiningMachine",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 4
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 2
+    },
+    {
+     "item": "Gear",
+     "count": 2
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Electromagnetism",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 49,
+   "key": "WaterPump",
+   "outputs": [
+    {
+     "item": "WaterPump",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 8
+    },
+    {
+     "item": "StoneBrick",
+     "count": 4
+    },
+    {
+     "item": "ElectricMotor",
+     "count": 4
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Fluid Storage Encapsulation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 50,
+   "key": "CircuitBoard",
+   "outputs": [
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 2
+    },
+    {
+     "item": "CopperIngot",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": null,
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 51,
+   "key": "Processor",
+   "outputs": [
+    {
+     "item": "Processor",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    },
+    {
+     "item": "MicrocrystallineComponent",
+     "count": 2
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Processor",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 52,
+   "key": "QuantumChip",
+   "outputs": [
+    {
+     "item": "QuantumChip",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Processor",
+     "count": 2
+    },
+    {
+     "item": "PlaneFilter",
+     "count": 2
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Quantum Chip",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 53,
+   "key": "MicrocrystallineComponent",
+   "outputs": [
+    {
+     "item": "MicrocrystallineComponent",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "HighpuritySilicon",
+     "count": 2
+    },
+    {
+     "item": "CopperIngot",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Semiconductor Material",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 54,
+   "key": "OrganicCrystalOriginal",
+   "outputs": [
+    {
+     "item": "OrganicCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Log",
+     "count": 20
+    },
+    {
+     "item": "PlantFuel",
+     "count": 30
+    },
+    {
+     "item": "Water",
+     "count": 10
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Polymer Chemical Engineering",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate",
+   "fluidInputs": [
+    "Water"
+   ]
+  },
+  {
+   "id": 55,
+   "key": "InformationMatrix",
+   "outputs": [
+    {
+     "item": "InformationMatrix",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Processor",
+     "count": 2
+    },
+    {
+     "item": "ParticleBroadband",
+     "count": 1
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "MatrixLab",
+   "tech": "Information Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 56,
+   "key": "ArcSmelter",
+   "outputs": [
+    {
+     "item": "ArcSmelter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 4
+    },
+    {
+     "item": "StoneBrick",
+     "count": 2
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 4
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 2
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Automatic Metallurgy",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 57,
+   "key": "Glass",
+   "outputs": [
+    {
+     "item": "Glass",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Stone",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ArcSmelter",
+   "tech": "Automatic Metallurgy",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 58,
+   "key": "XrayCracking",
+   "outputs": [
+    {
+     "item": "Hydrogen",
+     "count": 3
+    },
+    {
+     "item": "EnergeticGraphite",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "RefinedOil",
+     "count": 1
+    },
+    {
+     "item": "Hydrogen",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "OilRefinery",
+   "tech": "X-Ray Cracking",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": false,
+   "category": "alternate",
+   "fluidInputs": [
+    "Hydrogen",
+    "RefinedOil"
+   ],
+   "note": "X 射线裂解：精炼厂替代配方（2 精炼油 + 1 氢 → 3 氢 + 1 高能石墨）。"
+  },
+  {
+   "id": 59,
+   "key": "HighpuritySilicon",
+   "outputs": [
+    {
+     "item": "HighpuritySilicon",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "SiliconOre",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ArcSmelter",
+   "tech": "Smelting Purification",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 60,
+   "key": "Diamond",
+   "outputs": [
+    {
+     "item": "Diamond",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "EnergeticGraphite",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ArcSmelter",
+   "tech": "Crystal Smelting",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 61,
+   "key": "DiamondAdvanced",
+   "outputs": [
+    {
+     "item": "Diamond",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "KimberliteOre",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.5,
+   "facility": "ArcSmelter",
+   "tech": "Crystal Smelting",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 62,
+   "key": "CrystalSiliconAdvanced",
+   "outputs": [
+    {
+     "item": "CrystalSilicon",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "FractalSilicon",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.5,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Particle Control",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 63,
+   "key": "Steel",
+   "outputs": [
+    {
+     "item": "Steel",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 3
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "ArcSmelter",
+   "tech": "Steel Smelting",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 64,
+   "key": "ThermalPowerPlant",
+   "outputs": [
+    {
+     "item": "ThermalPowerPlant",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 10
+    },
+    {
+     "item": "StoneBrick",
+     "count": 4
+    },
+    {
+     "item": "Gear",
+     "count": 4
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 4
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Thermal Power",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 65,
+   "key": "TitaniumIngot",
+   "outputs": [
+    {
+     "item": "TitaniumIngot",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumOre",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "ArcSmelter",
+   "tech": "Titanium Smelting",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 66,
+   "key": "TitaniumAlloy",
+   "outputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 4
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumIngot",
+     "count": 4
+    },
+    {
+     "item": "Steel",
+     "count": 4
+    },
+    {
+     "item": "SulfuricAcid",
+     "count": 8
+    }
+   ],
+   "craftTime": 12.0,
+   "facility": "ArcSmelter",
+   "tech": "High-Strength Titanium Alloy",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "SulfuricAcid"
+   ]
+  },
+  {
+   "id": 67,
+   "key": "SolarPanel",
+   "outputs": [
+    {
+     "item": "SolarPanel",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CopperIngot",
+     "count": 10
+    },
+    {
+     "item": "HighpuritySilicon",
+     "count": 10
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 5
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Solar Collection",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 68,
+   "key": "PhotonCombiner",
+   "outputs": [
+    {
+     "item": "PhotonCombiner",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Prism",
+     "count": 2
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Photon Frequency Conversion",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 69,
+   "key": "PhotonCombinerAdvanced",
+   "outputs": [
+    {
+     "item": "PhotonCombiner",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "GratingCrystal",
+     "count": 1
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Photon Frequency Conversion",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 70,
+   "key": "SolarSail",
+   "outputs": [
+    {
+     "item": "SolarSail",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Graphene",
+     "count": 1
+    },
+    {
+     "item": "PhotonCombiner",
+     "count": 1
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Solar Sail Orbit System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 71,
+   "key": "EMRailEjector",
+   "outputs": [
+    {
+     "item": "EMRailEjector",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 20
+    },
+    {
+     "item": "Gear",
+     "count": 20
+    },
+    {
+     "item": "Processor",
+     "count": 5
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 10
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Solar Sail Orbit System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 72,
+   "key": "RayReceiver",
+   "outputs": [
+    {
+     "item": "RayReceiver",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 20
+    },
+    {
+     "item": "HighpuritySilicon",
+     "count": 20
+    },
+    {
+     "item": "PhotonCombiner",
+     "count": 10
+    },
+    {
+     "item": "Processor",
+     "count": 5
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 20
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Ray Receiver",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 73,
+   "key": "SatelliteSubstation",
+   "outputs": [
+    {
+     "item": "SatelliteSubstation",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "WirelessPowerTower",
+     "count": 1
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 10
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 2
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Satellite Power Distribution System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 74,
+   "key": "MassenergyStorage",
+   "outputs": [
+    {
+     "item": "Antimatter",
+     "count": 2
+    },
+    {
+     "item": "Hydrogen",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CriticalPhoton",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "MiniatureParticleCollider",
+   "tech": "Dirac Inversion Mechanism",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "note": "质能储存：粒子对撞机，临界光子 + 氢 → 反物质 + 氢；NonProductive。"
+  },
+  {
+   "id": 75,
+   "key": "UniverseMatrix",
+   "outputs": [
+    {
+     "item": "UniverseMatrix",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ElectromagneticMatrix",
+     "count": 1
+    },
+    {
+     "item": "EnergyMatrix",
+     "count": 1
+    },
+    {
+     "item": "StructureMatrix",
+     "count": 1
+    },
+    {
+     "item": "InformationMatrix",
+     "count": 1
+    },
+    {
+     "item": "GravityMatrix",
+     "count": 1
+    },
+    {
+     "item": "Antimatter",
+     "count": 1
+    }
+   ],
+   "craftTime": 15.0,
+   "facility": "MatrixLab",
+   "tech": "Universe Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 76,
+   "key": "Accumulator",
+   "outputs": [
+    {
+     "item": "Accumulator",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 6
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    },
+    {
+     "item": "CrystalSilicon",
+     "count": 3
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Energy Storage",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=3.0s,in={1101: 6, 1205: 1, 1113: 3},out={2206: 1}) | cabmoomoo t=5.0; cabmoomoo in={1101: 6, 1205: 1, 1113: 6}"
+  },
+  {
+   "id": 77,
+   "key": "EnergyExchanger",
+   "outputs": [
+    {
+     "item": "EnergyExchanger",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 40
+    },
+    {
+     "item": "Steel",
+     "count": 40
+    },
+    {
+     "item": "Processor",
+     "count": 40
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 8
+    }
+   ],
+   "craftTime": 15.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Interstellar Power Transmission",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 78,
+   "key": "SpaceWarper",
+   "outputs": [
+    {
+     "item": "SpaceWarper",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "GravitonLens",
+     "count": 1
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Gravitational Wave Refraction",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 79,
+   "key": "SpaceWarperAdvanced",
+   "outputs": [
+    {
+     "item": "SpaceWarper",
+     "count": 8
+    }
+   ],
+   "inputs": [
+    {
+     "item": "GravityMatrix",
+     "count": 1
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Gravity Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 80,
+   "key": "FrameMaterial",
+   "outputs": [
+    {
+     "item": "FrameMaterial",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CarbonNanotube",
+     "count": 4
+    },
+    {
+     "item": "TitaniumAlloy",
+     "count": 1
+    },
+    {
+     "item": "HighpuritySilicon",
+     "count": 1
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Strength Lightweight Structure",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 81,
+   "key": "DysonSphereComponent",
+   "outputs": [
+    {
+     "item": "DysonSphereComponent",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "FrameMaterial",
+     "count": 3
+    },
+    {
+     "item": "SolarSail",
+     "count": 3
+    },
+    {
+     "item": "Processor",
+     "count": 3
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Strength Lightweight Structure",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 82,
+   "key": "VerticalLaunchingSilo",
+   "outputs": [
+    {
+     "item": "VerticalLaunchingSilo",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 80
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 30
+    },
+    {
+     "item": "GravitonLens",
+     "count": 20
+    },
+    {
+     "item": "QuantumChip",
+     "count": 10
+    }
+   ],
+   "craftTime": 30.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Vertical Launching Silo",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 83,
+   "key": "SmallCarrierRocket",
+   "outputs": [
+    {
+     "item": "SmallCarrierRocket",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "DysonSphereComponent",
+     "count": 2
+    },
+    {
+     "item": "DeuteronFuelRod",
+     "count": 4
+    },
+    {
+     "item": "QuantumChip",
+     "count": 2
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Vertical Launching Silo",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 84,
+   "key": "ConveyorBeltMKI",
+   "outputs": [
+    {
+     "item": "ConveyorBeltMk1",
+     "count": 3
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 2
+    },
+    {
+     "item": "Gear",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Basic Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 85,
+   "key": "SorterMKI",
+   "outputs": [
+    {
+     "item": "SorterMk1",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 1
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Basic Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 86,
+   "key": "DepotMKI",
+   "outputs": [
+    {
+     "item": "DepotMk1",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 4
+    },
+    {
+     "item": "StoneBrick",
+     "count": 4
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Basic Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 87,
+   "key": "Splitter",
+   "outputs": [
+    {
+     "item": "Splitter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 3
+    },
+    {
+     "item": "Gear",
+     "count": 2
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Upgraded Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 88,
+   "key": "SorterMKII",
+   "outputs": [
+    {
+     "item": "SorterMk2",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "SorterMk1",
+     "count": 2
+    },
+    {
+     "item": "ElectricMotor",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Upgraded Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 89,
+   "key": "ConveyorBeltMKII",
+   "outputs": [
+    {
+     "item": "ConveyorBeltMk2",
+     "count": 3
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ConveyorBeltMk1",
+     "count": 3
+    },
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Efficiency Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 90,
+   "key": "SorterMKIII",
+   "outputs": [
+    {
+     "item": "SorterMk3",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "SorterMk2",
+     "count": 2
+    },
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Efficiency Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 91,
+   "key": "DepotMKII",
+   "outputs": [
+    {
+     "item": "DepotMk2",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 8
+    },
+    {
+     "item": "StoneBrick",
+     "count": 8
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Efficiency Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 92,
+   "key": "ConveyorBeltMKIII",
+   "outputs": [
+    {
+     "item": "ConveyorBeltMk3",
+     "count": 3
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ConveyorBeltMk2",
+     "count": 3
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    },
+    {
+     "item": "Graphene",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Planetary Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 93,
+   "key": "PlanetaryLogisticsStation",
+   "outputs": [
+    {
+     "item": "PlanetaryLogisticsStation",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 40
+    },
+    {
+     "item": "TitaniumIngot",
+     "count": 40
+    },
+    {
+     "item": "Processor",
+     "count": 40
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 20
+    }
+   ],
+   "craftTime": 20.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Planetary Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 94,
+   "key": "LogisticsDrone",
+   "outputs": [
+    {
+     "item": "LogisticsDrone",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 5
+    },
+    {
+     "item": "Processor",
+     "count": 2
+    },
+    {
+     "item": "Thruster",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Planetary Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 95,
+   "key": "InterstellarLogisticsStation",
+   "outputs": [
+    {
+     "item": "InterstellarLogisticsStation",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "PlanetaryLogisticsStation",
+     "count": 1
+    },
+    {
+     "item": "TitaniumAlloy",
+     "count": 40
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 20
+    }
+   ],
+   "craftTime": 30.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Interstellar Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 96,
+   "key": "InterstellarLogisticsVessel",
+   "outputs": [
+    {
+     "item": "InterstellarLogisticsVessel",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 10
+    },
+    {
+     "item": "Processor",
+     "count": 10
+    },
+    {
+     "item": "ReinforcedThruster",
+     "count": 2
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Interstellar Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 97,
+   "key": "ElectricMotor",
+   "outputs": [
+    {
+     "item": "ElectricMotor",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 2
+    },
+    {
+     "item": "Gear",
+     "count": 1
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Electromagnetic Drive",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 98,
+   "key": "ElectromagneticTurbine",
+   "outputs": [
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ElectricMotor",
+     "count": 2
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Magnetic Levitation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 99,
+   "key": "ParticleContainer",
+   "outputs": [
+    {
+     "item": "ParticleContainer",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 2
+    },
+    {
+     "item": "CopperIngot",
+     "count": 2
+    },
+    {
+     "item": "Graphene",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Magnetic Particle Trap",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 100,
+   "key": "ParticleContainerAdvanced",
+   "outputs": [
+    {
+     "item": "ParticleContainer",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "UnipolarMagnet",
+     "count": 10
+    },
+    {
+     "item": "CopperIngot",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Magnetic Particle Trap",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": false,
+   "category": "alternate"
+  },
+  {
+   "id": 101,
+   "key": "GravitonLens",
+   "outputs": [
+    {
+     "item": "GravitonLens",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Diamond",
+     "count": 4
+    },
+    {
+     "item": "StrangeMatter",
+     "count": 1
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Gravitational Wave Refraction",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 102,
+   "key": "GravityMatrix",
+   "outputs": [
+    {
+     "item": "GravityMatrix",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "GravitonLens",
+     "count": 1
+    },
+    {
+     "item": "QuantumChip",
+     "count": 1
+    }
+   ],
+   "craftTime": 24.0,
+   "facility": "MatrixLab",
+   "tech": "Gravity Matrix",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 103,
+   "key": "SupermagneticRing",
+   "outputs": [
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 2
+    },
+    {
+     "item": "Magnet",
+     "count": 3
+    },
+    {
+     "item": "EnergeticGraphite",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Super Magnetic Field Generator",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 104,
+   "key": "StrangeMatter",
+   "outputs": [
+    {
+     "item": "StrangeMatter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ParticleContainer",
+     "count": 2
+    },
+    {
+     "item": "IronIngot",
+     "count": 2
+    },
+    {
+     "item": "Deuterium",
+     "count": 10
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "MiniatureParticleCollider",
+   "tech": "Strange Matter",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Deuterium"
+   ]
+  },
+  {
+   "id": 105,
+   "key": "Engine",
+   "outputs": [
+    {
+     "item": "Engine",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "MagneticCoil",
+     "count": 1
+    },
+    {
+     "item": "CopperIngot",
+     "count": 2
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Engine",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 106,
+   "key": "ProliferatorMkI",
+   "outputs": [
+    {
+     "item": "Proliferator1",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Coal",
+     "count": 1
+    }
+   ],
+   "craftTime": 0.5,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Proliferator Mk.I",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 107,
+   "key": "ProliferatorMkII",
+   "outputs": [
+    {
+     "item": "Proliferator2",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Proliferator1",
+     "count": 2
+    },
+    {
+     "item": "Diamond",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Proliferator Mk.II",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 108,
+   "key": "ProliferatorMkIII",
+   "outputs": [
+    {
+     "item": "Proliferator3",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Proliferator2",
+     "count": 2
+    },
+    {
+     "item": "CarbonNanotube",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Proliferator Mk.III",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 109,
+   "key": "SprayCoater",
+   "outputs": [
+    {
+     "item": "SprayCoater",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 4
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 2
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    },
+    {
+     "item": "MicrocrystallineComponent",
+     "count": 2
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Proliferator Mk.I",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 110,
+   "key": "Fractionator",
+   "outputs": [
+    {
+     "item": "Fractionator",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 8
+    },
+    {
+     "item": "StoneBrick",
+     "count": 4
+    },
+    {
+     "item": "Glass",
+     "count": 4
+    },
+    {
+     "item": "Processor",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Deuterium Fractionation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 111,
+   "key": "OrbitalCollector",
+   "outputs": [
+    {
+     "item": "OrbitalCollector",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "InterstellarLogisticsStation",
+     "count": 1
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 50
+    },
+    {
+     "item": "ReinforcedThruster",
+     "count": 20
+    },
+    {
+     "item": "AccumulatorFull",
+     "count": 20
+    }
+   ],
+   "craftTime": 30.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Gas Giants Exploitation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 112,
+   "key": "Foundation",
+   "outputs": [
+    {
+     "item": "Foundation",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "StoneBrick",
+     "count": 3
+    },
+    {
+     "item": "Steel",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Reclamation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 113,
+   "key": "MiniFusionPowerPlant",
+   "outputs": [
+    {
+     "item": "MiniFusionPowerPlant",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 12
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 10
+    },
+    {
+     "item": "CarbonNanotube",
+     "count": 8
+    },
+    {
+     "item": "Processor",
+     "count": 4
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Mini Fusion Power Generation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 114,
+   "key": "StorageTank",
+   "outputs": [
+    {
+     "item": "StorageTank",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 8
+    },
+    {
+     "item": "StoneBrick",
+     "count": 4
+    },
+    {
+     "item": "Glass",
+     "count": 4
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Fluid Storage Encapsulation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 115,
+   "key": "DeuteriumFractionation",
+   "outputs": [
+    {
+     "item": "Deuterium",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Hydrogen",
+     "count": 100
+    }
+   ],
+   "craftTime": 100.0,
+   "facility": "Fractionator",
+   "tech": "Deuterium Fractionation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ],
+   "conflict": "wiki GameData: TimeSpend=1 tick(0.0167s)、100 氢→1 重氢 | antian(DSPCalculator): 6000 tick(100s)、1 氢→1 重氢 | cabmoomoo: 1s | wiki ItemRecipe(Deuterium): 1 氢/次、CraftTime 记为「1%」成功率。取 GameData 的 100:1 化学计量 + antian 的 100s 工时；分馏塔实为吞吐受限，引擎应特殊处理。"
+  },
+  {
+   "id": 116,
+   "key": "PlaneSmelter",
+   "outputs": [
+    {
+     "item": "PlaneSmelter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ArcSmelter",
+     "count": 1
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 5
+    },
+    {
+     "item": "PlaneFilter",
+     "count": 4
+    },
+    {
+     "item": "UnipolarMagnet",
+     "count": 15
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Plane-Filter Smelting",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 117,
+   "key": "TrafficMonitor",
+   "outputs": [
+    {
+     "item": "TrafficMonitor",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 3
+    },
+    {
+     "item": "Gear",
+     "count": 2
+    },
+    {
+     "item": "Glass",
+     "count": 1
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Upgraded Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 118,
+   "key": "GeothermalPowerStation",
+   "outputs": [
+    {
+     "item": "GeothermalPowerStation",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 15
+    },
+    {
+     "item": "CopperIngot",
+     "count": 20
+    },
+    {
+     "item": "PhotonCombiner",
+     "count": 4
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Geothermal Extraction",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 119,
+   "key": "AdvancedMiningMachine",
+   "outputs": [
+    {
+     "item": "AdvancedMiningMachine",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 20
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 10
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 10
+    },
+    {
+     "item": "QuantumChip",
+     "count": 4
+    },
+    {
+     "item": "GratingCrystal",
+     "count": 40
+    }
+   ],
+   "craftTime": 20.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Photon Spotlight Mining",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 120,
+   "key": "AutomaticPiler",
+   "outputs": [
+    {
+     "item": "AutomaticPiler",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 3
+    },
+    {
+     "item": "Gear",
+     "count": 4
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    },
+    {
+     "item": "Processor",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Integrated Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 121,
+   "key": "ReformedRefinement",
+   "outputs": [
+    {
+     "item": "RefinedOil",
+     "count": 3
+    }
+   ],
+   "inputs": [
+    {
+     "item": "RefinedOil",
+     "count": 2
+    },
+    {
+     "item": "Hydrogen",
+     "count": 1
+    },
+    {
+     "item": "Coal",
+     "count": 1
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "OilRefinery",
+   "tech": "Reformed Refinement",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": false,
+   "category": "alternate",
+   "fluidInputs": [
+    "Hydrogen",
+    "RefinedOil"
+   ],
+   "note": "重整精炼：精炼厂替代配方；NonProductive。"
+  },
+  {
+   "id": 122,
+   "key": "LogisticsDistributor",
+   "outputs": [
+    {
+     "item": "LogisticsDistributor",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 8
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 4
+    },
+    {
+     "item": "Processor",
+     "count": 4
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Distribution Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 123,
+   "key": "LogisticsBot",
+   "outputs": [
+    {
+     "item": "LogisticsBot",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 2
+    },
+    {
+     "item": "Engine",
+     "count": 1
+    },
+    {
+     "item": "Processor",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Distribution Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=2.0s,in={1101: 2, 1407: 1, 1303: 1},out={5003: 1}) | cabmoomoo in={1101: 2, 1204: 1, 1303: 1}"
+  },
+  {
+   "id": 124,
+   "key": "QuantumChemicalPlant",
+   "outputs": [
+    {
+     "item": "QuantumChemicalPlant",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ChemicalPlant",
+     "count": 1
+    },
+    {
+     "item": "TitaniumGlass",
+     "count": 10
+    },
+    {
+     "item": "StrangeMatter",
+     "count": 3
+    },
+    {
+     "item": "QuantumChip",
+     "count": 3
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Mesoscopic Quantum Entanglement",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 125,
+   "key": "GaussTurret",
+   "outputs": [
+    {
+     "item": "GaussTurret",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 8
+    },
+    {
+     "item": "Gear",
+     "count": 8
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    },
+    {
+     "item": "MagneticCoil",
+     "count": 4
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Weapon System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 126,
+   "key": "LaserTurret",
+   "outputs": [
+    {
+     "item": "LaserTurret",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 9
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 6
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 6
+    },
+    {
+     "item": "PhotonCombiner",
+     "count": 9
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Planetary Defense System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 127,
+   "key": "ImplosionCannon",
+   "outputs": [
+    {
+     "item": "ImplosionCannon",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 10
+    },
+    {
+     "item": "ElectricMotor",
+     "count": 8
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 10
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 2
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Implosion Cannon",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 128,
+   "key": "PlasmaTurret",
+   "outputs": [
+    {
+     "item": "PlasmaTurret",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 20
+    },
+    {
+     "item": "TitaniumGlass",
+     "count": 10
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 10
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 5
+    },
+    {
+     "item": "Processor",
+     "count": 5
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Plasma Turret",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 129,
+   "key": "MissileTurret",
+   "outputs": [
+    {
+     "item": "MissileTurret",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 8
+    },
+    {
+     "item": "ElectricMotor",
+     "count": 6
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 12
+    },
+    {
+     "item": "Engine",
+     "count": 6
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Missile Turret",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 130,
+   "key": "JammerTower",
+   "outputs": [
+    {
+     "item": "JammerTower",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CopperIngot",
+     "count": 12
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 9
+    },
+    {
+     "item": "Diamond",
+     "count": 6
+    },
+    {
+     "item": "Processor",
+     "count": 3
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Jammer Tower",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=5.0s,in={1104: 12, 1401: 9, 1112: 6, 1303: 3},out={3006: 1}) | eurydos t=6.0"
+  },
+  {
+   "id": 131,
+   "key": "SignalTower",
+   "outputs": [
+    {
+     "item": "SignalTower",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "WirelessPowerTower",
+     "count": 2
+    },
+    {
+     "item": "Steel",
+     "count": 12
+    },
+    {
+     "item": "CrystalSilicon",
+     "count": 6
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Signal Tower",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 132,
+   "key": "PlanetaryShieldGenerator",
+   "outputs": [
+    {
+     "item": "PlanetaryShieldGenerator",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 20
+    },
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 20
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 5
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 5
+    }
+   ],
+   "craftTime": 10.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Planetary Defense System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 133,
+   "key": "CombustibleUnit",
+   "outputs": [
+    {
+     "item": "CombustibleUnit",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Coal",
+     "count": 3
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Combustible Unit",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 134,
+   "key": "ExplosiveUnit",
+   "outputs": [
+    {
+     "item": "ExplosiveUnit",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CombustibleUnit",
+     "count": 2
+    },
+    {
+     "item": "Plastic",
+     "count": 2
+    },
+    {
+     "item": "SulfuricAcid",
+     "count": 1
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "ChemicalPlant",
+   "tech": "Explosive Unit",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "SulfuricAcid"
+   ]
+  },
+  {
+   "id": 135,
+   "key": "CrystalExplosiveUnit",
+   "outputs": [
+    {
+     "item": "CrystalExplosiveUnit",
+     "count": 8
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ExplosiveUnit",
+     "count": 8
+    },
+    {
+     "item": "CasimirCrystal",
+     "count": 1
+    },
+    {
+     "item": "CrystalSilicon",
+     "count": 8
+    }
+   ],
+   "craftTime": 24.0,
+   "facility": "ChemicalPlant",
+   "tech": "Crystal Explosive Unit",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 136,
+   "key": "MagnumAmmoBox",
+   "outputs": [
+    {
+     "item": "MagnumAmmoBox",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CopperIngot",
+     "count": 3
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Weapon System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 137,
+   "key": "TitaniumAmmoBox",
+   "outputs": [
+    {
+     "item": "TitaniumAmmoBox",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "MagnumAmmoBox",
+     "count": 1
+    },
+    {
+     "item": "TitaniumIngot",
+     "count": 2
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Titanium Ammo Box",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 138,
+   "key": "SuperalloyAmmoBox",
+   "outputs": [
+    {
+     "item": "SuperalloyAmmoBox",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAmmoBox",
+     "count": 1
+    },
+    {
+     "item": "TitaniumAlloy",
+     "count": 1
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Superalloy Ammo Box",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=3.0s,in={1602: 1, 1107: 1},out={1603: 1}) | eurydos in={1602: 1, 1107: 2}"
+  },
+  {
+   "id": 139,
+   "key": "ShellSet",
+   "outputs": [
+    {
+     "item": "ShellSet",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CopperIngot",
+     "count": 9
+    },
+    {
+     "item": "CombustibleUnit",
+     "count": 2
+    }
+   ],
+   "craftTime": 1.5,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Implosion Cannon",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 140,
+   "key": "HighExplosiveShellSet",
+   "outputs": [
+    {
+     "item": "HighExplosiveShellSet",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ShellSet",
+     "count": 1
+    },
+    {
+     "item": "TitaniumIngot",
+     "count": 6
+    },
+    {
+     "item": "ExplosiveUnit",
+     "count": 2
+    }
+   ],
+   "craftTime": 3.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Explosive Shell Set",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 141,
+   "key": "CrystalShellSet",
+   "outputs": [
+    {
+     "item": "CrystalShellSet",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "HighExplosiveShellSet",
+     "count": 1
+    },
+    {
+     "item": "TitaniumAlloy",
+     "count": 3
+    },
+    {
+     "item": "CrystalExplosiveUnit",
+     "count": 2
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Crystal Shell Set",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 142,
+   "key": "PlasmaCapsule",
+   "outputs": [
+    {
+     "item": "PlasmaCapsule",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Graphene",
+     "count": 1
+    },
+    {
+     "item": "Magnet",
+     "count": 2
+    },
+    {
+     "item": "Deuterium",
+     "count": 10
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Plasma Turret",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Deuterium"
+   ]
+  },
+  {
+   "id": 143,
+   "key": "AntimatterCapsule",
+   "outputs": [
+    {
+     "item": "AntimatterCapsule",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "PlasmaCapsule",
+     "count": 1
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 1
+    },
+    {
+     "item": "Hydrogen",
+     "count": 10
+    },
+    {
+     "item": "Antimatter",
+     "count": 10
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Antimatter Capsule",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ]
+  },
+  {
+   "id": 144,
+   "key": "MissileSet",
+   "outputs": [
+    {
+     "item": "MissileSet",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "CopperIngot",
+     "count": 6
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 3
+    },
+    {
+     "item": "CombustibleUnit",
+     "count": 2
+    },
+    {
+     "item": "Engine",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Missile Turret",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 145,
+   "key": "SupersonicMissileSet",
+   "outputs": [
+    {
+     "item": "SupersonicMissileSet",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "MissileSet",
+     "count": 2
+    },
+    {
+     "item": "Processor",
+     "count": 4
+    },
+    {
+     "item": "ExplosiveUnit",
+     "count": 4
+    },
+    {
+     "item": "Thruster",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Supersonic Missile Set",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 146,
+   "key": "GravityMissileSet",
+   "outputs": [
+    {
+     "item": "GravityMissileSet",
+     "count": 3
+    }
+   ],
+   "inputs": [
+    {
+     "item": "SupersonicMissileSet",
+     "count": 3
+    },
+    {
+     "item": "CrystalExplosiveUnit",
+     "count": 6
+    },
+    {
+     "item": "StrangeMatter",
+     "count": 3
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Gravity Missile Set",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 147,
+   "key": "Prototype",
+   "outputs": [
+    {
+     "item": "Prototype",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 3
+    },
+    {
+     "item": "Engine",
+     "count": 1
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 1
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Prototype",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 148,
+   "key": "PrecisionDrone",
+   "outputs": [
+    {
+     "item": "PrecisionDrone",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Prototype",
+     "count": 1
+    },
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 1
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    },
+    {
+     "item": "PhotonCombiner",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Precision Drone",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 149,
+   "key": "AttackDrone",
+   "outputs": [
+    {
+     "item": "AttackDrone",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Prototype",
+     "count": 1
+    },
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 1
+    },
+    {
+     "item": "Processor",
+     "count": 1
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 1
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Attack Drone",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 150,
+   "key": "Corvette",
+   "outputs": [
+    {
+     "item": "Corvette",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "TitaniumAlloy",
+     "count": 5
+    },
+    {
+     "item": "ReinforcedThruster",
+     "count": 1
+    },
+    {
+     "item": "Processor",
+     "count": 2
+    },
+    {
+     "item": "ParticleContainer",
+     "count": 3
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Corvette",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 151,
+   "key": "Destroyer",
+   "outputs": [
+    {
+     "item": "Destroyer",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "FrameMaterial",
+     "count": 20
+    },
+    {
+     "item": "ReinforcedThruster",
+     "count": 4
+    },
+    {
+     "item": "Processor",
+     "count": 4
+    },
+    {
+     "item": "StrangeMatter",
+     "count": 1
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Destroyer",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 152,
+   "key": "BattlefieldAnalysisBase",
+   "outputs": [
+    {
+     "item": "BattlefieldAnalysisBase",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 12
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 18
+    },
+    {
+     "item": "MicrocrystallineComponent",
+     "count": 6
+    },
+    {
+     "item": "Engine",
+     "count": 12
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Battlefield Analysis Base",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 153,
+   "key": "SelfevolutionLab",
+   "outputs": [
+    {
+     "item": "SelfevolutionLab",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "MatrixLab",
+     "count": 1
+    },
+    {
+     "item": "SiliconbasedNeuron",
+     "count": 10
+    },
+    {
+     "item": "DarkFogMatrix",
+     "count": 20
+    },
+    {
+     "item": "QuantumChip",
+     "count": 4
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Digital Analog Computation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 154,
+   "key": "RecomposingAssembler",
+   "outputs": [
+    {
+     "item": "RecomposingAssembler",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "AssemblingMachineMk3",
+     "count": 1
+    },
+    {
+     "item": "MatterRecombinator",
+     "count": 10
+    },
+    {
+     "item": "EnergyShard",
+     "count": 30
+    },
+    {
+     "item": "QuantumChip",
+     "count": 4
+    }
+   ],
+   "craftTime": 5.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Matter Recombination",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=5.0s,in={2305: 1, 5203: 10, 5206: 30, 1305: 4},out={2318: 1}) | eurydos in={2305: 1, 1305: 4, 5204: 10, 5206: 30}"
+  },
+  {
+   "id": 155,
+   "key": "NegentropySmelter",
+   "outputs": [
+    {
+     "item": "NegentropySmelter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "PlaneSmelter",
+     "count": 1
+    },
+    {
+     "item": "NegentropySingularity",
+     "count": 10
+    },
+    {
+     "item": "EnergyShard",
+     "count": 30
+    },
+    {
+     "item": "QuantumChip",
+     "count": 4
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Negentropy Recursion",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 156,
+   "key": "StrangeAnnihilationFuelRod",
+   "outputs": [
+    {
+     "item": "StrangeAnnihilationFuelRod",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "AntimatterFuelRod",
+     "count": 8
+    },
+    {
+     "item": "CoreElement",
+     "count": 1
+    },
+    {
+     "item": "StrangeMatter",
+     "count": 2
+    },
+    {
+     "item": "FrameMaterial",
+     "count": 1
+    }
+   ],
+   "craftTime": 32.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "High-Density Controlled Annihilation",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 157,
+   "key": "SRPlasmaTurret",
+   "outputs": [
+    {
+     "item": "SRPlasmaTurret",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "Steel",
+     "count": 15
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 5
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 5
+    },
+    {
+     "item": "Processor",
+     "count": 5
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Plasma Turret",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "conflict": "wiki GameData(t=8.0s,in={1103: 15, 1205: 5, 1401: 5, 1303: 5},out={3010: 1}) | eurydos t=6.0"
+  },
+  {
+   "id": 158,
+   "key": "JammingCapsule",
+   "outputs": [
+    {
+     "item": "JammingCapsule",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "ElectromagneticTurbine",
+     "count": 1
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 1
+    },
+    {
+     "item": "Hydrogen",
+     "count": 3
+    }
+   ],
+   "craftTime": 2.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Jammer Tower",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "fluidInputs": [
+    "Hydrogen"
+   ]
+  },
+  {
+   "id": 159,
+   "key": "SuppressingCapsule",
+   "outputs": [
+    {
+     "item": "SuppressingCapsule",
+     "count": 2
+    }
+   ],
+   "inputs": [
+    {
+     "item": "JammingCapsule",
+     "count": 2
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    },
+    {
+     "item": "TitaniumGlass",
+     "count": 2
+    }
+   ],
+   "craftTime": 8.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Suppressing Capsule",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true
+  },
+  {
+   "id": 160,
+   "key": "PileSorter",
+   "outputs": [
+    {
+     "item": "PileSorter",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "SorterMk3",
+     "count": 2
+    },
+    {
+     "item": "SupermagneticRing",
+     "count": 1
+    },
+    {
+     "item": "Processor",
+     "count": 1
+    }
+   ],
+   "craftTime": 1.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Integrated Logistics System",
+   "proliferatorBoost": true,
+   "proliferatorOutput": false,
+   "isDefault": true
+  },
+  {
+   "id": 161,
+   "key": "HoloBeacon",
+   "outputs": [
+    {
+     "item": "HoloBeacon",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "IronIngot",
+     "count": 3
+    },
+    {
+     "item": "Prism",
+     "count": 4
+    },
+    {
+     "item": "PlasmaExciter",
+     "count": 2
+    },
+    {
+     "item": "CircuitBoard",
+     "count": 2
+    }
+   ],
+   "craftTime": 4.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Holo Beacon",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "note": "Dark Fog（黑雾）更新配方，计算器与旧版工具数据均未收录，仅来自 wiki GameData。"
+  },
+  {
+   "id": 162,
+   "key": "DarkFogLens",
+   "outputs": [
+    {
+     "item": "DarkFogLens",
+     "count": 1
+    }
+   ],
+   "inputs": [
+    {
+     "item": "GravitonLens",
+     "count": 1
+    },
+    {
+     "item": "DarkFogMatrix",
+     "count": 12
+    }
+   ],
+   "craftTime": 6.0,
+   "facility": "AssemblingMachineMk1",
+   "tech": "Dark Fog Lens",
+   "proliferatorBoost": true,
+   "proliferatorOutput": true,
+   "isDefault": true,
+   "note": "Dark Fog（黑雾）更新配方（产出黑雾透镜 1211），计算器与旧版工具数据均未收录。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractIronOre",
+   "outputs": [
+    {
+     "item": "IronOre",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Iron Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractCopperOre",
+   "outputs": [
+    {
+     "item": "CopperOre",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Copper Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractSiliconOre",
+   "outputs": [
+    {
+     "item": "SiliconOre",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Silicon Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractTitaniumOre",
+   "outputs": [
+    {
+     "item": "TitaniumOre",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Titanium Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractStone",
+   "outputs": [
+    {
+     "item": "Stone",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 0.75,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Stone Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractCoal",
+   "outputs": [
+    {
+     "item": "Coal",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 0.5,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Coal Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractCrudeOil",
+   "outputs": [
+    {
+     "item": "CrudeOil",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "OilExtractor",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Crude Oil Seep。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractFireIce",
+   "outputs": [
+    {
+     "item": "FireIce",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 0.5,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Fire Ice Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractKimberliteOre",
+   "outputs": [
+    {
+     "item": "KimberliteOre",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.5,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Kimberlite Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractFractalSilicon",
+   "outputs": [
+    {
+     "item": "FractalSilicon",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.5,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Fractal Silicon Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractGratingCrystal",
+   "outputs": [
+    {
+     "item": "GratingCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.5,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Grating Crystal Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractStalagmiteCrystal",
+   "outputs": [
+    {
+     "item": "StalagmiteCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.5,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Stalagmite Crystal Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractUnipolarMagnet",
+   "outputs": [
+    {
+     "item": "UnipolarMagnet",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 2.0,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Unipolar Magnet Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "ExtractOrganicCrystal",
+   "outputs": [
+    {
+     "item": "OrganicCrystal",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "MiningMachine",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Organic Crystal Veins。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "PumpWater",
+   "outputs": [
+    {
+     "item": "Water",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "WaterPump",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Ocean。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "PumpSulfuricAcid",
+   "outputs": [
+    {
+     "item": "SulfuricAcid",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "WaterPump",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Sulfuric acid ocean。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "CollectHydrogen",
+   "outputs": [
+    {
+     "item": "Hydrogen",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "OrbitalCollector",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Gas Giant Orbit。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "CollectDeuterium",
+   "outputs": [
+    {
+     "item": "Deuterium",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "OrbitalCollector",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Gas Giant Orbit。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "CollectFireIce",
+   "outputs": [
+    {
+     "item": "FireIce",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "OrbitalCollector",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Gas Giant Orbit。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "GatherLog",
+   "outputs": [
+    {
+     "item": "Log",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Tree。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "GatherPlantFuel",
+   "outputs": [
+    {
+     "item": "PlantFuel",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Plant。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "SalvageDarkFogMatrix",
+   "outputs": [
+    {
+     "item": "DarkFogMatrix",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Dark Fog Debris。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "SalvageSiliconbasedNeuron",
+   "outputs": [
+    {
+     "item": "SiliconbasedNeuron",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Dark Fog Debris。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "SalvageMatterRecombinator",
+   "outputs": [
+    {
+     "item": "MatterRecombinator",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Dark Fog Debris。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "SalvageNegentropySingularity",
+   "outputs": [
+    {
+     "item": "NegentropySingularity",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Dark Fog Debris。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "SalvageCoreElement",
+   "outputs": [
+    {
+     "item": "CoreElement",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Dark Fog Debris。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  },
+  {
+   "id": null,
+   "idConfidence": "unknown",
+   "key": "SalvageEnergyShard",
+   "outputs": [
+    {
+     "item": "EnergyShard",
+     "count": 1
+    }
+   ],
+   "inputs": [],
+   "craftTime": 1.0,
+   "facility": "None",
+   "tech": null,
+   "proliferatorBoost": false,
+   "proliferatorOutput": false,
+   "isDefault": true,
+   "category": "extraction",
+   "note": "来源：Dark Fog Debris。非游戏 RecipeProto：DSP 中采矿/抽水/采气由建筑直接产出，无配方 ID。craftTime 取矿脉 MiningTime（矿脉）或计算器归一化的 1 次/秒（海洋/气态巨星/手采/黑雾掉落）；实际速率还取决于矿脉数量、矿物利用等级与机器速度，引擎应覆盖。"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+# Normalise line endings so the repo checks out consistently on Windows and Unix.
+* text=auto eol=lf
+
+# Binary assets: never touch these.
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Generated / third-party content that should not skew language stats.
+pnpm-lock.yaml linguist-generated=true
+docs/research/_raw/prefabs.json linguist-generated=true
+public/samples/*.txt linguist-vendored=true

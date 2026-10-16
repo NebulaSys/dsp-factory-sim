@@ -1,0 +1,5482 @@
+{
+	"version": "0.10.35.29104",
+	"prefabs": {
+		"combat/centrebrain/prefabs/fighter-type-a": {
+			"UnitDesc": {
+				"craftSize": "Small",
+				"initializeSpeed": 40000,
+				"maxMovementSpeed": 46,
+				"maxMovementAcceleration": 100,
+				"maxRotateAcceleration": 0,
+				"attackRange0": 42,
+				"attackRange1": 0,
+				"sensorRange": 46,
+				"ROF0": 8000,
+				"ROF1": 0,
+				"roundInterval0": 360000,
+				"roundInterval1": 0,
+				"muzzleInterval0": 120000,
+				"muzzleInterval1": 0,
+				"muzzleCount0": 3,
+				"muzzleCount1": 0,
+				"attackDamage0": 1000,
+				"attackDamage1": 0,
+				"energyPerTick": 2024,
+				"fireEnergy0": 70000,
+				"fireEnergy1": 0,
+				"repairEnergyPerHP": 60,
+				"repairHPPerTick": 800,
+				"addEnemyExppBase": 700,
+				"addEnemyThreatBase": 2,
+				"addEnemyHatredBase": 30,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"combat/centrebrain/prefabs/fighter-type-e": {
+			"UnitDesc": {
+				"craftSize": "Small",
+				"initializeSpeed": 30000,
+				"maxMovementSpeed": 36,
+				"maxMovementAcceleration": 60,
+				"maxRotateAcceleration": 0,
+				"attackRange0": 16,
+				"attackRange1": 0,
+				"sensorRange": 36,
+				"ROF0": 16000,
+				"ROF1": 0,
+				"roundInterval0": 600000,
+				"roundInterval1": 0,
+				"muzzleInterval0": 0,
+				"muzzleInterval1": 0,
+				"muzzleCount0": 1,
+				"muzzleCount1": 0,
+				"attackDamage0": 900,
+				"attackDamage1": 0,
+				"energyPerTick": 1800,
+				"fireEnergy0": 60000,
+				"fireEnergy1": 0,
+				"repairEnergyPerHP": 60,
+				"repairHPPerTick": 600,
+				"addEnemyExppBase": 1000,
+				"addEnemyThreatBase": 4,
+				"addEnemyHatredBase": 40,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"combat/centrebrain/prefabs/fighter-type-f": {
+			"UnitDesc": {
+				"craftSize": "Small",
+				"initializeSpeed": 20000,
+				"maxMovementSpeed": 38,
+				"maxMovementAcceleration": 80,
+				"maxRotateAcceleration": 0,
+				"attackRange0": 16,
+				"attackRange1": 0,
+				"sensorRange": 36,
+				"ROF0": 15000,
+				"ROF1": 0,
+				"roundInterval0": 600000,
+				"roundInterval1": 0,
+				"muzzleInterval0": 0,
+				"muzzleInterval1": 0,
+				"muzzleCount0": 1,
+				"muzzleCount1": 0,
+				"attackDamage0": 2000,
+				"attackDamage1": 0,
+				"energyPerTick": 1900,
+				"fireEnergy0": 150000,
+				"fireEnergy1": 0,
+				"repairEnergyPerHP": 60,
+				"repairHPPerTick": 1000,
+				"addEnemyExppBase": 1000,
+				"addEnemyThreatBase": 4,
+				"addEnemyHatredBase": 40,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"combat/centrebrain/prefabs/warship-type-a": {
+			"UnitDesc": {
+				"craftSize": "Small",
+				"initializeSpeed": 20000,
+				"maxMovementSpeed": 2500,
+				"maxMovementAcceleration": 1200,
+				"maxRotateAcceleration": 15,
+				"attackRange0": 1600,
+				"attackRange1": 0,
+				"sensorRange": 5500,
+				"ROF0": 10000,
+				"ROF1": 0,
+				"roundInterval0": 285000,
+				"roundInterval1": 0,
+				"muzzleInterval0": 105000,
+				"muzzleInterval1": 0,
+				"muzzleCount0": 4,
+				"muzzleCount1": 0,
+				"attackDamage0": 10000,
+				"attackDamage1": 0,
+				"energyPerTick": 3300,
+				"fireEnergy0": 150000,
+				"fireEnergy1": 0,
+				"repairEnergyPerHP": 60,
+				"repairHPPerTick": 3000,
+				"addEnemyExppBase": 1000,
+				"addEnemyThreatBase": 4,
+				"addEnemyHatredBase": 40,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 0,
+				"selectAlpha": 0,
+				"signHeight": 0,
+				"signSize": 0,
+				"overrideBarWidth": 10,
+				"overrideBarHeight": 5,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"combat/centrebrain/prefabs/warship-type-f": {
+			"UnitDesc": {
+				"craftSize": "Large",
+				"initializeSpeed": 10000,
+				"maxMovementSpeed": 2500,
+				"maxMovementAcceleration": 1200,
+				"maxRotateAcceleration": 15,
+				"attackRange0": 3000,
+				"attackRange1": 5000,
+				"sensorRange": 5500,
+				"ROF0": 10000,
+				"ROF1": 5000,
+				"roundInterval0": 200000,
+				"roundInterval1": 600000,
+				"muzzleInterval0": 80000,
+				"muzzleInterval1": 0,
+				"muzzleCount0": 6,
+				"muzzleCount1": 1,
+				"attackDamage0": 15000,
+				"attackDamage1": 60000,
+				"energyPerTick": 16000,
+				"fireEnergy0": 150000,
+				"fireEnergy1": 800000,
+				"repairEnergyPerHP": 60,
+				"repairHPPerTick": 15000,
+				"addEnemyExppBase": 750,
+				"addEnemyThreatBase": 5,
+				"addEnemyHatredBase": 30,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 0,
+				"selectAlpha": 0,
+				"signHeight": 0,
+				"signSize": 0,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"combat/dark fog/prefabs/ground-node-base": {
+			"EnemyDesc": {
+				"selectCircleRadius": 7,
+				"roughRadius": 8,
+				"colliderComplexityOverride": -1,
+				"sandCount": 9600,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 15000,
+				"minEnergy": 12000,
+				"maxMatter": 30000,
+				"maxEnergy": 6000000,
+				"spMatter": 40,
+				"spEnergy": 1000,
+				"spMax": 120,
+				"idleEnergy": 5400,
+				"workEnergy": 5400,
+				"genMatter": 180,
+				"genEnergy": 0
+			},
+			"DFGBaseDesc": {}
+		},
+		"combat/dark fog/prefabs/ground-node-guardian": {
+			"EnemyDesc": {
+				"selectCircleRadius": 5,
+				"roughRadius": 3.8499999,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1800,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 960,
+				"minEnergy": 28800,
+				"maxMatter": 2880,
+				"maxEnergy": 288000,
+				"spMatter": 2,
+				"spEnergy": 100,
+				"spMax": 300,
+				"idleEnergy": 400,
+				"workEnergy": 2400,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGReplicatorDesc": {
+				"productId": 8130,
+				"productSpMatter": 2,
+				"productSpEnergy": 180,
+				"productSpMax": 40,
+				"turboSpeed": 40,
+				"unitSupply": 8,
+				"productInitialPose": {},
+				"productInitialVel": {},
+				"productInitialTick": 90
+			}
+		},
+		"combat/dark fog/prefabs/ground-node-raider": {
+			"EnemyDesc": {
+				"selectCircleRadius": 5,
+				"roughRadius": 6.1999998,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1440,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 2400,
+				"minEnergy": 28800,
+				"maxMatter": 7200,
+				"maxEnergy": 244800,
+				"spMatter": 2,
+				"spEnergy": 100,
+				"spMax": 240,
+				"idleEnergy": 400,
+				"workEnergy": 1200,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGReplicatorDesc": {
+				"productId": 8128,
+				"productSpMatter": 2,
+				"productSpEnergy": 80,
+				"productSpMax": 50,
+				"turboSpeed": 50,
+				"unitSupply": 12,
+				"productInitialPose": {},
+				"productInitialVel": {},
+				"productInitialTick": 60
+			}
+		},
+		"combat/dark fog/prefabs/ground-node-rail": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 600,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 600,
+				"maxEnergy": 12000,
+				"spMatter": 1,
+				"spEnergy": 20,
+				"spMax": 300,
+				"idleEnergy": 100,
+				"workEnergy": 300,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGConnectorDesc": {}
+		},
+		"combat/dark fog/prefabs/ground-node-ranger": {
+			"EnemyDesc": {
+				"selectCircleRadius": 5,
+				"roughRadius": 5.25,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1800,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 1440,
+				"minEnergy": 28800,
+				"maxMatter": 4320,
+				"maxEnergy": 244800,
+				"spMatter": 2,
+				"spEnergy": 100,
+				"spMax": 300,
+				"idleEnergy": 400,
+				"workEnergy": 1800,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGReplicatorDesc": {
+				"productId": 8129,
+				"productSpMatter": 2,
+				"productSpEnergy": 200,
+				"productSpMax": 30,
+				"turboSpeed": 30,
+				"unitSupply": 12,
+				"productInitialPose": {},
+				"productInitialVel": {},
+				"productInitialTick": 30
+			}
+		},
+		"combat/dark fog/prefabs/ground-node-shield": {
+			"EnemyDesc": {
+				"selectCircleRadius": 2.5,
+				"roughRadius": 4.5749998,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1200,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 240000,
+				"maxMatter": 100,
+				"maxEnergy": 600000,
+				"spMatter": 1,
+				"spEnergy": 200,
+				"spMax": 1200,
+				"idleEnergy": 2000,
+				"workEnergy": 6000,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGShieldDesc": {}
+		},
+		"combat/dark fog/prefabs/ground-node-tower-1": {
+			"EnemyDesc": {
+				"selectCircleRadius": 2.5,
+				"roughRadius": 6.375,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1200,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 60000,
+				"maxMatter": 100,
+				"maxEnergy": 120000,
+				"spMatter": 1,
+				"spEnergy": 200,
+				"spMax": 600,
+				"idleEnergy": 2400,
+				"workEnergy": 6000,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGTurretDesc": {
+				"type": "Laser",
+				"attackRange": 41,
+				"sensorRange": 55,
+				"rangeInc": 0.1,
+				"attackEnergy": 15000,
+				"attackInterval": 15,
+				"attackHeat": 4800,
+				"attackDamage": 36000,
+				"attackDamageInc": 4000,
+				"coldSpeed": 40,
+				"coldSpeedInc": 0,
+				"muzzleY": 6.5
+			}
+		},
+		"combat/dark fog/prefabs/ground-node-tower-2": {
+			"EnemyDesc": {
+				"selectCircleRadius": 2.5,
+				"roughRadius": 3.95,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1000,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 60000,
+				"maxMatter": 100,
+				"maxEnergy": 120000,
+				"spMatter": 1,
+				"spEnergy": 200,
+				"spMax": 600,
+				"idleEnergy": 2400,
+				"workEnergy": 4800,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFGTurretDesc": {
+				"type": "Plasma",
+				"attackRange": 37,
+				"sensorRange": 55,
+				"rangeInc": 0.1,
+				"attackEnergy": 4000,
+				"attackInterval": 9,
+				"attackHeat": 1500,
+				"attackDamage": 12000,
+				"attackDamageInc": 800,
+				"coldSpeed": 30,
+				"coldSpeedInc": 3,
+				"muzzleY": 6
+			}
+		},
+		"combat/dark fog/prefabs/ground-unit-guardian": {
+			"EnemyDesc": {
+				"selectCircleRadius": 2,
+				"roughRadius": 2,
+				"colliderComplexityOverride": 0,
+				"sandCount": 40,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyUnitDesc": {
+				"maxMovementSpeed": 55,
+				"maxMovementAcceleration": 75,
+				"marchMovementSpeed": 40,
+				"assaultArriveRange": 20,
+				"engageArriveRange": 45,
+				"sensorRange": 45,
+				"attackRange0": 80,
+				"attackInterval0": 120,
+				"attackHeat0": 0,
+				"attackDamage0": 1600,
+				"attackDamageInc0": 200,
+				"attackRange1": 24,
+				"attackInterval1": 0,
+				"attackHeat1": 0,
+				"attackDamage1": 0,
+				"attackDamageInc1": 0,
+				"attackRange2": 0,
+				"attackInterval2": 0,
+				"attackHeat2": 0,
+				"attackDamage2": 0,
+				"attackDamageInc2": 0,
+				"coldSpeed": 0,
+				"coldSpeedInc": 0
+			}
+		},
+		"combat/dark fog/prefabs/ground-unit-raider": {
+			"EnemyDesc": {
+				"selectCircleRadius": 1.6,
+				"roughRadius": 1.6,
+				"colliderComplexityOverride": 0,
+				"sandCount": 50,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyUnitDesc": {
+				"maxMovementSpeed": 13,
+				"maxMovementAcceleration": 45,
+				"marchMovementSpeed": 13,
+				"assaultArriveRange": 8,
+				"engageArriveRange": 7,
+				"sensorRange": 32,
+				"attackRange0": 13,
+				"attackInterval0": 78,
+				"attackHeat0": 0,
+				"attackDamage0": 750,
+				"attackDamageInc0": 125,
+				"attackRange1": 0,
+				"attackInterval1": 0,
+				"attackHeat1": 0,
+				"attackDamage1": 0,
+				"attackDamageInc1": 0,
+				"attackRange2": 0,
+				"attackInterval2": 0,
+				"attackHeat2": 0,
+				"attackDamage2": 0,
+				"attackDamageInc2": 0,
+				"coldSpeed": 0,
+				"coldSpeedInc": 0
+			}
+		},
+		"combat/dark fog/prefabs/ground-unit-ranger": {
+			"EnemyDesc": {
+				"selectCircleRadius": 1.4,
+				"roughRadius": 1.4,
+				"colliderComplexityOverride": 0,
+				"sandCount": 30,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyUnitDesc": {
+				"maxMovementSpeed": 32,
+				"maxMovementAcceleration": 64,
+				"marchMovementSpeed": 13.5,
+				"assaultArriveRange": 10,
+				"engageArriveRange": 36,
+				"sensorRange": 32,
+				"attackRange0": 36,
+				"attackInterval0": 9,
+				"attackHeat0": 1500,
+				"attackDamage0": 540,
+				"attackDamageInc0": 60,
+				"attackRange1": 0,
+				"attackInterval1": 0,
+				"attackHeat1": 0,
+				"attackDamage1": 0,
+				"attackDamageInc1": 0,
+				"attackRange2": 0,
+				"attackInterval2": 0,
+				"attackHeat2": 0,
+				"attackDamage2": 0,
+				"attackDamageInc2": 0,
+				"coldSpeed": 30,
+				"coldSpeedInc": 3
+			}
+		},
+		"combat/dark fog/prefabs/ground-unit-truck": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 20,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			}
+		},
+		"combat/dark fog/prefabs/space-node-core": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 900000,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 120000,
+				"minEnergy": 36000,
+				"maxMatter": 500000,
+				"maxEnergy": 1200000000,
+				"spMatter": 1500,
+				"spEnergy": 25000,
+				"spMax": 300,
+				"idleEnergy": 12000,
+				"workEnergy": 12000,
+				"genMatter": 0,
+				"genEnergy": 480000
+			},
+			"DFSCoreDesc": {
+				"relayBuilderDesc": {},
+				"tinderBuilderDesc": {},
+				"tinderTriggerMinTick": 172800,
+				"tinderTriggerKeyTick": 3600,
+				"tinderTriggerProbability": 0.0353529
+			}
+		},
+		"combat/dark fog/prefabs/space-node-fortress": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 100000,
+				"overrideBarWidth": 600,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 600,
+				"minEnergy": 120000,
+				"maxMatter": 6000,
+				"maxEnergy": 720000,
+				"spMatter": 60,
+				"spEnergy": 2500,
+				"spMax": 5000,
+				"idleEnergy": 9000,
+				"workEnergy": 24000,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSReplicatorDesc": {
+				"productId": 8111,
+				"productSpMatter": 120,
+				"productSpEnergy": 10000,
+				"productSpMax": 3600,
+				"turboSpeed": 1,
+				"unitSupply": 1,
+				"productInitialPose": {},
+				"productInitialVel": {},
+				"productInitialTick": 0
+			}
+		},
+		"combat/dark fog/prefabs/space-node-horizontal": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 900,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 720,
+				"maxEnergy": 54000,
+				"spMatter": 3,
+				"spEnergy": 600,
+				"spMax": 900,
+				"idleEnergy": 600,
+				"workEnergy": 1800,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSConnectorDesc": {
+				"isVertical": false
+			}
+		},
+		"combat/dark fog/prefabs/space-node-humpback": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 15000,
+				"overrideBarWidth": 240,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 450,
+				"minEnergy": 36000,
+				"maxMatter": 4500,
+				"maxEnergy": 216000,
+				"spMatter": 45,
+				"spEnergy": 2000,
+				"spMax": 1000,
+				"idleEnergy": 2400,
+				"workEnergy": 7200,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSReplicatorDesc": {
+				"productId": 8112,
+				"productSpMatter": 20,
+				"productSpEnergy": 2400,
+				"productSpMax": 240,
+				"turboSpeed": 15,
+				"unitSupply": 8,
+				"productInitialPose": {},
+				"productInitialVel": {},
+				"productInitialTick": 300
+			}
+		},
+		"combat/dark fog/prefabs/space-node-lancer": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 12000,
+				"overrideBarWidth": 375,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 600,
+				"minEnergy": 36000,
+				"maxMatter": 6000,
+				"maxEnergy": 216000,
+				"spMatter": 45,
+				"spEnergy": 2000,
+				"spMax": 750,
+				"idleEnergy": 3600,
+				"workEnergy": 10800,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSReplicatorDesc": {
+				"productId": 8113,
+				"productSpMatter": 20,
+				"productSpEnergy": 3600,
+				"productSpMax": 90,
+				"turboSpeed": 15,
+				"unitSupply": 80,
+				"productInitialPose": {},
+				"productInitialVel": {},
+				"productInitialTick": 360
+			}
+		},
+		"combat/dark fog/prefabs/space-node-photon": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 5000,
+				"overrideBarWidth": 270,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 2000,
+				"maxEnergy": 4320000,
+				"spMatter": 25,
+				"spEnergy": 1500,
+				"spMax": 600,
+				"idleEnergy": 0,
+				"workEnergy": 0,
+				"genMatter": 0,
+				"genEnergy": 150000
+			},
+			"DFSGammaDesc": {}
+		},
+		"combat/dark fog/prefabs/space-node-seed": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 1500,
+				"overrideBarWidth": 75,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 2400,
+				"maxEnergy": 1080000,
+				"spMatter": 12,
+				"spEnergy": 800,
+				"spMax": 480,
+				"idleEnergy": 1000,
+				"workEnergy": 1000,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSNodeDesc": {}
+		},
+		"combat/dark fog/prefabs/space-node-tower-1": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 4000,
+				"overrideBarWidth": 120,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 108000,
+				"maxMatter": 600,
+				"maxEnergy": 216000,
+				"spMatter": 20,
+				"spEnergy": 3000,
+				"spMax": 600,
+				"idleEnergy": 4800,
+				"workEnergy": 54000,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSTurretDesc": {
+				"type": "Plasma",
+				"attackRange": 8000,
+				"sensorRange": 10000,
+				"rangeInc": 150,
+				"attackEnergy": 8100,
+				"attackInterval": 9,
+				"attackHeat": 1500,
+				"attackDamage": 15000,
+				"attackDamageInc": 1000,
+				"coldSpeed": 30,
+				"coldSpeedInc": 3,
+				"muzzleY": 100
+			}
+		},
+		"combat/dark fog/prefabs/space-node-tower-2": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 4000,
+				"overrideBarWidth": 120,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 108000,
+				"maxMatter": 600,
+				"maxEnergy": 216000,
+				"spMatter": 20,
+				"spEnergy": 3000,
+				"spMax": 600,
+				"idleEnergy": 4800,
+				"workEnergy": 54000,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSTurretDesc": {
+				"type": "Laser",
+				"attackRange": 8000,
+				"sensorRange": 10000,
+				"rangeInc": 10,
+				"attackEnergy": 36000,
+				"attackInterval": 15,
+				"attackHeat": 5000,
+				"attackDamage": 24000,
+				"attackDamageInc": 1200,
+				"coldSpeed": 30,
+				"coldSpeedInc": 3,
+				"muzzleY": 70
+			}
+		},
+		"combat/dark fog/prefabs/space-node-vertical": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0,
+				"roughRadius": 0.7,
+				"colliderComplexityOverride": -1,
+				"sandCount": 900,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 900,
+				"maxEnergy": 54000,
+				"spMatter": 3,
+				"spEnergy": 600,
+				"spMax": 900,
+				"idleEnergy": 600,
+				"workEnergy": 1800,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFSConnectorDesc": {
+				"isVertical": true
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-ant": {
+			"EnemyDesc": {
+				"selectCircleRadius": 0.6,
+				"roughRadius": 0.6,
+				"colliderComplexityOverride": 0,
+				"sandCount": 20,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-bomb-craft": {
+			"EnemyDesc": {
+				"selectCircleRadius": 4,
+				"roughRadius": 4,
+				"colliderComplexityOverride": 0,
+				"sandCount": 40,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-fortress": {
+			"EnemyDesc": {
+				"selectCircleRadius": 150,
+				"roughRadius": 150,
+				"colliderComplexityOverride": 0,
+				"sandCount": 20000,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 30000,
+				"maxEnergy": 100000000,
+				"spMatter": 0,
+				"spEnergy": 0,
+				"spMax": 0,
+				"idleEnergy": 0,
+				"workEnergy": 12000,
+				"genMatter": 0,
+				"genEnergy": 3000
+			},
+			"EnemyUnitDesc": {
+				"maxMovementSpeed": 400,
+				"maxMovementAcceleration": 20,
+				"marchMovementSpeed": 200,
+				"assaultArriveRange": 200,
+				"engageArriveRange": 1000,
+				"sensorRange": 1200,
+				"attackRange0": 1800,
+				"attackInterval0": 15,
+				"attackHeat0": 0,
+				"attackDamage0": 1000,
+				"attackDamageInc0": 0,
+				"attackRange1": 0,
+				"attackInterval1": 0,
+				"attackHeat1": 0,
+				"attackDamage1": 0,
+				"attackDamageInc1": 0,
+				"attackRange2": 0,
+				"attackInterval2": 0,
+				"attackHeat2": 0,
+				"attackDamage2": 0,
+				"attackDamageInc2": 0,
+				"coldSpeed": 0,
+				"coldSpeedInc": 0
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-humpback": {
+			"EnemyDesc": {
+				"selectCircleRadius": 58,
+				"roughRadius": 58,
+				"colliderComplexityOverride": 0,
+				"sandCount": 1000,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyUnitDesc": {
+				"maxMovementSpeed": 500,
+				"maxMovementAcceleration": 500,
+				"marchMovementSpeed": 400,
+				"assaultArriveRange": 100,
+				"engageArriveRange": 2000,
+				"sensorRange": 7000,
+				"attackRange0": 3500,
+				"attackInterval0": 10,
+				"attackHeat0": 1300,
+				"attackDamage0": 12000,
+				"attackDamageInc0": 1000,
+				"attackRange1": 0,
+				"attackInterval1": 0,
+				"attackHeat1": 0,
+				"attackDamage1": 0,
+				"attackDamageInc1": 0,
+				"attackRange2": 0,
+				"attackInterval2": 0,
+				"attackHeat2": 0,
+				"attackDamage2": 0,
+				"attackDamageInc2": 0,
+				"coldSpeed": 25,
+				"coldSpeedInc": 2
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 0,
+				"selectAlpha": 0,
+				"signHeight": 0,
+				"signSize": 0,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-interceptor": {
+			"EnemyDesc": {
+				"selectCircleRadius": 4.5,
+				"roughRadius": 4.5,
+				"colliderComplexityOverride": 0,
+				"sandCount": 30,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-lancer": {
+			"EnemyDesc": {
+				"selectCircleRadius": 37,
+				"roughRadius": 37,
+				"colliderComplexityOverride": 0,
+				"sandCount": 500,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyUnitDesc": {
+				"maxMovementSpeed": 1500,
+				"maxMovementAcceleration": 500,
+				"marchMovementSpeed": 400,
+				"assaultArriveRange": 200,
+				"engageArriveRange": 500,
+				"sensorRange": 6000,
+				"attackRange0": 3000,
+				"attackInterval0": 5,
+				"attackHeat0": 720,
+				"attackDamage0": 3000,
+				"attackDamageInc0": 300,
+				"attackRange1": 4000,
+				"attackInterval1": 480,
+				"attackHeat1": 1800,
+				"attackDamage1": 15000,
+				"attackDamageInc1": 1000,
+				"attackRange2": 5000,
+				"attackInterval2": 900,
+				"attackHeat2": 1800,
+				"attackDamage2": 1200,
+				"attackDamageInc2": 60,
+				"coldSpeed": 15,
+				"coldSpeedInc": 0
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 0,
+				"selectAlpha": 0,
+				"signHeight": 0,
+				"signSize": 0,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"combat/dark fog/prefabs/space-unit-relay": {
+			"EnemyDesc": {
+				"selectCircleRadius": 8,
+				"roughRadius": 8,
+				"colliderComplexityOverride": 0,
+				"sandCount": 6000,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 4800,
+				"minEnergy": 18000,
+				"maxMatter": 108000,
+				"maxEnergy": 150000000,
+				"spMatter": 18,
+				"spEnergy": 2500,
+				"spMax": 600,
+				"idleEnergy": 600,
+				"workEnergy": 600,
+				"genMatter": 0,
+				"genEnergy": 5400
+			},
+			"DFRelayDesc": {}
+		},
+		"combat/dark fog/prefabs/space-unit-tinder": {
+			"EnemyDesc": {
+				"selectCircleRadius": 80,
+				"roughRadius": 80,
+				"colliderComplexityOverride": 0,
+				"sandCount": 900000,
+				"overrideBarWidth": 280,
+				"overrideBarHeight": 200
+			},
+			"EnemyBuilderDesc": {
+				"minMatter": 0,
+				"minEnergy": 0,
+				"maxMatter": 1296000,
+				"maxEnergy": 81000000,
+				"spMatter": 30,
+				"spEnergy": 45000,
+				"spMax": 86400,
+				"idleEnergy": 0,
+				"workEnergy": 0,
+				"genMatter": 0,
+				"genEnergy": 0
+			},
+			"DFTinderDesc": {}
+		},
+		"combat/skill/prefabs/general-bomb-em-capsule-mk1-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 15,
+				"blastRadius1": 25,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 43,
+				"parameter0": 1
+			}
+		},
+		"combat/skill/prefabs/general-bomb-em-capsule-mk2-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 16,
+				"blastRadius1": 28,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 44,
+				"parameter0": 2
+			}
+		},
+		"combat/skill/prefabs/general-bomb-explosive-mk1-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 9,
+				"blastRadius1": 13,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 40,
+				"parameter0": 1
+			}
+		},
+		"combat/skill/prefabs/general-bomb-explosive-mk2-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 9,
+				"blastRadius1": 15,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 41,
+				"parameter0": 2
+			}
+		},
+		"combat/skill/prefabs/general-bomb-explosive-mk3-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 9,
+				"blastRadius1": 17,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 42,
+				"parameter0": 3
+			}
+		},
+		"combat/skill/prefabs/general-bomb-water-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 9,
+				"blastRadius1": 15,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 45,
+				"parameter0": 1
+			}
+		},
+		"combat/skill/prefabs/turret-cannonade-mk1-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 4.5,
+				"blastRadius1": 11,
+				"blastFalloff": 0.5,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 10,
+				"parameter0": 0
+			}
+		},
+		"combat/skill/prefabs/turret-cannonade-mk2-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 6,
+				"blastRadius1": 13,
+				"blastFalloff": 0.3,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 10,
+				"parameter0": 0
+			}
+		},
+		"combat/skill/prefabs/turret-cannonade-mk3-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 7,
+				"blastRadius1": 15,
+				"blastFalloff": 0.15,
+				"moveAcc": 0,
+				"turnAcc": 0,
+				"hitIndex": 10,
+				"parameter0": 0
+			}
+		},
+		"combat/skill/prefabs/turret-missile-mk1-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 3,
+				"blastRadius1": 7.5,
+				"blastFalloff": 1.1,
+				"moveAcc": 1,
+				"turnAcc": 1,
+				"hitIndex": 12,
+				"parameter0": 0
+			}
+		},
+		"combat/skill/prefabs/turret-missile-mk2-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 4,
+				"blastRadius1": 9,
+				"blastFalloff": 0.85,
+				"moveAcc": 3,
+				"turnAcc": 3,
+				"hitIndex": 12,
+				"parameter0": 0
+			}
+		},
+		"combat/skill/prefabs/turret-missile-mk3-desc": {
+			"AmmoDesc": {
+				"blastRadius0": 4.5,
+				"blastRadius1": 10,
+				"blastFalloff": 0.75,
+				"moveAcc": 5,
+				"turnAcc": 5,
+				"hitIndex": 12,
+				"parameter0": 0
+			}
+		},
+		"entities/prefabs/accumulator": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.23,
+					"z": -0.09
+				},
+				"selectSize": {
+					"x": 3.27,
+					"y": 4.46,
+					"z": 2.98
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 4.1999998,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 1.7,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": true,
+				"inputEnergyPerTick": 25000,
+				"outputEnergyPerTick": 37500,
+				"maxAcuEnergy": 540000000,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/assembler-mk-1": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.3,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.1999998,
+					"y": 4.5999999,
+					"z": 4.1999998
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Assemble",
+				"speedf": 0.75
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 4500,
+				"idleEnergyPerTick": 200
+			}
+		},
+		"entities/prefabs/assembler-mk-2": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.3,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.1999998,
+					"y": 4.5999999,
+					"z": 4.1999998
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Assemble",
+				"speedf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 9000,
+				"idleEnergyPerTick": 300
+			}
+		},
+		"entities/prefabs/assembler-mk-3": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.3,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.1999998,
+					"y": 4.5999999,
+					"z": 4.1999998
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Assemble",
+				"speedf": 1.5
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 18000,
+				"idleEnergyPerTick": 400
+			}
+		},
+		"entities/prefabs/assembler-mk-4": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.3,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.1999998,
+					"y": 4.5999999,
+					"z": 4.1999998
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Assemble",
+				"speedf": 3
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 45000,
+				"idleEnergyPerTick": 900
+			}
+		},
+		"entities/prefabs/battle-base": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 4,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 5,
+					"y": 8,
+					"z": 7
+				},
+				"selectDistance": 64,
+				"selectAlpha": 0.6,
+				"signHeight": 4,
+				"signSize": 2.3,
+				"overrideBarWidth": 6,
+				"overrideBarHeight": 7.1999998,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 40000,
+				"idleEnergyPerTick": 1000
+			},
+			"StorageDesc": {
+				"colCount": 10,
+				"rowCount": 6
+			},
+			"BattleBaseDesc": {
+				"maxEnergyAcc": 120000000,
+				"pickRange": 90
+			},
+			"ConstructionModuleDesc": {
+				"droneCount": 12,
+				"buildRange": 60,
+				"droneEjectPos": {
+					"x": 0,
+					"y": 6.5,
+					"z": 0
+				}
+			}
+		},
+		"entities/prefabs/belt-1": {
+			"BeltDesc": {
+				"beltPrototype": 2001,
+				"speed": 1
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.1,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 0.5,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.8,
+				"signHeight": 1.2,
+				"signSize": 1.6,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.2,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/belt-2": {
+			"BeltDesc": {
+				"beltPrototype": 2002,
+				"speed": 2
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.1,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 0.5,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.8,
+				"signHeight": 1.2,
+				"signSize": 1.6,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.2,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/belt-3": {
+			"BeltDesc": {
+				"beltPrototype": 2003,
+				"speed": 5
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.1,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 0.5,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.8,
+				"signHeight": 1.2,
+				"signSize": 1.6,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.2,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/charging-pole": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 4.5999999,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 2.3,
+					"y": 9.1999998,
+					"z": 2.3
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 45.5,
+				"coverRadius": 6.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 6.5999999,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": true,
+				"workEnergyPerTick": 80000,
+				"idleEnergyPerTick": 1500
+			}
+		},
+		"entities/prefabs/chemical-plant": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0.48,
+					"y": 3.1500001,
+					"z": 0.78
+				},
+				"selectSize": {
+					"x": 9.1999998,
+					"y": 6.3000002,
+					"z": 5.3000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Chemical",
+				"speedf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 12000,
+				"idleEnergyPerTick": 400
+			}
+		},
+		"entities/prefabs/chemical-plant-2": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0.23,
+					"y": 3.1500001,
+					"z": 0.78
+				},
+				"selectSize": {
+					"x": 9.6999998,
+					"y": 6.3000002,
+					"z": 5.3000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Chemical",
+				"speedf": 2
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 36000,
+				"idleEnergyPerTick": 600
+			}
+		},
+		"entities/prefabs/delivery-machine": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.1,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3,
+					"y": 1.9,
+					"z": 3.2
+				},
+				"selectDistance": 800,
+				"selectAlpha": 0.6,
+				"signHeight": 0.6,
+				"signSize": 1.5,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"DispenserDesc": {
+				"maxCourierCount": 10,
+				"maxEnergyAcc": 27000000
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 30000,
+				"idleEnergyPerTick": 300
+			}
+		},
+		"entities/prefabs/em-rail-ejector": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 5,
+					"y": 6,
+					"z": 5
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2.5,
+				"signSize": 2,
+				"overrideBarWidth": 6,
+				"overrideBarHeight": 6.1999998,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"EjectorDesc": {
+				"pivotY": 2.5999999,
+				"muzzleY": 5.4000001,
+				"chargeFrame": 120,
+				"coldFrame": 60,
+				"bulletProtoId": 1501
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 30000,
+				"idleEnergyPerTick": 1000
+			}
+		},
+		"entities/prefabs/energy-exchanger": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 6,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 8.3000002,
+					"y": 12,
+					"z": 8.3000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 15.5,
+				"coverRadius": 7,
+				"powerPoint": {
+					"x": 0,
+					"y": 3.55,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 540000000,
+				"exchanger": true,
+				"exchangeEnergyPerTick": 900000,
+				"emptyId": 2206,
+				"fullId": 2207,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/fractionator": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 4.6999998,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.8000002,
+					"y": 9.3999996,
+					"z": 4.8000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 4.5,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 12000,
+				"idleEnergyPerTick": 300
+			},
+			"FractionatorDesc": {
+				"recipeType": "Fractionate",
+				"fluidInputMax": 40,
+				"productOutputMax": 20,
+				"fluidOutputMax": 20
+			}
+		},
+		"entities/prefabs/fusion-power-station": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": -0.4,
+					"y": 2.0999999,
+					"z": 0.45
+				},
+				"selectSize": {
+					"x": 4.8000002,
+					"y": 4.1999998,
+					"z": 9
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 11.75,
+				"coverRadius": 4.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 1.88,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 250000,
+				"useFuelPerTick": 250000,
+				"fuelMask": 2,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/fusion-reactor": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 5.0999999,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 5.5999999,
+					"y": 10.1999998,
+					"z": 5.5999999
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 5.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 15,
+				"coverRadius": 5,
+				"powerPoint": {
+					"x": 0,
+					"y": 1.4400001,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 1200000,
+				"useFuelPerTick": 1200000,
+				"fuelMask": 4,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/geothermal-power-station": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 6,
+					"y": 10,
+					"z": 8
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 22,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 1.2,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": true,
+				"genEnergyPerTick": 80000,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/hadron-collider": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": -0.7,
+					"y": 6.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 11.1999998,
+					"y": 13,
+					"z": 6.0999999
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 4.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Particle",
+				"speedf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 200000,
+				"idleEnergyPerTick": 2000
+			}
+		},
+		"entities/prefabs/inserter-1": {
+			"InserterDesc": {
+				"grade": 1,
+				"sttf": 0.3333333,
+				"delayf": 0,
+				"canStack": false,
+				"stackSize": 1
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 0.9,
+				"signSize": 0.9,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.7,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 300,
+				"idleEnergyPerTick": 150
+			}
+		},
+		"entities/prefabs/inserter-2": {
+			"InserterDesc": {
+				"grade": 2,
+				"sttf": 0.1666667,
+				"delayf": 0,
+				"canStack": false,
+				"stackSize": 1
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 0.9,
+				"signSize": 0.9,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.7,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 600,
+				"idleEnergyPerTick": 150
+			}
+		},
+		"entities/prefabs/inserter-3": {
+			"InserterDesc": {
+				"grade": 3,
+				"sttf": 0.0833333,
+				"delayf": 0,
+				"canStack": true,
+				"stackSize": 1
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 0.9,
+				"signSize": 0.9,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.7,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 1200,
+				"idleEnergyPerTick": 150
+			}
+		},
+		"entities/prefabs/inserter-4": {
+			"InserterDesc": {
+				"grade": 4,
+				"sttf": 0.05,
+				"delayf": 0,
+				"canStack": true,
+				"stackSize": 2
+			},
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 0.9,
+				"signSize": 0.9,
+				"overrideBarWidth": 1,
+				"overrideBarHeight": 0.7,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 2400,
+				"idleEnergyPerTick": 150
+			}
+		},
+		"entities/prefabs/interstellar-logistic-station": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 17,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 8,
+					"y": 34,
+					"z": 8
+				},
+				"selectDistance": 800,
+				"selectAlpha": 0.6,
+				"signHeight": 11.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 24,
+				"overrideBarHeight": 31,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"StationDesc": {
+				"isStellar": true,
+				"maxItemCount": 10000,
+				"maxItemKinds": 5,
+				"maxDroneCount": 100,
+				"maxShipCount": 10,
+				"maxEnergyAcc": 12000000000,
+				"dronePoint": {
+					"x": 0,
+					"y": 26,
+					"z": 0
+				},
+				"shipPoint": {
+					"x": 0,
+					"y": 30.3500004,
+					"z": 0
+				},
+				"isCollector": false,
+				"collectSpeed": 0,
+				"isVeinCollector": false
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 1000000,
+				"idleEnergyPerTick": 1000
+			}
+		},
+		"entities/prefabs/lab": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.55,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 6.0999999,
+					"y": 3.0999999,
+					"z": 6.0999999
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.4,
+				"signSize": 1.4,
+				"overrideBarWidth": 4.5,
+				"overrideBarHeight": 3,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"LabDesc": {
+				"assembleSpeed": 1,
+				"researchSpeed": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 8000,
+				"idleEnergyPerTick": 200
+			}
+		},
+		"entities/prefabs/lab-2": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.55,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 6.0999999,
+					"y": 3.0999999,
+					"z": 6.0999999
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.4,
+				"signSize": 1.4,
+				"overrideBarWidth": 4.5,
+				"overrideBarHeight": 3,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"LabDesc": {
+				"assembleSpeed": 3,
+				"researchSpeed": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 32000,
+				"idleEnergyPerTick": 800
+			}
+		},
+		"entities/prefabs/lighthouse": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 3,
+					"z": 1
+				},
+				"selectDistance": 800,
+				"selectAlpha": 0.6,
+				"signHeight": 1.2,
+				"signSize": 1.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 2000,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/logistic-station": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 12.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 7.5999999,
+					"y": 25,
+					"z": 7.5999999
+				},
+				"selectDistance": 800,
+				"selectAlpha": 0.6,
+				"signHeight": 10.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 12,
+				"overrideBarHeight": 24,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"StationDesc": {
+				"isStellar": false,
+				"maxItemCount": 5000,
+				"maxItemKinds": 4,
+				"maxDroneCount": 50,
+				"maxShipCount": 0,
+				"maxEnergyAcc": 180000000,
+				"dronePoint": {
+					"x": 0,
+					"y": 26,
+					"z": 0
+				},
+				"shipPoint": {
+					"x": 0,
+					"y": 26,
+					"z": 0
+				},
+				"isCollector": false,
+				"collectSpeed": 0,
+				"isVeinCollector": false
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 200000,
+				"idleEnergyPerTick": 1000
+			}
+		},
+		"entities/prefabs/mining-drill": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.8,
+					"z": 0.3
+				},
+				"selectSize": {
+					"x": 3.8,
+					"y": 3.5999999,
+					"z": 6.8000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 0.8,
+				"signSize": 2.4000001,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"MinerDesc": {
+				"minerType": "Vein",
+				"periodf": 2
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 7000,
+				"idleEnergyPerTick": 400
+			}
+		},
+		"entities/prefabs/mining-drill-mk2": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 8,
+					"z": -0.4
+				},
+				"selectSize": {
+					"x": 5,
+					"y": 16,
+					"z": 8
+				},
+				"selectDistance": 600,
+				"selectAlpha": 0.6,
+				"signHeight": 4.1999998,
+				"signSize": 3,
+				"overrideBarWidth": 8,
+				"overrideBarHeight": 14,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"StationDesc": {
+				"isStellar": false,
+				"maxItemCount": 5000,
+				"maxItemKinds": 1,
+				"maxDroneCount": 0,
+				"maxShipCount": 0,
+				"maxEnergyAcc": 0,
+				"dronePoint": {
+					"x": 0,
+					"y": 10,
+					"z": -2
+				},
+				"shipPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"isCollector": false,
+				"collectSpeed": 0,
+				"isVeinCollector": true
+			},
+			"MinerDesc": {
+				"minerType": "Vein",
+				"periodf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 49000,
+				"idleEnergyPerTick": 2800
+			}
+		},
+		"entities/prefabs/monitor": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 0.7,
+					"z": 0.05
+				},
+				"selectSize": {
+					"x": 1.3,
+					"y": 1.4,
+					"z": 2.3
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 0.5,
+				"signSize": 1,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 600,
+				"idleEnergyPerTick": 150
+			}
+		},
+		"entities/prefabs/oil-extractor": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 5.8000002,
+					"z": 0.2
+				},
+				"selectSize": {
+					"x": 6.9000001,
+					"y": 11.6000004,
+					"z": 12.6000004
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 4,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"MinerDesc": {
+				"minerType": "Oil",
+				"periodf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 14000,
+				"idleEnergyPerTick": 400
+			}
+		},
+		"entities/prefabs/oil-refinery": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 5.3000002,
+					"z": -0.32
+				},
+				"selectSize": {
+					"x": 4.1999998,
+					"y": 10.6000004,
+					"z": 7.4000001
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 4,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Refine",
+				"speedf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 16000,
+				"idleEnergyPerTick": 400
+			}
+		},
+		"entities/prefabs/orbital-collector": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 17,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 8,
+					"y": 34,
+					"z": 8
+				},
+				"selectDistance": 2400,
+				"selectAlpha": 0.6,
+				"signHeight": 11.5,
+				"signSize": 2.2,
+				"overrideBarWidth": 24,
+				"overrideBarHeight": 31,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"StationDesc": {
+				"isStellar": true,
+				"maxItemCount": 5000,
+				"maxItemKinds": 6,
+				"maxDroneCount": 50,
+				"maxShipCount": 10,
+				"maxEnergyAcc": 8000000000,
+				"dronePoint": {
+					"x": 0,
+					"y": 26,
+					"z": 0
+				},
+				"shipPoint": {
+					"x": 0,
+					"y": 30.3500004,
+					"z": 0
+				},
+				"isCollector": true,
+				"collectSpeed": 8,
+				"isVeinCollector": false
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 500000,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/orbital-substation": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.5,
+					"y": 7,
+					"z": 3.5
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 53.5,
+				"coverRadius": 26.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 4,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": true,
+				"workEnergyPerTick": 400000,
+				"idleEnergyPerTick": 12000
+			}
+		},
+		"entities/prefabs/piler": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 2.2,
+					"y": 2,
+					"z": 3
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1,
+				"signSize": 1.25,
+				"overrideBarWidth": 2.2,
+				"overrideBarHeight": 2,
+				"slotPoses": [
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 2400,
+				"idleEnergyPerTick": 150
+			}
+		},
+		"entities/prefabs/power-generator": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": -0.4,
+					"y": 2.0999999,
+					"z": 0.45
+				},
+				"selectSize": {
+					"x": 4.8000002,
+					"y": 4.1999998,
+					"z": 9
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 2,
+				"signSize": 2.2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 11.75,
+				"coverRadius": 4.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 1.88,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 36000,
+				"useFuelPerTick": 45000,
+				"fuelMask": 1,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/ray-receiver": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 7,
+					"y": 10,
+					"z": 5
+				},
+				"selectDistance": 39,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 8,
+				"overrideBarHeight": 9.5,
+				"slotPoses": [
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 22.5,
+				"coverRadius": 10.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 3,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": true,
+				"geothermal": false,
+				"genEnergyPerTick": 100000,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 1,
+				"productId": 1208,
+				"productHeat": 1200000000,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/smelter": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.9,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.2,
+					"y": 3.8,
+					"z": 3.2
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.1,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Smelt",
+				"speedf": 1
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 6000,
+				"idleEnergyPerTick": 200
+			}
+		},
+		"entities/prefabs/smelter-2": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.9,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.2,
+					"y": 3.8,
+					"z": 3.2
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.1,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Smelt",
+				"speedf": 2
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 24000,
+				"idleEnergyPerTick": 800
+			}
+		},
+		"entities/prefabs/smelter-3": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.9,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.2,
+					"y": 3.8,
+					"z": 3.2
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.1,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"AssemblerDesc": {
+				"recipeType": "Smelt",
+				"speedf": 3
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 48000,
+				"idleEnergyPerTick": 1600
+			}
+		},
+		"entities/prefabs/solar-panel": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.5999999,
+					"y": 4,
+					"z": 3.5999999
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 3.5999999,
+				"overrideBarHeight": 3.5999999,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 6.75,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": true,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 6000,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/splitter-a": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.2,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 2.7,
+					"y": 2.4000001,
+					"z": 2.7
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 2.2,
+				"overrideBarHeight": 2,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/splitter-b": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.47,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 2,
+					"y": 2.9400001,
+					"z": 2.7
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 2.2,
+				"overrideBarHeight": 2,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/splitter-c": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.48,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 2.7,
+					"y": 2.96,
+					"z": 2.7
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 2.2,
+				"overrideBarHeight": 2,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/spray-coater": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.25,
+					"z": -0.2
+				},
+				"selectSize": {
+					"x": 1.3,
+					"y": 2.5,
+					"z": 4.8000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1,
+				"signSize": 1,
+				"overrideBarWidth": 2.8,
+				"overrideBarHeight": 1.9,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{},
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					{
+						"x": 0,
+						"y": 1.3333,
+						"z": -1.25
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 1500,
+				"idleEnergyPerTick": 75
+			}
+		},
+		"entities/prefabs/stone-wall": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1,
+					"y": 2,
+					"z": 1
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			}
+		},
+		"entities/prefabs/storage-1": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 1.33,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.2,
+					"y": 2.6700001,
+					"z": 3.2
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.25,
+				"signSize": 2.3,
+				"overrideBarWidth": 2.5,
+				"overrideBarHeight": 1.95,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"StorageDesc": {
+				"colCount": 10,
+				"rowCount": 3
+			}
+		},
+		"entities/prefabs/storage-2": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 6.1999998,
+					"y": 4,
+					"z": 4.1999998
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 1.9,
+				"signSize": 2.3,
+				"overrideBarWidth": 4.5,
+				"overrideBarHeight": 2.8,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"StorageDesc": {
+				"colCount": 10,
+				"rowCount": 6
+			}
+		},
+		"entities/prefabs/storage-tank": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.8000002,
+					"y": 4,
+					"z": 4.8000002
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 4,
+				"overrideBarHeight": 2.9000001,
+				"slotPoses": [
+					{},
+					{},
+					{},
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"TankDesc": {
+				"fluidStorageCount": 10000
+			}
+		},
+		"entities/prefabs/tesla-tower-1": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 1.25,
+					"y": 6,
+					"z": 1.25
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 22.5,
+				"coverRadius": 10.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 4,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		},
+		"entities/prefabs/turret-cannon": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.8,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 5.8000002,
+					"y": 5.5999999,
+					"z": 7.1999998
+				},
+				"selectDistance": 64,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 12500,
+				"idleEnergyPerTick": 500
+			},
+			"TurretDesc": {
+				"type": "Cannon",
+				"ammoType": "Cannon",
+				"vsCaps": "GroundAndAir",
+				"defaultDir": {
+					"x": 0,
+					"y": 0,
+					"z": 1
+				},
+				"ROF": 10000,
+				"roundInterval": 600000,
+				"muzzleInterval": 0,
+				"muzzleCount": 1,
+				"minAttackRange": 12,
+				"maxAttackRange": 58,
+				"spaceAttackRange": 0,
+				"pitchUpMax": 70,
+				"pitchDownMax": 20,
+				"damageScale": 1,
+				"muzzleY": 4.0999999,
+				"aimSpeed": 0.9,
+				"uniformAngleSpeed": 0,
+				"angleAcc": 0,
+				"addEnemyExppBase": 2400,
+				"addEnemyThreatBase": 2,
+				"addEnemyHatredBase": 50,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"entities/prefabs/turret-disturb": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 6,
+					"y": 7,
+					"z": 6
+				},
+				"selectDistance": 50,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 20000,
+				"idleEnergyPerTick": 1500
+			},
+			"TurretDesc": {
+				"type": "Disturb",
+				"ammoType": "EMCapsule",
+				"vsCaps": "GroundAndAir",
+				"defaultDir": {
+					"x": 0,
+					"y": 0,
+					"z": 1
+				},
+				"ROF": 2000,
+				"roundInterval": 600000,
+				"muzzleInterval": 0,
+				"muzzleCount": 1,
+				"minAttackRange": 0,
+				"maxAttackRange": 40,
+				"spaceAttackRange": 0,
+				"pitchUpMax": 90,
+				"pitchDownMax": 90,
+				"damageScale": 1,
+				"muzzleY": 0,
+				"aimSpeed": 0,
+				"uniformAngleSpeed": 0,
+				"angleAcc": 0,
+				"addEnemyExppBase": 0,
+				"addEnemyThreatBase": 0,
+				"addEnemyHatredBase": 0,
+				"addEnemyExppCoef": 0,
+				"addEnemyThreatCoef": 0,
+				"addEnemyHatredCoef": 0
+			}
+		},
+		"entities/prefabs/turret-gauss": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 2.2,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 4.5,
+					"y": 4.5,
+					"z": 4.5
+				},
+				"selectDistance": 50,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 3500,
+				"idleEnergyPerTick": 150
+			},
+			"TurretDesc": {
+				"type": "Gauss",
+				"ammoType": "Bullet",
+				"vsCaps": "GroundAndAir",
+				"defaultDir": {
+					"x": 0,
+					"y": 0,
+					"z": 1
+				},
+				"ROF": 15000,
+				"roundInterval": 285000,
+				"muzzleInterval": 105000,
+				"muzzleCount": 4,
+				"minAttackRange": 0,
+				"maxAttackRange": 44,
+				"spaceAttackRange": 0,
+				"pitchUpMax": 70,
+				"pitchDownMax": 90,
+				"damageScale": 1,
+				"muzzleY": 3.7,
+				"aimSpeed": 1.2,
+				"uniformAngleSpeed": 0,
+				"angleAcc": 0,
+				"addEnemyExppBase": 700,
+				"addEnemyThreatBase": 2,
+				"addEnemyHatredBase": 30,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"entities/prefabs/turret-laser": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3.5,
+					"z": 0.25
+				},
+				"selectSize": {
+					"x": 5.1999998,
+					"y": 7.4000001,
+					"z": 5.5
+				},
+				"selectDistance": 50,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 50000,
+				"idleEnergyPerTick": 2000
+			},
+			"TurretDesc": {
+				"type": "Laser",
+				"ammoType": "Laser",
+				"vsCaps": "GroundAndAir",
+				"defaultDir": {
+					"x": 0,
+					"y": 0,
+					"z": 1
+				},
+				"ROF": 600000,
+				"roundInterval": 600000,
+				"muzzleInterval": 0,
+				"muzzleCount": 1,
+				"minAttackRange": 0,
+				"maxAttackRange": 40,
+				"spaceAttackRange": 0,
+				"pitchUpMax": 70,
+				"pitchDownMax": 90,
+				"damageScale": 2,
+				"muzzleY": 4.5,
+				"aimSpeed": 1.4,
+				"uniformAngleSpeed": 0,
+				"angleAcc": 0,
+				"addEnemyExppBase": 24,
+				"addEnemyThreatBase": 1,
+				"addEnemyHatredBase": 5,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"entities/prefabs/turret-missile": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3.5,
+					"z": 0.3
+				},
+				"selectSize": {
+					"x": 7,
+					"y": 7,
+					"z": 7.5
+				},
+				"selectDistance": 64,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 10000,
+				"idleEnergyPerTick": 300
+			},
+			"TurretDesc": {
+				"type": "Missile",
+				"ammoType": "Missile",
+				"vsCaps": "All",
+				"defaultDir": {
+					"x": 0,
+					"y": 0.5,
+					"z": 0.8660254
+				},
+				"ROF": 5000,
+				"roundInterval": 300000,
+				"muzzleInterval": 75000,
+				"muzzleCount": 5,
+				"minAttackRange": 0,
+				"maxAttackRange": 60,
+				"spaceAttackRange": 4200,
+				"pitchUpMax": 90,
+				"pitchDownMax": 20,
+				"damageScale": 1,
+				"muzzleY": 4.9699998,
+				"aimSpeed": 0.8,
+				"uniformAngleSpeed": 180,
+				"angleAcc": 360,
+				"addEnemyExppBase": 1500,
+				"addEnemyThreatBase": 3,
+				"addEnemyHatredBase": 70,
+				"addEnemyExppCoef": 0.1,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"entities/prefabs/turret-plasma": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 4.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 8,
+					"y": 9,
+					"z": 8
+				},
+				"selectDistance": 100,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 28000,
+				"idleEnergyPerTick": 1400
+			},
+			"TurretDesc": {
+				"type": "Plasma",
+				"ammoType": "Plasma",
+				"vsCaps": "OrbitAndSpace",
+				"defaultDir": {
+					"x": 0,
+					"y": 0.3713907,
+					"z": 0.9284768
+				},
+				"ROF": 10000,
+				"roundInterval": 600000,
+				"muzzleInterval": 0,
+				"muzzleCount": 1,
+				"minAttackRange": 0,
+				"maxAttackRange": 0,
+				"spaceAttackRange": 6500,
+				"pitchUpMax": 80,
+				"pitchDownMax": 0,
+				"damageScale": 1,
+				"muzzleY": 5.8499999,
+				"aimSpeed": 0.4,
+				"uniformAngleSpeed": 0,
+				"angleAcc": 0,
+				"addEnemyExppBase": 1200,
+				"addEnemyThreatBase": 3,
+				"addEnemyHatredBase": 80,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"entities/prefabs/turret-plasma-ground": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 7.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 2.5,
+					"y": 15,
+					"z": 2.5
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [
+					{}
+				],
+				"addonAreaCenter": [
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				]
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 70000,
+				"idleEnergyPerTick": 35000
+			},
+			"TurretDesc": {
+				"type": "LocalPlasma",
+				"ammoType": "Plasma",
+				"vsCaps": "GroundAndAir",
+				"defaultDir": {
+					"x": 0,
+					"y": 0,
+					"z": 1
+				},
+				"ROF": 6000,
+				"roundInterval": 600000,
+				"muzzleInterval": 0,
+				"muzzleCount": 1,
+				"minAttackRange": 8,
+				"maxAttackRange": 55,
+				"spaceAttackRange": 0,
+				"pitchUpMax": 90,
+				"pitchDownMax": 90,
+				"damageScale": 1,
+				"muzzleY": 11,
+				"aimSpeed": 0,
+				"uniformAngleSpeed": 0,
+				"angleAcc": 0,
+				"addEnemyExppBase": 1200,
+				"addEnemyThreatBase": 3,
+				"addEnemyHatredBase": 80,
+				"addEnemyExppCoef": 0.2,
+				"addEnemyThreatCoef": 0.001,
+				"addEnemyHatredCoef": 0.005
+			}
+		},
+		"entities/prefabs/turret-shield": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 7,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 7,
+					"y": 14.1999998,
+					"z": 7
+				},
+				"selectDistance": 800,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 400000,
+				"idleEnergyPerTick": 200000
+			}
+		},
+		"entities/prefabs/turret-signal": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 7.8000002,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 6,
+					"y": 16,
+					"z": 6
+				},
+				"selectDistance": 64,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 9,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 60.5,
+				"coverRadius": 14.5,
+				"powerPoint": {
+					"x": 0,
+					"y": 4,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": true,
+				"workEnergyPerTick": 160000,
+				"idleEnergyPerTick": 22500
+			},
+			"BeaconDesc": {
+				"signalRadius": 64,
+				"ROF": 5000,
+				"spaceSignalRange": 4200,
+				"pitchUpMax": 90,
+				"pitchDownMax": 20
+			}
+		},
+		"entities/prefabs/vertical-launching-silo": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 9.5,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 15,
+					"y": 19,
+					"z": 18.2000008
+				},
+				"selectDistance": 50,
+				"selectAlpha": 0.6,
+				"signHeight": 6.5999999,
+				"signSize": 2.4000001,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [
+					{},
+					{},
+					{}
+				],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"SiloDesc": {
+				"chargeFrame": 480,
+				"coldFrame": 240,
+				"bulletProtoId": 1503
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 300000,
+				"idleEnergyPerTick": 1000
+			}
+		},
+		"entities/prefabs/water-pump": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0,
+					"y": 3,
+					"z": 0.1
+				},
+				"selectSize": {
+					"x": 2.5999999,
+					"y": 6,
+					"z": 5.5999999
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [
+					{}
+				],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"MinerDesc": {
+				"minerType": "Water",
+				"periodf": 1.2
+			},
+			"PowerDesc": {
+				"node": false,
+				"connectDistance": 0,
+				"coverRadius": 0,
+				"powerPoint": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"generator": false,
+				"photovoltaic": false,
+				"wind": false,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 0,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": true,
+				"charger": false,
+				"workEnergyPerTick": 5000,
+				"idleEnergyPerTick": 200
+			}
+		},
+		"entities/prefabs/wind-turbine": {
+			"SlotConfig": {
+				"selectCenter": {
+					"x": 0.3,
+					"y": 3.7,
+					"z": 0
+				},
+				"selectSize": {
+					"x": 3.5,
+					"y": 7.4000001,
+					"z": 3.8
+				},
+				"selectDistance": 34,
+				"selectAlpha": 0.6,
+				"signHeight": 3,
+				"signSize": 2,
+				"overrideBarWidth": 0,
+				"overrideBarHeight": 0,
+				"slotPoses": [],
+				"insertPoses": [],
+				"addonAreaCol": [],
+				"addonAreaCenter": []
+			},
+			"PowerDesc": {
+				"node": true,
+				"connectDistance": 16.5,
+				"coverRadius": 7.6999998,
+				"powerPoint": {
+					"x": 0,
+					"y": 0.4,
+					"z": 0
+				},
+				"generator": true,
+				"photovoltaic": false,
+				"wind": true,
+				"gamma": false,
+				"geothermal": false,
+				"genEnergyPerTick": 5000,
+				"useFuelPerTick": 0,
+				"fuelMask": 0,
+				"catalystId": 0,
+				"catalystMask": 0,
+				"productId": 0,
+				"productHeat": 0,
+				"accumulator": false,
+				"inputEnergyPerTick": 0,
+				"outputEnergyPerTick": 0,
+				"maxAcuEnergy": 0,
+				"exchanger": false,
+				"exchangeEnergyPerTick": 0,
+				"emptyId": 0,
+				"fullId": 0,
+				"consumer": false,
+				"charger": false,
+				"workEnergyPerTick": 0,
+				"idleEnergyPerTick": 0
+			}
+		}
+	}
+}

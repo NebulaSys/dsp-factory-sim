@@ -1,0 +1,702 @@
+[
+ {
+  "id": -1,
+  "name": "Lava"
+ },
+ {
+  "id": 1000,
+  "name": "Water"
+ },
+ {
+  "id": 1001,
+  "name": "Iron ore"
+ },
+ {
+  "id": 1002,
+  "name": "Copper ore"
+ },
+ {
+  "id": 1003,
+  "name": "Silicon ore"
+ },
+ {
+  "id": 1004,
+  "name": "Titanium ore"
+ },
+ {
+  "id": 1005,
+  "name": "Stone"
+ },
+ {
+  "id": 1006,
+  "name": "Coal"
+ },
+ {
+  "id": 1007,
+  "name": "Crude oil"
+ },
+ {
+  "id": 1011,
+  "name": "Fire ice"
+ },
+ {
+  "id": 1012,
+  "name": "Kimberlite ore"
+ },
+ {
+  "id": 1013,
+  "name": "Fractal silicon"
+ },
+ {
+  "id": 1014,
+  "name": "Grating crystal"
+ },
+ {
+  "id": 1015,
+  "name": "Spiniform stalagmite crystal"
+ },
+ {
+  "id": 1016,
+  "name": "Unipolar magnet"
+ },
+ {
+  "id": 1030,
+  "name": "Log"
+ },
+ {
+  "id": 1031,
+  "name": "Plant fuel"
+ },
+ {
+  "id": 1099,
+  "name": "Soil pile"
+ },
+ {
+  "id": 1101,
+  "name": "Iron ingot"
+ },
+ {
+  "id": 1102,
+  "name": "Magnet"
+ },
+ {
+  "id": 1103,
+  "name": "Steel"
+ },
+ {
+  "id": 1104,
+  "name": "Copper ingot"
+ },
+ {
+  "id": 1105,
+  "name": "High-purity silicon"
+ },
+ {
+  "id": 1106,
+  "name": "Titanium ingot"
+ },
+ {
+  "id": 1107,
+  "name": "Titanium alloy"
+ },
+ {
+  "id": 1108,
+  "name": "Stone brick"
+ },
+ {
+  "id": 1109,
+  "name": "Energetic graphite"
+ },
+ {
+  "id": 1110,
+  "name": "Glass"
+ },
+ {
+  "id": 1111,
+  "name": "Prism"
+ },
+ {
+  "id": 1112,
+  "name": "Diamond"
+ },
+ {
+  "id": 1113,
+  "name": "Crystal silicon"
+ },
+ {
+  "id": 1114,
+  "name": "Refined oil"
+ },
+ {
+  "id": 1115,
+  "name": "Plastic"
+ },
+ {
+  "id": 1116,
+  "name": "Sulfuric acid"
+ },
+ {
+  "id": 1117,
+  "name": "Organic crystal"
+ },
+ {
+  "id": 1118,
+  "name": "Titanium crystal"
+ },
+ {
+  "id": 1119,
+  "name": "Titanium glass"
+ },
+ {
+  "id": 1120,
+  "name": "Hydrogen"
+ },
+ {
+  "id": 1121,
+  "name": "Deuterium"
+ },
+ {
+  "id": 1122,
+  "name": "Antimatter"
+ },
+ {
+  "id": 1123,
+  "name": "Graphene"
+ },
+ {
+  "id": 1124,
+  "name": "Carbon nanotube"
+ },
+ {
+  "id": 1125,
+  "name": "Frame material"
+ },
+ {
+  "id": 1126,
+  "name": "Casimir crystal"
+ },
+ {
+  "id": 1127,
+  "name": "Strange matter"
+ },
+ {
+  "id": 1128,
+  "name": "Combustible unit"
+ },
+ {
+  "id": 1129,
+  "name": "Explosive unit"
+ },
+ {
+  "id": 1130,
+  "name": "Crystal explosive unit"
+ },
+ {
+  "id": 1131,
+  "name": "Foundation"
+ },
+ {
+  "id": 1141,
+  "name": "Proliferator Mk.I"
+ },
+ {
+  "id": 1142,
+  "name": "Proliferator Mk.II"
+ },
+ {
+  "id": 1143,
+  "name": "Proliferator Mk.III"
+ },
+ {
+  "id": 1201,
+  "name": "Gear"
+ },
+ {
+  "id": 1202,
+  "name": "Magnetic coil"
+ },
+ {
+  "id": 1203,
+  "name": "Electric motor"
+ },
+ {
+  "id": 1204,
+  "name": "Electromagnetic turbine"
+ },
+ {
+  "id": 1205,
+  "name": "Super-magnetic ring"
+ },
+ {
+  "id": 1206,
+  "name": "Particle container"
+ },
+ {
+  "id": 1208,
+  "name": "Critical photon"
+ },
+ {
+  "id": 1209,
+  "name": "Graviton lens"
+ },
+ {
+  "id": 1210,
+  "name": "Space warper"
+ },
+ {
+  "id": 1301,
+  "name": "Circuit board"
+ },
+ {
+  "id": 1302,
+  "name": "Microcrystalline component"
+ },
+ {
+  "id": 1303,
+  "name": "Processor"
+ },
+ {
+  "id": 1304,
+  "name": "Plane filter"
+ },
+ {
+  "id": 1305,
+  "name": "Quantum chip"
+ },
+ {
+  "id": 1401,
+  "name": "Plasma exciter"
+ },
+ {
+  "id": 1402,
+  "name": "Particle broadband"
+ },
+ {
+  "id": 1403,
+  "name": "Annihilation constraint sphere"
+ },
+ {
+  "id": 1404,
+  "name": "Photon combiner"
+ },
+ {
+  "id": 1405,
+  "name": "Thruster"
+ },
+ {
+  "id": 1406,
+  "name": "Reinforced thruster"
+ },
+ {
+  "id": 1407,
+  "name": "Engine"
+ },
+ {
+  "id": 1501,
+  "name": "Solar sail"
+ },
+ {
+  "id": 1502,
+  "name": "Dyson sphere component"
+ },
+ {
+  "id": 1503,
+  "name": "Small carrier rocket"
+ },
+ {
+  "id": 1601,
+  "name": "Magnum ammo box"
+ },
+ {
+  "id": 1602,
+  "name": "Titanium ammo box"
+ },
+ {
+  "id": 1603,
+  "name": "Superalloy ammo box"
+ },
+ {
+  "id": 1604,
+  "name": "Shell set"
+ },
+ {
+  "id": 1605,
+  "name": "High-explosive shell set"
+ },
+ {
+  "id": 1606,
+  "name": "Crystal shell set"
+ },
+ {
+  "id": 1607,
+  "name": "Plasma capsule"
+ },
+ {
+  "id": 1608,
+  "name": "Antimatter capsule"
+ },
+ {
+  "id": 1609,
+  "name": "Missile set"
+ },
+ {
+  "id": 1610,
+  "name": "Supersonic missile set"
+ },
+ {
+  "id": 1611,
+  "name": "Gravity missile set"
+ },
+ {
+  "id": 1612,
+  "name": "Jamming capsule"
+ },
+ {
+  "id": 1613,
+  "name": "Suppressing capsule"
+ },
+ {
+  "id": 1801,
+  "name": "Hydrogen fuel rod"
+ },
+ {
+  "id": 1802,
+  "name": "Deuteron fuel rod"
+ },
+ {
+  "id": 1803,
+  "name": "Antimatter fuel rod"
+ },
+ {
+  "id": 1804,
+  "name": "Strange annihilation fuel rod"
+ },
+ {
+  "id": 2001,
+  "name": "Conveyor belt MK.I"
+ },
+ {
+  "id": 2002,
+  "name": "Conveyor belt MK.II"
+ },
+ {
+  "id": 2003,
+  "name": "Conveyor belt MK.III"
+ },
+ {
+  "id": 2011,
+  "name": "Sorter MK.I"
+ },
+ {
+  "id": 2012,
+  "name": "Sorter MK.II"
+ },
+ {
+  "id": 2013,
+  "name": "Sorter MK.III"
+ },
+ {
+  "id": 2014,
+  "name": "Pile sorter"
+ },
+ {
+  "id": 2020,
+  "name": "Splitter"
+ },
+ {
+  "id": 2040,
+  "name": "Automatic piler"
+ },
+ {
+  "id": 2030,
+  "name": "Traffic monitor"
+ },
+ {
+  "id": 2101,
+  "name": "Storage MK.I"
+ },
+ {
+  "id": 2102,
+  "name": "Storage MK.II"
+ },
+ {
+  "id": 2103,
+  "name": "Planetary logistics station"
+ },
+ {
+  "id": 2104,
+  "name": "Interstellar logistics station"
+ },
+ {
+  "id": 2105,
+  "name": "Orbital collector"
+ },
+ {
+  "id": 2106,
+  "name": "Storage tank"
+ },
+ {
+  "id": 2107,
+  "name": "Logistics distributor"
+ },
+ {
+  "id": 2201,
+  "name": "Tesla tower"
+ },
+ {
+  "id": 2202,
+  "name": "Wireless power tower"
+ },
+ {
+  "id": 2203,
+  "name": "Wind turbine"
+ },
+ {
+  "id": 2204,
+  "name": "Thermal power station"
+ },
+ {
+  "id": 2205,
+  "name": "Solar panel"
+ },
+ {
+  "id": 2206,
+  "name": "Accumulator"
+ },
+ {
+  "id": 2207,
+  "name": "Accumulator(full)"
+ },
+ {
+  "id": 2208,
+  "name": "Ray receiver"
+ },
+ {
+  "id": 2209,
+  "name": "Energy exchanger"
+ },
+ {
+  "id": 2210,
+  "name": "Artificial star"
+ },
+ {
+  "id": 2211,
+  "name": "Mini fusion power station"
+ },
+ {
+  "id": 2212,
+  "name": "Satellite substation"
+ },
+ {
+  "id": 2213,
+  "name": "Geothermal power station"
+ },
+ {
+  "id": 2301,
+  "name": "Mining machine"
+ },
+ {
+  "id": 2302,
+  "name": "Arc smelter"
+ },
+ {
+  "id": 2303,
+  "name": "Assembling machine Mk.I"
+ },
+ {
+  "id": 2304,
+  "name": "Assembling machine Mk.II"
+ },
+ {
+  "id": 2305,
+  "name": "Assembling machine Mk.III"
+ },
+ {
+  "id": 2306,
+  "name": "Water pump"
+ },
+ {
+  "id": 2307,
+  "name": "Oil extractor"
+ },
+ {
+  "id": 2308,
+  "name": "Oil refinery"
+ },
+ {
+  "id": 2309,
+  "name": "Chemical plant"
+ },
+ {
+  "id": 2310,
+  "name": "Miniature particle collider"
+ },
+ {
+  "id": 2311,
+  "name": "EM-rail ejector"
+ },
+ {
+  "id": 2312,
+  "name": "Vertical launching silo"
+ },
+ {
+  "id": 2313,
+  "name": "Spray coater"
+ },
+ {
+  "id": 2314,
+  "name": "Fractionator"
+ },
+ {
+  "id": 2315,
+  "name": "Plane smelter"
+ },
+ {
+  "id": 2316,
+  "name": "Advanced mining machine"
+ },
+ {
+  "id": 2317,
+  "name": "Quantum chemical plant"
+ },
+ {
+  "id": 2318,
+  "name": "Re-composing assembler"
+ },
+ {
+  "id": 2319,
+  "name": "Negentropy smelter"
+ },
+ {
+  "id": 2401,
+  "name": "Holo Beacon"
+ },
+ {
+  "id": 2901,
+  "name": "Matrix lab"
+ },
+ {
+  "id": 2902,
+  "name": "Self-evolution lab"
+ },
+ {
+  "id": 3001,
+  "name": "Gauss turret"
+ },
+ {
+  "id": 3002,
+  "name": "Laser turret"
+ },
+ {
+  "id": 3003,
+  "name": "Implosion cannon"
+ },
+ {
+  "id": 3004,
+  "name": "Plasma turret"
+ },
+ {
+  "id": 3005,
+  "name": "Missile turret"
+ },
+ {
+  "id": 3006,
+  "name": "Jammer tower"
+ },
+ {
+  "id": 3007,
+  "name": "Signal tower"
+ },
+ {
+  "id": 3008,
+  "name": "Planetary shield generator"
+ },
+ {
+  "id": 3009,
+  "name": "Battlefield analysis base"
+ },
+ {
+  "id": 3010,
+  "name": "SR plasma turret"
+ },
+ {
+  "id": 5001,
+  "name": "Logistics drone"
+ },
+ {
+  "id": 5002,
+  "name": "Logistics vessel"
+ },
+ {
+  "id": 5003,
+  "name": "Logistics bot"
+ },
+ {
+  "id": 5101,
+  "name": "Prototype"
+ },
+ {
+  "id": 5102,
+  "name": "Precision drone"
+ },
+ {
+  "id": 5103,
+  "name": "Attack drone"
+ },
+ {
+  "id": 5111,
+  "name": "Corvette"
+ },
+ {
+  "id": 5112,
+  "name": "Destroyer"
+ },
+ {
+  "id": 5201,
+  "name": "Dark fog matrix"
+ },
+ {
+  "id": 5202,
+  "name": "Silicon-based neuron"
+ },
+ {
+  "id": 5203,
+  "name": "Matter recombinator"
+ },
+ {
+  "id": 5204,
+  "name": "Negentropy singularity"
+ },
+ {
+  "id": 5205,
+  "name": "Core element"
+ },
+ {
+  "id": 5206,
+  "name": "Energy shard"
+ },
+ {
+  "id": 6001,
+  "name": "Electromagnetic matrix"
+ },
+ {
+  "id": 6002,
+  "name": "Energy matrix"
+ },
+ {
+  "id": 6003,
+  "name": "Structure matrix"
+ },
+ {
+  "id": 6004,
+  "name": "Information matrix"
+ },
+ {
+  "id": 6005,
+  "name": "Gravity matrix"
+ },
+ {
+  "id": 6006,
+  "name": "Universe matrix"
+ }
+]

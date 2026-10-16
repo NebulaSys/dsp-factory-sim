@@ -1,0 +1,35 @@
+{
+  "name": "dsp-factory-sim",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Web-based Dyson Sphere Program production-line simulator: import game blueprints, compute real rates, material balance and power, and export blueprints back.",
+  "keywords": [
+    "dyson-sphere-program",
+    "factory",
+    "simulator",
+    "blueprint",
+    "typescript",
+    "canvas"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "data:check": "node --experimental-strip-types tools/validate-dataset.ts",
+    "corpus:fetch": "node tools/fetch-corpus.mjs",
+    "icons:fetch": "node tools/fetch-icons.mjs"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.6.5",
+    "jsdom": "^30.1.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}
