@@ -7,12 +7,35 @@
 import type { Store } from '../store.ts';
 import { clear, el } from '../dom.ts';
 import { ICON_KEYS } from '../icons.ts';
+import { PROJECT } from '../project.ts';
 
 export function initAboutView(store: Store): void {
   const data = store.state.data;
   const sourcesHost = document.getElementById('about-sources') as HTMLElement;
   const limitsHost = document.getElementById('about-limits') as HTMLElement;
   const metaHost = document.getElementById('dataset-meta') as HTMLElement;
+
+  // Where the project lives, so the deployed app is not a dead end.
+  const projectHost = document.getElementById('about-project');
+  if (projectHost) {
+    clear(projectHost);
+    const links = el('ul', { class: 'about' });
+    for (const [label, href] of [
+      ['在线演示', PROJECT.demo],
+      ['源码仓库', PROJECT.repo],
+      ['问题反馈', PROJECT.issues],
+    ] as const) {
+      const li = el('li');
+      li.append(el('a', { href, target: '_blank', rel: 'noreferrer', text: `${label} — ${href}` }));
+      links.append(li);
+    }
+    projectHost.append(
+      el('p', {
+        text: '本模拟器是开源的非官方同人工具，欢迎提交问题与改进；蓝图格式与游戏数值的核对记录都在仓库文档里。',
+      }),
+      links,
+    );
+  }
 
   clear(sourcesHost);
   const sources = data.meta.sources ?? [];

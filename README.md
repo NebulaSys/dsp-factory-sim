@@ -4,6 +4,8 @@
 
 纯 TypeScript 引擎，无框架依赖；界面是 Vite + 原生 DOM。
 
+**▶ 在线试用：<https://nebulasys.github.io/dsp-factory-sim/>**
+
 ![蓝图分析](docs/images/blueprint-analysis.png)
 
 ---
@@ -65,6 +67,8 @@ pnpm corpus:fetch   # 第三方蓝图语料（约 1 MB），启用 6 项依赖�
 | `solar-farm-v1.txt` | 8687 栋 | 16 层堆叠太阳能 |
 | `factory-v2.txt` | 2971 栋 | 1195 个分拣器，v2 记录格式 |
 | `smelter-v1.txt` | 3732 栋 | **168 台熔炉，唯一能看到速率表的样本** |
+
+不想本地跑？直接打开 **<https://nebulasys.github.io/dsp-factory-sim/>**。
 
 ---
 
@@ -204,7 +208,9 @@ node tools/fetch-corpus.mjs     # 从公开仓库拉取（约 1 MB）
 
 ### 部署（GitHub Pages）
 
-仓库内置了 Pages 工作流（`.github/workflows/pages.yml`），推到 `main` 即自动发布。
+**线上地址：<https://nebulasys.github.io/dsp-factory-sim/>** —— 推到 `main` 即自动重新发布。
+
+仓库内置了 Pages 工作流（`.github/workflows/pages.yml`）。
 
 **一次性设置**：`Settings → Pages → Build and deployment → Source` 选 **GitHub Actions**。
 

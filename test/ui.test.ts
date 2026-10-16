@@ -11,6 +11,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { JSDOM } from 'jsdom';
+import { PROJECT } from '../src/ui/project.ts';
 
 const ROOT = resolve(import.meta.dirname, '..');
 
@@ -155,6 +156,25 @@ describe('web UI smoke test', () => {
     const balance = q(window, '#bp-balance').textContent ?? '';
     expect(balance).toContain('铁块');
     expect(errors).toEqual([]);
+  });
+
+  it('links to the project from the topbar and the About view', () => {
+    // The topbar href is in index.html so it works before the module loads, while the About view
+    // renders from src/ui/project.ts. This is what stops the two copies from drifting apart.
+    const topbar = window.document.getElementById('repo-link') as HTMLAnchorElement | null;
+    expect(topbar, 'no #repo-link in the markup').toBeTruthy();
+    expect(topbar!.getAttribute('href')).toBe(PROJECT.repo);
+    expect(topbar!.getAttribute('target')).toBe('_blank');
+
+    const about = q(window, '#about-project').textContent ?? '';
+    expect(about).toContain(PROJECT.repo);
+    expect(about).toContain(PROJECT.demo);
+    expect(about).toContain(PROJECT.issues);
+
+    // A relative or placeholder href would silently 404 once deployed under a subpath.
+    for (const url of [PROJECT.repo, PROJECT.demo, PROJECT.issues]) {
+      expect(url.startsWith('https://')).toBe(true);
+    }
   });
 
   it('draws the factory onto the canvas (rendering path exercised)', () => {
