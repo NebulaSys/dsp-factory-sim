@@ -40,16 +40,23 @@ p { margin: 6px 0; }
 code { background: var(--bg-3); padding: 1px 5px; border-radius: 3px; color: var(--accent-2); font-size: 12px; }
 
 .topbar {
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px 16px;
   padding: 12px 20px; background: linear-gradient(180deg, #16222c, #0e161d);
   border-bottom: 1px solid var(--line);
+  /* The brand and the right-hand block together exceed a narrow window. Without wrapping, flex
+     items refuse to shrink below their content and the repository link is pushed off-screen —
+     its label was clipped at 1400px. Wrapping degrades instead of hiding. */
+  flex-wrap: wrap;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.logo { font-size: 26px; color: var(--accent); }
+/* Let the brand shrink so the right-hand block always stays fully visible. */
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand > div { min-width: 0; }
+.brand h1, .subtitle { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.logo { font-size: 26px; color: var(--accent); flex: 0 0 auto; }
 .subtitle { margin: 2px 0 0; font-size: 11px; color: var(--fg-dim); }
 .topbar-meta { font-size: 11px; color: var(--fg-dim); text-align: right; }
 /* Keeps the dataset line and the repository link in one right-aligned block. */
-.topbar-end { display: flex; align-items: center; gap: 14px; }
+.topbar-end { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; margin-left: auto; }
 .repo-link {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 5px 11px; border: 1px solid var(--line); border-radius: 6px;
