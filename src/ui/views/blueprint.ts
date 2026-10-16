@@ -333,7 +333,9 @@ export function initBlueprintView(store: Store): void {
   const loadReal = async (name: string, note: string): Promise<void> => {
     setStatus('正在载入真实蓝图…', '');
     try {
-      const res = await fetch(`/samples/${name}`);
+      // Rebased: GitHub Pages serves a project site from /<repo>/, so a leading slash would
+      // miss. BASE_URL always ends in '/'.
+      const res = await fetch(`${import.meta.env.BASE_URL}samples/${name}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const text = (await res.text()).trim();
       input.value = text;
@@ -348,7 +350,7 @@ export function initBlueprintView(store: Store): void {
   if (realHost) {
     void (async () => {
       try {
-        const res = await fetch('/samples/manifest.json');
+        const res = await fetch(`${import.meta.env.BASE_URL}samples/manifest.json`);
         if (!res.ok) return;
         const manifest = (await res.json()) as { name: string; file: string; note: string }[];
         for (const entry of manifest) {

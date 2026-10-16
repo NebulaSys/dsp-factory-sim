@@ -202,7 +202,28 @@ node tools/check-dev-server.mjs http://localhost:5199                  # 开发�
 node tools/fetch-corpus.mjs     # 从公开仓库拉取（约 1 MB）
 ```
 
-### 工程约定
+### 部署（GitHub Pages）
+
+仓库内置了 Pages 工作流（`.github/workflows/pages.yml`），推到 `main` 即自动发布。
+
+**一次性设置**：`Settings → Pages → Build and deployment → Source` 选 **GitHub Actions**。
+
+发布地址是 `https://<owner>.github.io/<repo>/` —— 注意是**子路径**，这是最容易踩的坑：
+根绝对路径（`/assets/…`、`/icons/…`）在子路径下全部 404，而症状通常是「画布空白」而不是报错。
+本项目用 `base` + `import.meta.env.BASE_URL` 处理，源码里**不硬编码仓库名**。
+
+本地验证子路径构建（与 Pages 行为一致）：
+
+```bash
+VITE_BASE=/<repo>/ pnpm exec vite build   # Windows: $env:VITE_BASE='/<repo>/'
+node tools/serve-pages-preview.mjs 5200   # 在 /<repo>/ 下托管 dist，并逐条打印请求状态
+# 打开 http://127.0.0.1:5200/<repo>/
+```
+
+`serve-pages-preview.mjs` 会把每个请求和状态码打出来，所以 base 配错会**当场看到 404**，
+而不是等部署完才发现是白屏。
+
+## 工程约定
 
 - **引擎不依赖 DOM**：`src/engine/**` 可在 Node 里直接跑，测试与校验脚本都这么用。
 - **数据与数学分离**：游戏数值只在 JSON 里。

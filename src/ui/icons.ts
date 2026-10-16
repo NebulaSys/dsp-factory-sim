@@ -51,17 +51,34 @@ export interface IconAsset {
 
 const MANIFEST: Record<string, IconAsset> = (manifestJson as { icons: Record<string, IconAsset> }).icons;
 
+/**
+ * Icon URL rebased onto the deployment root.
+ *
+ * The manifest stores repository-absolute paths (`/icons/Icon_Arc_Smelter.png`), which are
+ * correct only when the app is served from the domain root. GitHub Pages serves a project site
+ * from `/<repo>/`, so a leading slash would send every icon request to the wrong place and the
+ * canvas would silently fall back to coloured blocks.
+ *
+ * `import.meta.env.BASE_URL` is whatever `base` resolved to at build time, and always ends in a
+ * separator, so this works unchanged for `/` and for `/dsp-factory-sim/`.
+ */
+function rebase(file: string): string {
+  const base = import.meta.env.BASE_URL || '/';
+  return base.replace(/\/$/, '') + '/' + file.replace(/^\/+/, '');
+}
+
 /** Dataset building keys that have a downloaded icon. */
 export const ICON_KEYS: ReadonlySet<string> = new Set(Object.keys(MANIFEST));
 
 /** Every icon URL in the manifest, for preloading. */
 export function allIconUrls(): string[] {
-  return [...new Set(Object.values(MANIFEST).map((i) => i.file))];
+  return [...new Set(Object.values(MANIFEST).map((i) => rebase(i.file)))];
 }
 
 export function iconFor(buildingKey: string | null): IconAsset | null {
   if (!buildingKey) return null;
-  return MANIFEST[buildingKey] ?? null;
+  const asset = MANIFEST[buildingKey];
+  return asset ? { ...asset, file: rebase(asset.file) } : null;
 }
 
 /**

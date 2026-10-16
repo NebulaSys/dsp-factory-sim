@@ -1,0 +1,83 @@
+# Build the Vite app and publish it to GitHub Pages.
+#
+# One-time setup in the repository: Settings -> Pages -> Build and deployment -> Source =
+# "GitHub Actions". Without that the deploy step has nowhere to publish.
+#
+# The site lands at https://<owner>.github.io/<repo>/, i.e. under a subpath, so the build runs
+# with VITE_BASE=/<repo>/. Everything that loads a URL at runtime derives it from
+# import.meta.env.BASE_URL, which is why no source file hardcodes the repository name.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let one deploy finish rather than cancelling it mid-publish; queue the next.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck and test
+        run: |
+          pnpm exec tsc --noEmit
+          pnpm exec vitest run
+
+      - name: Build for the Pages subpath
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: pnpm exec vite build
+
+      - name: Fail if the build still contains root-absolute asset URLs
+        # A root-absolute /assets/... or /icons/... reference would 404 under /<repo>/ and
+        # usually shows up as a blank canvas rather than an obvious error, so check the built
+        # HTML instead of trusting the build to have got it right.
+        run: |
+          base="/${{ github.event.repository.name }}/"
+          if grep -qE '(src|href)="/(assets|icons|samples)/' dist/index.html; then
+            echo "::error::dist/index.html references a root-absolute path; it will 404 under ${base}"
+            exit 1
+          fi
+          if ! grep -q "$base" dist/index.html; then
+            echo "::error::dist/index.html does not reference the base path ${base}"
+            exit 1
+          fi
+          echo "base path looks correct: ${base}"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

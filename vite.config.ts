@@ -37,6 +37,15 @@ export default { gzipSync, gunzipSync, deflateSync, inflateSync };
 }
 
 export default defineConfig({
+  /**
+   * Deployment root.
+   *
+   * Dev and a root-hosted build use `/`. GitHub Pages serves a *project* site from
+   * `https://<owner>.github.io/<repo>/`, so the Pages workflow builds with
+   * `VITE_BASE=/dsp-factory-sim/`. Everything that loads a URL at runtime reads
+   * `import.meta.env.BASE_URL`, which is this value, so no other code has to know.
+   */
+  base: process.env.VITE_BASE ?? '/',
   plugins: [nodeZlibBrowserStub()],
   server: {
     watch: {
