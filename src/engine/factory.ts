@@ -36,6 +36,14 @@ export type FactoryNodeKind =
   | 'research'
   | 'other';
 
+/**
+ * What stands at one end of a sorter's arm.
+ *
+ * Resolved from position alone, because the attachment is not in the blueprint: the game derives it
+ * when the blueprint is pasted, and so can the view.
+ */
+export type SorterEndKind = 'machine' | 'belt' | 'sorter' | 'empty';
+
 export interface FactoryNode {
   /** `BlueprintBuilding.index` — unique inside one blueprint. */
   index: number;
@@ -82,11 +90,12 @@ export interface FactoryNode {
    * `(x2, y2, z2)` rather than from its link fields.
    *
    * This is the only trustworthy source for the arm's shape. `outputObjectIndex` /
-   * `inputObjectIndex` name the object a sorter is wired to logically, and measured against
-   * real blueprints those targets are usually nowhere near the sorter (a p90 of 175 cells, and
-   * 0 of 2390 references land on a neighbour), because several sorters feeding one belt all
-   * point at the same belt record. The anchors instead describe the arm itself: across 4427
-   * sorters in 30 blueprints the horizontal span is 1-3 cells for **96%** of them, which is
+   * `inputObjectIndex` name the object a sorter is wired to logically, and measured over the whole
+   * corpus those targets are not neighbours: only 1.5% land within 0.01 cells of either arm end and
+   * the median distance is 4.5 cells, because several sorters feeding one belt all point at the
+   * same belt record. (An earlier note here said "0 of 2390", which was a sample artefact — the
+   * full count is 1.5%, still far from adjacency.) The anchors instead describe the arm itself:
+   * across 4427 sorters in 30 blueprints the horizontal span is 1-3 cells for **96%** of them, which is
    * exactly a sorter's physical reach.
    *
    * Only set when the pair actually looks like an arm, so a malformed record cannot silently
@@ -94,6 +103,50 @@ export interface FactoryNode {
    */
   armFrom?: { x: number; y: number };
   armTo?: { x: number; y: number };
+  /**
+   * What stands at each end of the arm, resolved purely from geometry.
+   *
+   * The game does not serialise the machine<->port<->sorter attachment — measured across the whole
+   * corpus, machine categories write zero `outputObjectIndex`/`inputObjectIndex` links. The game
+   * rebuilds those attachments from position when a blueprint is pasted, so the view can do exactly
+   * the same and does not need to invent anything.
+   *
+   * Only set together with `armFrom`/`armTo`, i.e. when the record actually describes an arm.
+   */
+  armFromKind?: SorterEndKind;
+  armToKind?: SorterEndKind;
+  /**
+   * True when the arm's ends cannot be trusted to mean "nothing is there".
+   *
+   * A stacked layout attaches vertically: the record's anchors still differ in x/y, but the thing a
+   * sorter actually serves can sit in another layer at the same cell. `z` is non-zero for stacked
+   * buildings, so an empty end on a stacked sorter is reported as *unresolved*, not as broken.
+   */
+  armEndUncertain?: boolean;
+  /**
+   * How many sorter ends attach to this building (both directions, since which end picks up is not
+   * recorded).
+   */
+  servedBySorters?: number;
+  /**
+   * Total items/min those sorters can carry, as the machine's port capacity ceiling.
+   *
+   * This is an UPPER BOUND on total movement in *both* directions combined, not a per-direction
+   * figure: direction is not serialised, so input capacity cannot be separated from output
+   * capacity. It bounds throughput; it does not predict it.
+   */
+  sorterCapacityPerMin?: number;
+  /**
+   * Items/min this machine must move for its recipe to run at full rate: every input plus every
+   * output.
+   *
+   * Paired with `sorterCapacityPerMin` this is what makes the ceiling meaningful — a large capacity
+   * number on its own says nothing, but capacity below this requirement means the sorters cannot
+   * feed the machine and it will run slow regardless of what the rate table says.
+   */
+  requiredFlowPerMin?: number;
+  /** True when the attached sorters cannot carry the recipe's full input+output flow. */
+  sorterStarved?: boolean;
   /**
    * Unit travel direction of a belt, measured from its recorded link target.
    *
@@ -140,6 +193,26 @@ export interface FactoryModel {
     finalOutputsPerMin: { item: string; count: number }[];
     /** Per-item production and consumption across the whole factory. */
     balance: { item: string; producedPerMin: number; consumedPerMin: number }[];
+    /**
+     * Sorters with an arm end that touches nothing.
+     *
+     * Excludes stacked sorters (`armEndUncertain`), whose vertical attachment the x/y geometry
+     * cannot see — reporting those as broken would be a false alarm on a normal build.
+     */
+    danglingSorters: number;
+    /** Sorters whose arm end touches nothing but which are stacked, so it is unresolved not broken. */
+    danglingSortersUncertain: number;
+    /** Producers that at least one sorter attaches to. */
+    machinesWithSorter: number;
+    /** Producers no sorter attaches to (stacked/inserted machines are normal, so this is informational). */
+    machinesWithoutSorter: number;
+    /**
+     * Producers whose attached sorter capacity is below the recipe's own input+output flow.
+     *
+     * This is the actionable half of the capacity figure: it names machines that provably cannot be
+     * fed fast enough by their own sorters, whatever the rate table claims.
+     */
+    sorterStarvedMachines: number;
     boundingBox: { minX: number; minY: number; maxX: number; maxY: number };
     warnings: string[];
   };
@@ -284,6 +357,79 @@ export function convertBlueprint(data: GameData, blueprint: DecodedBlueprint, op
   const positionByIndex = new Map<number, { x: number; y: number }>();
   for (const b of blueprint.body.buildings) positionByIndex.set(b.index, { x: b.x, y: b.y });
 
+  // --- geometric end classification ---------------------------------------
+  // What stands at a point? This mirrors what the game does on paste: the attachment is not in the
+  // blueprint, so it is recovered from position + footprint. Built from ALL buildings, not from
+  // `nodes`, so a sorter's ends still resolve when belts or machines are filtered out of the view.
+  interface Placed {
+    index: number;
+    kind: SorterEndKind;
+    x: number;
+    y: number;
+    hw: number;
+    hh: number;
+  }
+  const placed: Placed[] = [];
+  for (const b of blueprint.body.buildings) {
+    const def = data.buildingByIdOrUndefined(b.itemId);
+    if (!def) continue;
+    const { footprint } = resolvedFootprint(def);
+    const w = footprint?.w ?? 1;
+    const h = footprint?.h ?? 1;
+    const kind: SorterEndKind =
+      def.category === 'belt' ? 'belt' : def.category === 'sorter' ? 'sorter' : 'machine';
+    placed.push({ index: b.index, kind, x: b.x, y: b.y, hw: w / 2, hh: h / 2 });
+  }
+  const byCell = new Map<string, Placed[]>();
+  for (const p of placed) {
+    // Bucket by rounded cell so a lookup only scans the local neighbourhood.
+    const key = `${Math.round(p.x)},${Math.round(p.y)}`;
+    const list = byCell.get(key);
+    if (list) list.push(p);
+    else byCell.set(key, [p]);
+  }
+  /**
+   * The building occupying a point, or 'empty'. Ties are broken towards the nearest centre, which
+   * matters where a footprint spans several cells and a neighbouring building overlaps the search
+   * area. `self` is excluded so a sorter cannot classify itself.
+   */
+  const whatIsAt = (px: number, py: number, self: number): { kind: SorterEndKind; index: number | null } => {
+    let best: Placed | null = null;
+    let bestD = Infinity;
+    const cx = Math.round(px);
+    const cy = Math.round(py);
+    for (let dx = -2; dx <= 2; dx++) {
+      for (let dy = -2; dy <= 2; dy++) {
+        const list = byCell.get(`${cx + dx},${cy + dy}`);
+        if (!list) continue;
+        for (const p of list) {
+          if (p.index === self) continue;
+          if (Math.abs(px - p.x) > p.hw + 0.01 || Math.abs(py - p.y) > p.hh + 0.01) continue;
+          const d = Math.hypot(p.x - px, p.y - py);
+          if (d < bestD) {
+            bestD = d;
+            best = p;
+          }
+        }
+      }
+    }
+    return best ? { kind: best.kind, index: best.index } : { kind: 'empty', index: null };
+  };
+  const servedBy = new Map<number, { count: number; capacity: number }>();
+
+  /**
+   * Whether this blueprint stacks buildings at all.
+   *
+   * Measured evidence, not a guess: in the one blueprint that reported 137 "dangling" sorters,
+   * 2497 of its 2971 buildings sit at z != 0 with a maximum z of 41 — a heavily stacked build —
+   * while the sorters in question are at z = 0. Geometry alone therefore cannot tell a genuinely
+   * unattached sorter from one that attaches to the layer above, so in a stacked blueprint every
+   * unresolved end is reported as *unresolved*, never as broken.
+   */
+  const hasVerticalStacking =
+    blueprint.body.buildings.some((b) => b.z !== 0 || b.z2 !== 0) ||
+    blueprint.body.buildings.some((b) => data.buildingByIdOrUndefined(b.itemId)?.key === 'PileSorter');
+
   for (const b of blueprint.body.buildings) {
     const sorterNode = nodeByIndex.get(b.index);
     const from = b.outputObjectIndex >= 0 ? nodeByIndex.get(b.outputObjectIndex) : undefined;
@@ -326,6 +472,37 @@ export function convertBlueprint(data: GameData, blueprint: DecodedBlueprint, op
       if (armH >= 0.5 && armH <= SORTER_ARM_MAX_CELLS + 0.05 && armV <= 0.5) {
         sorterNode.armFrom = { x: b.x, y: b.y };
         sorterNode.armTo = { x: b.x2, y: b.y2 };
+
+        // Resolve both ends geometrically and attribute the machine ends to their machine, so the
+        // view can tell a served machine from a dangling sorter without inventing anything.
+        const endFrom = whatIsAt(b.x, b.y, b.index);
+        const endTo = whatIsAt(b.x2, b.y2, b.index);
+        sorterNode.armFromKind = endFrom.kind;
+        sorterNode.armToKind = endTo.kind;
+        // A stacked sorter attaches vertically; x/y geometry cannot see that layer, so an empty
+        // end there is unresolved rather than broken. Both the per-sorter `z` and the blueprint's
+        // overall stacking are considered — a stacked blueprint mixes z = 0 and z != 0 records,
+        // and judging a single sorter by its own z missed 117 of them.
+        const sorterDef = data.buildingByIdOrUndefined(b.itemId);
+        sorterNode.armEndUncertain =
+          hasVerticalStacking || b.z !== 0 || b.z2 !== 0 || sorterDef?.key === 'PileSorter';
+
+        // 1.5 / 3 / 6 items per second for Mk.I/II/III, i.e. 90 / 180 / 360 per minute.
+        const sorterSpeed = (data.buildingByIdOrUndefined(b.itemId)?.sorterSpeedPerSec ?? 0) * 60;
+        // Count each machine once per sorter. A sorter lying entirely inside a large footprint has
+        // both ends on the same machine, and attributing it twice would double-count both the
+        // service count and the capacity.
+        const machines = new Set<number>();
+        for (const end of [endFrom, endTo]) {
+          if (end.kind !== 'machine' || end.index === null) continue;
+          machines.add(end.index);
+        }
+        for (const machineIndex of machines) {
+          const entry = servedBy.get(machineIndex) ?? { count: 0, capacity: 0 };
+          entry.count += 1;
+          entry.capacity += sorterSpeed;
+          servedBy.set(machineIndex, entry);
+        }
       }
 
       // Range-check the recorded slot indices against the building's real attachment
@@ -405,6 +582,38 @@ export function convertBlueprint(data: GameData, blueprint: DecodedBlueprint, op
 
   const bbox = boundingBox(blueprint.body);
 
+  // --- sorter service + dangling diagnostics -------------------------------
+  // Attribute the geometric machine ends back onto the emitting nodes, then count what is broken.
+  let danglingSorters = 0;
+  let danglingSortersUncertain = 0;
+  for (const node of nodes) {
+    if (node.kind === 'sorter') {
+      const dangling = node.armFromKind === 'empty' || node.armToKind === 'empty';
+      if (dangling) {
+        if (node.armEndUncertain) danglingSortersUncertain++;
+        else danglingSorters++;
+      }
+      continue;
+    }    const served = servedBy.get(node.index);
+    if (served) {
+      node.servedBySorters = served.count;
+      node.sorterCapacityPerMin = round(served.capacity);
+      // Required movement = every input plus every output, per minute, for this one machine.
+      if (node.production) {
+        const required =
+          node.production.inputsPerMin.reduce((s, r) => s + r.count, 0) +
+          node.production.outputsPerMin.reduce((s, r) => s + r.count, 0);
+        if (required > 0) {
+          node.requiredFlowPerMin = round(required);
+          node.sorterStarved = served.capacity + 1e-9 < required;
+        }
+      }
+    }
+  }
+  const producerNodes = nodes.filter((n) => n.kind === 'producer');
+  const machinesWithSorter = producerNodes.filter((n) => (n.servedBySorters ?? 0) > 0).length;
+  const sorterStarvedMachines = producerNodes.filter((n) => n.sorterStarved === true).length;
+
   return {
     meta: { ...blueprint.meta, format: blueprint.format, hashWarning: blueprint.hashWarning },
     nodes,
@@ -413,7 +622,7 @@ export function convertBlueprint(data: GameData, blueprint: DecodedBlueprint, op
     bonuses,
     totals: {
       buildings: blueprint.body.buildings.length,
-      producers: nodes.filter((n) => n.kind === 'producer').length,
+      producers: producerNodes.length,
       belts: nodes.filter((n) => n.kind === 'belt').length,
       sorters: nodes.filter((n) => n.kind === 'sorter').length,
       logistics: nodes.filter((n) => n.kind === 'logistics').length,
@@ -422,6 +631,11 @@ export function convertBlueprint(data: GameData, blueprint: DecodedBlueprint, op
       rawInputsPerMin,
       finalOutputsPerMin,
       balance,
+      danglingSorters,
+      danglingSortersUncertain,
+      machinesWithSorter,
+      machinesWithoutSorter: producerNodes.length - machinesWithSorter,
+      sorterStarvedMachines,
       boundingBox: bbox,
       warnings,
     },
@@ -540,6 +754,11 @@ export function mergeFactories(models: FactoryModel[]): FactoryModel {
         .filter((r) => r.consumedPerMin === 0 && r.producedPerMin > 0)
         .map((r) => ({ item: r.item, count: round(r.producedPerMin) })),
       balance,
+      danglingSorters: models.reduce((s, m) => s + m.totals.danglingSorters, 0),
+      danglingSortersUncertain: models.reduce((s, m) => s + m.totals.danglingSortersUncertain, 0),
+      machinesWithSorter: models.reduce((s, m) => s + m.totals.machinesWithSorter, 0),
+      machinesWithoutSorter: models.reduce((s, m) => s + m.totals.machinesWithoutSorter, 0),
+      sorterStarvedMachines: models.reduce((s, m) => s + m.totals.sorterStarvedMachines, 0),
       boundingBox: first.totals.boundingBox,
       warnings: models.flatMap((m) => m.totals.warnings),
     },

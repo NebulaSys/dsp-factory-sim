@@ -2,8 +2,8 @@
  * Sorter arms come from the record's own anchors, not from its link fields.
  *
  * `outputObjectIndex` / `inputObjectIndex` name the object a sorter is wired to logically.
- * Measured against 28 real blueprints those targets are usually nowhere near the sorter — a p90
- * of 175 cells, and 0 of 2390 references land on a neighbour — because several sorters feeding
+ * Measured over the whole corpus those targets are not neighbours — only 1.5% land within 0.01
+ * cells of either arm end and the median distance is 4.5 cells — because several sorters feeding
  * one belt all point at the same belt record. The record's two anchors `(x, y, z)` and
  * `(x2, y2, z2)` are the ends of the arm itself: over 4427 sorters their horizontal span is 1-3
  * cells for 96% of them.

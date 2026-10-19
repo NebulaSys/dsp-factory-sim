@@ -100,6 +100,30 @@ function sampleBlueprintBody(): BlueprintBody {
   };
 }
 
+/**
+ * One-line summary of the sorter capacity that attaches to machines, for the stat's hint.
+ *
+ * Deliberately described as a bound and as two-way: the blueprint does not record which end of a
+ * sorter picks up, so input capacity cannot be separated from output capacity.
+ */
+function sorterCapacityNote(model: FactoryModel): string | null {
+  let sorters = 0;
+  let capacity = 0;
+  for (const node of model.nodes) {
+    if (!node.servedBySorters) continue;
+    sorters += node.servedBySorters;
+    capacity += node.sorterCapacityPerMin ?? 0;
+  }
+  if (sorters === 0) return null;
+  const starved = model.totals.sorterStarvedMachines;
+  return (
+    `\n接入分拣器合计 ${sorters} 个，运力上界 ${Math.round(capacity)}/分钟（双向合计，不是单方向吞吐）。` +
+    (starved > 0
+      ? `\n其中 ${starved} 台机器的分拣器运力低于配方所需的进出料总量 —— 这些机器无论速率表怎么写都会缺料。`
+      : '\n没有机器的分拣器运力低于配方需求。')
+  );
+}
+
 export function initBlueprintView(store: Store): void {
   const input = document.getElementById('bp-input') as HTMLTextAreaElement;
   const output = document.getElementById('bp-output') as HTMLTextAreaElement;
@@ -230,6 +254,34 @@ export function initBlueprintView(store: Store): void {
         '太阳能板、射线接收站、火电等。本模拟器不核算它们的发电量或耗电。',
       ),
       stat('未知原型', String(model.unknown.length), model.unknown.length > 0 ? 'warn' : 'ok'),
+      // (1) Dangling sorter diagnostic. The engine resolves each arm end geometrically; an empty
+      // end is only reported as broken when the blueprint does not stack buildings, because a
+      // stacked build attaches vertically where the x/y plane cannot see it.
+      stat(
+        '悬空分拣器',
+        String(model.totals.danglingSorters),
+        model.totals.danglingSorters > 0 ? 'warn' : 'ok',
+        model.totals.danglingSortersUncertain > 0
+          ? `另有 ${model.totals.danglingSortersUncertain} 个分拣器有一端未解析：本蓝图含堆叠，连接可能是垂直的，无法据此判断悬空。`
+          : '分拣器两端的臂有一端没接任何建筑。真实蓝图里很少见；创作/编辑时才有意义。',
+      ),
+      // (2) Machines served by at least one sorter, and the port-capacity ceiling that implies.
+      stat(
+        '分拣器接入机器',
+        `${model.totals.machinesWithSorter}/${model.totals.producers}`,
+        model.totals.producers === 0 ? '' : model.totals.machinesWithSorter === 0 ? 'warn' : 'ok',
+        `分拣器端接在机器上的数量。未被任何分拣器接入的机器可能是堆叠/插入式布局，属于正常。` +
+          (sorterCapacityNote(model) ?? ''),
+      ),
+      // The actionable half of the capacity figure: machines whose own sorters cannot carry the
+      // recipe's input+output flow. Zero on every real blueprint measured so far, which is the
+      // point — it only fires when a layout is actually under-served.
+      stat(
+        '分拣器运力不足',
+        String(model.totals.sorterStarvedMachines),
+        model.totals.sorterStarvedMachines > 0 ? 'warn' : 'ok',
+        '分拣器总运力低于该机器配方所需的进出料总量。未知分拣器方向，因此按双向合计与进+出总量比较，不区分输入/输出。',
+      ),
     );
 
     linesHost.append(

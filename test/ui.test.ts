@@ -149,6 +149,9 @@ describe('web UI smoke test', () => {
     expect(stats).toContain('制造耗电');
     expect(stats).toContain('发电/用电建筑');
     expect(stats).not.toContain('电力消耗');
+    // Geometric sorter diagnostics: a defect count, and how many machines have a sorter on them.
+    expect(stats).toContain('悬空分拣器');
+    expect(stats).toContain('分拣器接入机器');
 
     const rows = window.document.querySelectorAll('#bp-lines tbody tr');
     expect(rows.length).toBeGreaterThanOrEqual(2); // IronIngot + Gear

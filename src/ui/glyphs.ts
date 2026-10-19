@@ -27,7 +27,7 @@
  * confidently wrong arrow.
  */
 
-import type { FactoryModel, FactoryNode } from '../engine/factory.ts';
+import type { FactoryModel, FactoryNode, SorterEndKind } from '../engine/factory.ts';
 
 /**
  * Which world axis a belt with `yaw === 0` runs along.
@@ -157,7 +157,30 @@ export interface SorterDirection {
    * with a head at each end rather than asserting a heading it does not have.
    */
   signKnown: boolean;
+  /**
+   * What stands at the `armFrom` end and at the `armTo` end, resolved from position by the engine.
+   *
+   * The blueprint does not record the machine<->sorter attachment (machine categories write no
+   * link fields at all), so the engine reproduces what the game does on paste: look at what is
+   * standing there. Carrying it into the glyph turns "an arrow of unknown direction" into "this end
+   * is on a machine, that end is on a belt".
+   */
+  fromKind?: SorterEndKind;
+  toKind?: SorterEndKind;
+  /**
+   * True when an empty end cannot be trusted to mean "nothing is there", because the blueprint
+   * stacks buildings and the attachment may be vertical.
+   */
+  endUncertain?: boolean;
 }
+
+/** End-marker colours, keyed by what stands at that end of the arm. */
+export const SORTER_END_COLOUR: Record<SorterEndKind, string> = {
+  machine: '#e0a33e',
+  belt: '#3fa7d6',
+  sorter: '#8a8f98',
+  empty: '#d9534f',
+};
 
 /**
  * Sorter direction and reach, classified from the record's own arm anchors where they exist.
@@ -192,7 +215,17 @@ export function sorterDirection(node: FactoryNode): SorterDirection {
       const llen = Math.hypot(ldx, ldy);
       const signKnown =
         llen > 0.05 && llen <= SORTER_MAX_REACH_CELLS + 0.05 && (ldx * ux + ldy * uy) / llen > 0.5;
-      return { dx: ux, dy: uy, known: signKnown, length: alen, reach: 'horizontal', signKnown };
+      return {
+        dx: ux,
+        dy: uy,
+        known: signKnown,
+        length: alen,
+        reach: 'horizontal',
+        signKnown,
+        fromKind: node.armFromKind,
+        toKind: node.armToKind,
+        endUncertain: node.armEndUncertain,
+      };
     }
   }
 
@@ -493,6 +526,33 @@ export function drawSorter(
     ctx.lineTo(at - dir * head, head * 0.62);
     ctx.closePath();
     ctx.fill();
+  }
+
+  // What is standing at each end of the arm. Drawn at the true arm ends (±span/2), not at the
+  // decorative bar ends above, so the marker lands on the cell it is describing.
+  // A red "empty" marker is suppressed when the blueprint stacks, because there the attachment can
+  // be vertical and the x/y plane simply cannot see it — that is unresolved, not broken.
+  const half = span / 2;
+  for (const [at, kind] of [
+    [-half, direction.fromKind],
+    [half, direction.toKind],
+  ] as const) {
+    if (!kind) continue;
+    if (kind === 'empty' && direction.endUncertain) continue;
+    ctx.fillStyle = SORTER_END_COLOUR[kind];
+    if (kind === 'empty') {
+      // Hollow ring: "nothing here", distinct from any filled end marker.
+      ctx.strokeStyle = SORTER_END_COLOUR.empty;
+      ctx.lineWidth = Math.max(1, size * 0.1);
+      ctx.beginPath();
+      ctx.arc(at, 0, Math.max(1.6, size * 0.17), 0, Math.PI * 2);
+      ctx.stroke();
+    } else {
+      const r = Math.max(1.6, size * 0.15);
+      ctx.beginPath();
+      ctx.arc(at, 0, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
   }
   ctx.restore();
 }

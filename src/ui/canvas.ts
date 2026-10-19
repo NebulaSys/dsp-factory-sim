@@ -11,7 +11,7 @@
  *     its prototype id) rather than being silently dropped.
  */
 
-import type { FactoryModel, FactoryNode } from '../engine/factory.ts';
+import type { FactoryModel, FactoryNode, SorterEndKind } from '../engine/factory.ts';
 import { getIcon, iconFor } from './icons.ts';
 import {
   beltDirection,
@@ -19,6 +19,7 @@ import {
   drawBelt,
   drawSorter,
   glyphColour,
+  SORTER_END_COLOUR,
   SORTER_MAX_REACH_CELLS,
   sorterDirection,
 } from './glyphs.ts';
@@ -656,6 +657,56 @@ function drawLegend(
   }
   const markTop = height - 16 - (rows - 1) * ROW;
   const categoryY = markTop - (rows > 0 ? ROW : 0);
+
+  // Sorter arm-end markers, on their own row above the categories. Only the kinds this blueprint
+  // actually resolves are listed, and only when it has sorters at all — otherwise the key would
+  // explain a code that is not on screen.
+  const endLabels: [SorterEndKind, string][] = [
+    ['machine', '接机器'],
+    ['belt', '接传送带'],
+    ['sorter', '接分拣器'],
+    ['empty', '未接'],
+  ];
+  const presentEnds = new Set<SorterEndKind>();
+  for (const node of model.nodes) {
+    if (node.kind !== 'sorter') continue;
+    if (node.armFromKind) presentEnds.add(node.armFromKind);
+    if (node.armToKind) presentEnds.add(node.armToKind);
+  }
+  const endEntries = endLabels.filter(([kind]) => presentEnds.has(kind));
+  const endY = categoryY - (endEntries.length > 0 ? ROW : 0);
+
+  // Backdrop for the whole key. Without it the legend sits directly on top of the drawing and the
+  // rate labels and belt glyphs behind it make the text unreadable — which defeats the point of a
+  // key. Drawn first, so every row lands on top of it.
+  const keyTop = endY - 14;
+  ctx.fillStyle = 'rgba(10, 16, 22, 0.86)';
+  ctx.fillRect(0, keyTop, width, height - keyTop);
+
+  if (endEntries.length > 0) {
+    const caption = '分拣器臂端';
+    ctx.fillStyle = '#6f8496';
+    ctx.fillText(caption, 14, endY);
+    let ex = 14 + ctx.measureText(caption).width + 12;
+    for (const [kind, label] of endEntries) {
+      const colour = SORTER_END_COLOUR[kind];
+      if (kind === 'empty') {
+        ctx.strokeStyle = colour;
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.arc(ex + 5, endY - 4, 3.2, 0, Math.PI * 2);
+        ctx.stroke();
+      } else {
+        ctx.fillStyle = colour;
+        ctx.beginPath();
+        ctx.arc(ex + 5, endY - 4, 3.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.fillStyle = '#8ba0b3';
+      ctx.fillText(label, ex + 13, endY);
+      ex += 13 + ctx.measureText(label).width + 14;
+    }
+  }
 
   // Category swatches, on the row above the marks when marks are present.
   let cx = 14;
