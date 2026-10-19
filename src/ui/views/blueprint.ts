@@ -796,6 +796,20 @@ export function initBlueprintView(store: Store): void {
     canvas.style.cursor = 'grabbing';
   });
 
+  // Redraws are coalesced onto animation frames. A pointer reports movement faster than the screen
+  // refreshes (a 120 Hz mouse can fire two moves per 60 Hz frame), and each redraw of a large
+  // blueprint costs tens of milliseconds, so drawing synchronously on `pointermove` queued work
+  // faster than it could be consumed and the drag fell further behind the cursor every frame.
+  // Accumulating the delta and drawing once per frame keeps at most one redraw in flight.
+  let pendingFrame = 0;
+  const scheduleDraw = (): void => {
+    if (pendingFrame !== 0) return;
+    pendingFrame = requestAnimationFrame(() => {
+      pendingFrame = 0;
+      drawScene(store.state.factory);
+    });
+  };
+
   canvas.addEventListener('pointermove', (event: PointerEvent) => {
     if (!drag || event.pointerId !== drag.pointerId) return;
     const dx = event.clientX - drag.startX;
@@ -804,7 +818,7 @@ export function initBlueprintView(store: Store): void {
     if (!dragged && Math.abs(dx) < 3 && Math.abs(dy) < 3) return;
     dragged = true;
     pan = { x: drag.panX + dx, y: drag.panY + dy };
-    drawScene(store.state.factory);
+    scheduleDraw();
   });
 
   const endDrag = (event: PointerEvent): void => {
@@ -812,6 +826,9 @@ export function initBlueprintView(store: Store): void {
     if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
     drag = null;
     canvas.style.cursor = store.state.factory ? 'grab' : 'default';
+    // A coalesced frame may still be pending from the last move; let it land so the canvas
+    // matches where the pointer actually finished.
+    scheduleDraw();
   };
   canvas.addEventListener('pointerup', endDrag);
   canvas.addEventListener('pointercancel', endDrag);

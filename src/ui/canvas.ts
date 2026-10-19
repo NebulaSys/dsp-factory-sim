@@ -348,7 +348,94 @@ export function lastGlyphCounts(): { belts: number; sorters: number } {
   return { ...glyphStatus };
 }
 
+/**
+ * Per-model render cache.
+ *
+ * Everything here is derived only from the model plus the view filters, never from the pan/zoom,
+ * so it is identical on every frame of a drag. Recomputing it per frame was the bulk of the cost:
+ * the draw order sorted 8687 nodes while the comparator called `footprintOf` twice per comparison,
+ * and `beltTravelDirection` rebuilt a Map over the whole model.
+ */
+interface ModelCache {
+  hideBelts: boolean;
+  ordered: FactoryNode[];
+  beltDirs: ReturnType<typeof beltTravelDirection>;
+  links: [number, number][];
+}
+const MODEL_CACHE = new WeakMap<FactoryModel, ModelCache>();
+
+function modelCacheFor(model: FactoryModel, hideBelts: boolean): ModelCache {
+  const hit = MODEL_CACHE.get(model);
+  if (hit && hit.hideBelts === hideBelts) return hit;
+
+  const visible = model.nodes.filter((node) => !(hideBelts && node.kind === 'belt'));
+  // Large buildings first so small ones stay visible on top; within a size class, higher layers
+  // draw last so a stacked tower reads bottom-up.
+  visible.sort((a, b) => {
+    const fa = footprintOf(a);
+    const fb = footprintOf(b);
+    const area = fb.w * fb.h - fa.w * fa.h;
+    return area !== 0 ? area : a.z - b.z;
+  });
+
+  // Link segments that stay on one layer and within reach. A link that crosses layers is a
+  // vertical transfer between stacked buildings, and drawing it as a diagonal is misleading.
+  const byIndex = new Map(model.nodes.map((n) => [n.index, n]));
+  const links: [number, number][] = [];
+  for (const node of visible) {
+    for (const target of node.outputsTo) {
+      const to = byIndex.get(target);
+      if (!to) continue;
+      if (hideBelts && to.kind === 'belt') continue;
+      const cellGap = Math.hypot(to.x - node.x, to.y - node.y);
+      if (cellGap < 0.05 && Math.abs(to.z - node.z) > 0.05) continue;
+      if (cellGap > SORTER_MAX_REACH_CELLS + 0.05) continue;
+      links.push([node.index, to.index]);
+    }
+  }
+
+  const entry: ModelCache = { hideBelts, ordered: visible, beltDirs: beltTravelDirection(model), links };
+  MODEL_CACHE.set(model, entry);
+  return entry;
+}
+
+/**
+ * Opt-in frame timing, enabled by adding `?perf` to the URL.
+ *
+ * Kept in the shipped code because the cost of a frame depends on the blueprint (a 3732-building
+ * smelter block and an 8687-building solar farm behave differently) and a number measured in a
+ * test is not the same as a number measured in the browser.
+ */
+const PERF = typeof location !== 'undefined' && /[?&]perf\b/.test(location.search);
+let perfFrames = 0;
+let perfTotal = 0;
+let perfWorst = 0;
+
 export function renderFactory(
+  ctx: CanvasRenderingContext2D,
+  model: FactoryModel | null,
+  width: number,
+  height: number,
+  options: RenderOptions = {},
+): ViewTransform {
+  const perfStart = PERF ? performance.now() : 0;
+  const view = renderFactoryInner(ctx, model, width, height, options);
+  if (PERF) {
+    const ms = performance.now() - perfStart;
+    perfFrames++;
+    perfTotal += ms;
+    perfWorst = Math.max(perfWorst, ms);
+    // One line per frame while the flag is on: this is an explicit debug mode, and a drag needs
+    // the steady-state numbers rather than a periodic sample.
+    console.log(
+      `[perf] frame=${perfFrames} nodes=${model?.nodes.length ?? 0} ` +
+        `last=${ms.toFixed(1)}ms avg=${(perfTotal / perfFrames).toFixed(1)}ms worst=${perfWorst.toFixed(1)}ms`,
+    );
+  }
+  return view;
+}
+
+function renderFactoryInner(
   ctx: CanvasRenderingContext2D,
   model: FactoryModel | null,
   width: number,
@@ -388,6 +475,7 @@ export function renderFactory(
   // current filter.
   const hideBelts = options.hideBelts === true;
   const isVisible = (node: FactoryNode): boolean => !(hideBelts && node.kind === 'belt');
+  const cache = modelCacheFor(model, hideBelts);
 
   // Sorter connections below the buildings.
   //
@@ -400,24 +488,17 @@ export function renderFactory(
     const byIndex = new Map(model.nodes.map((n) => [n.index, n]));
     ctx.strokeStyle = 'rgba(141, 110, 99, 0.5)';
     ctx.lineWidth = 1.2;
-    for (const node of model.nodes) {
-      if (!isVisible(node)) continue;
-      for (const target of node.outputsTo) {
-        const to = byIndex.get(target);
-        if (!to) continue;
-        // A link to a hidden belt would end in empty space, so it is dropped with it.
-        if (!isVisible(to)) continue;
-        // Same cell but a different layer: a vertical transfer, not a horizontal link.
-        const cellGap = Math.hypot(to.x - node.x, to.y - node.y);
-        if (cellGap < 0.05 && Math.abs(to.z - node.z) > 0.05) continue;
-        if (cellGap > SORTER_MAX_REACH_CELLS + 0.05) continue;
-        const a = offset(node);
-        const b = offset(to);
-        ctx.beginPath();
-        ctx.moveTo(tx(node.x, a.dx), ty(node.y, a.dy));
-        ctx.lineTo(tx(to.x, b.dx), ty(to.y, b.dy));
-        ctx.stroke();
-      }
+    // Segment list is precomputed per model, so a drag only has to project and stroke it.
+    for (const [from, to] of cache.links) {
+      const a = byIndex.get(from);
+      const b = byIndex.get(to);
+      if (!a || !b) continue;
+      const oa = offset(a);
+      const ob = offset(b);
+      ctx.beginPath();
+      ctx.moveTo(tx(a.x, oa.dx), ty(a.y, oa.dy));
+      ctx.lineTo(tx(b.x, ob.dx), ty(b.y, ob.dy));
+      ctx.stroke();
     }
   }
 
@@ -431,19 +512,31 @@ export function renderFactory(
   const panX = options.panX ?? 0;
   const panY = options.panY ?? 0;
 
-  const ordered = [...model.nodes]
-    .filter(isVisible)
-    .sort((a, b) => {
-      const fa = footprintOf(a);
-      const fb = footprintOf(b);
-      const area = fb.w * fb.h - fa.w * fa.h;
-      return area !== 0 ? area : a.z - b.z;
-    });
-
+  const ordered = cache.ordered;
+  // Viewport culling. Drawing calls are the remaining cost once the ordering is cached, and when
+  // the view is zoomed in most buildings are off-screen. The margin covers a footprint plus the
+  // arm of a sorter whose far end can still reach into view.
+  const margin = 4 * scale;
+  const viewMinX = -margin;
+  const viewMaxX = width + margin;
+  const viewMinY = -margin;
+  const viewMaxY = height + margin;
 
   // Measured from the connection graph where a belt links to a neighbour; only belts the
   // graph cannot orient fall back to the yaw field.
-  const beltDirs = beltTravelDirection(model);
+  const beltDirs = cache.beltDirs;
+
+  let drawn = 0;
+  // Level of detail, measured in pixels per grid cell.
+  //
+  // A cropped `drawImage` per building plus its plate and outline is three canvas calls; at the
+  // fit-to-view zoom of a large blueprint a cell is only a few pixels, so the sprite is
+  // indistinguishable from a dot while still costing the full draw. Measured on the 8687-building
+  // solar farm a frame took ~85 ms and caching the draw order changed nothing, which says the
+  // drawing calls are the cost. Below these thresholds the schematic uses flat marks instead —
+  // cheaper, and all the eye can resolve at that size anyway.
+  const detailedBuildings = scale >= 4;
+  const detailedGlyphs = scale >= 3.5;
 
   for (const node of ordered) {
     const fp = footprintOf(node);
@@ -452,24 +545,61 @@ export function renderFactory(
     const nodeOffset = offset(node);
     const cx = tx(node.x, nodeOffset.dx);
     const cy = ty(node.y, nodeOffset.dy);
+    // Half a cell of slack: a glyph is drawn around the node centre, not only at it.
+    if (cx + w < viewMinX || cx - w > viewMaxX || cy + h < viewMinY || cy - h > viewMaxY) continue;
+    drawn++;
     const image = getIcon(node.buildingKey);
     const asset = iconFor(node.buildingKey);
     const palette = asset?.palette ?? null;
     const colour = palette?.accent ?? NODE_COLOURS[node.kind] ?? NODE_COLOURS.other!;
+
+    // Cheap path for small cells: one filled rectangle, no plate, no outline, no sprite.
+    if (!detailedBuildings) {
+      if (node.kind === 'belt' || node.kind === 'sorter') {
+        ctx.fillStyle = NODE_COLOURS[node.kind] ?? colour;
+        ctx.globalAlpha = 0.85;
+        const s = Math.max(1, Math.min(w, h));
+        ctx.fillRect(cx - s / 2, cy - s / 2, s, s);
+        ctx.globalAlpha = 1;
+      } else {
+        ctx.fillStyle = colour;
+        ctx.globalAlpha = node.kind === 'producer' || node.kind === 'research' ? 0.92 : 0.62;
+        ctx.fillRect(cx - w / 2, cy - h / 2, w, h);
+        ctx.globalAlpha = 1;
+        // A hairline border, because adjacent 1x1 cells otherwise merge into a solid blob and the
+        // layout stops being readable — which is worse than a flat colour that still shows cells.
+        ctx.strokeStyle = 'rgba(8, 13, 18, 0.55)';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(cx - w / 2, cy - h / 2, w, h);
+      }
+      imageStatus.fallback++;
+      continue;
+    }
 
     ctx.save();
     ctx.translate(cx, cy);
 
     if (node.kind === 'belt') {
       const colour2 = glyphColour(palette?.accent, NODE_COLOURS.belt!);
-      drawBelt(ctx, Math.min(w, h), beltDirs.get(node.index) ?? beltDirection(node), colour2);
+      if (detailedGlyphs) {
+        drawBelt(ctx, Math.min(w, h), beltDirs.get(node.index) ?? beltDirection(node), colour2);
+      } else {
+        ctx.fillStyle = colour2.main;
+        ctx.fillRect(-w / 2, -h / 2, w, h);
+      }
       glyphStatus.belts++;
       ctx.restore();
       continue;
     }
     if (node.kind === 'sorter') {
       const colour2 = glyphColour(palette?.accent, NODE_COLOURS.sorter!);
-      drawSorter(ctx, Math.min(w, h), sorterDirection(node), colour2);
+      if (detailedGlyphs) {
+        drawSorter(ctx, Math.min(w, h), sorterDirection(node), colour2);
+      } else {
+        ctx.fillStyle = colour2.main;
+        const s = Math.max(1, Math.min(w, h) * 0.6);
+        ctx.fillRect(-s / 2, -s / 2, s, s);
+      }
       glyphStatus.sorters++;
       ctx.restore();
       continue;

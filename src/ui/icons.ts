@@ -75,10 +75,24 @@ export function allIconUrls(): string[] {
   return [...new Set(Object.values(MANIFEST).map((i) => rebase(i.file)))];
 }
 
+/**
+ * Rebased assets, memoised.
+ *
+ * `iconFor` runs once per building per frame, so allocating a fresh object there cost 8687
+ * allocations on a single drag frame of the 8687-building sample. The manifest never changes at
+ * runtime, so the result can be cached per building key.
+ */
+const REBASED = new Map<string, IconAsset>();
+
 export function iconFor(buildingKey: string | null): IconAsset | null {
   if (!buildingKey) return null;
+  const cached = REBASED.get(buildingKey);
+  if (cached) return cached;
   const asset = MANIFEST[buildingKey];
-  return asset ? { ...asset, file: rebase(asset.file) } : null;
+  if (!asset) return null;
+  const rebased: IconAsset = { ...asset, file: rebase(asset.file) };
+  REBASED.set(buildingKey, rebased);
+  return rebased;
 }
 
 /**
